@@ -10,8 +10,11 @@ import { Router } from '@angular/router';
 })
 export class PostCodesComponent implements OnInit {
   shops: any = [];
+  codeFound: any = [];
   postCodes : string[] =[]
-  ngModel : string;
+  textInput : string;
+  numberCode : number;
+  notFound : number;
 
   constructor ( private storesService: StoresService, public router: Router){
     this.getShops();
@@ -20,6 +23,7 @@ export class PostCodesComponent implements OnInit {
   async getShops (){
     this.shops = await this.storesService.getAllShops();
     this.getPostCodes();
+
   }
 
   getPostCodes(){
@@ -29,6 +33,19 @@ export class PostCodesComponent implements OnInit {
       })
       console.log("Mis tiendas---->",this.shops);
   }
+
+  async findCode(CP: string){
+    this.codeFound = await this.storesService.getShopsByPostCode(CP);
+    if(this.codeFound.length == 0){
+      this.notFound=0;
+      console.log("No se ha encontrado el CP");
+    }else{
+      this.notFound=1;
+      this.router.navigate(['/postCode',CP]);
+      console.log("El CP es---->",CP);
+    }
+  }
+
 
   ngOnInit(): void {
   }

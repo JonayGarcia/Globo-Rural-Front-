@@ -9,7 +9,7 @@ export class StoresService {
   constructor() { }
 
   getAllShops() {
-    let url = 'http://localhost:3000/shops'
+    let url = 'http://localhost:3000/shops';
     return axios.get(url)
       .then (response => {
         return response.data;
@@ -39,4 +39,5 @@ export class StoresService {
         console.log("Se ha producido el error" ,error);
       })
   }
+
 }

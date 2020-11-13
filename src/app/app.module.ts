@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ShopsComponent } from './pages/shops/shops.component';
 import { PostCodesComponent } from './pages/post-codes/post-codes.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { PostCodesComponent } from './pages/post-codes/post-codes.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
