@@ -24,6 +24,7 @@ export class PostCodesComponent implements OnInit {
       if(this.postCodes.includes(shop.postCode) == false)
         this.postCodes.push(shop.postCode);
       })
+      console.log("Mis tiendas---->",this.shops);
   }
 
   ngOnInit(): void {

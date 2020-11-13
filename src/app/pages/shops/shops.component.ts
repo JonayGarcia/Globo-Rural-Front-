@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ShopsComponent implements OnInit {
   shops: any = [];
-  constructor(private route:ActivatedRoute, private storesService: StoresService) { 
+  constructor(private route:ActivatedRoute, private storesService: StoresService) {
     this.showShops();
   }
 

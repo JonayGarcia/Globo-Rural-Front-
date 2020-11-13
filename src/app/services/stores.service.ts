@@ -5,7 +5,7 @@ import axios from 'axios';
   providedIn: 'root'
 })
 export class StoresService {
-  
+
   constructor() { }
 
   getAllShops() {
@@ -32,6 +32,7 @@ export class StoresService {
   getProductsByShop(name:string){
     return axios.get("http://localhost:3000/shops?name="+name)
       .then (response => {
+        console.log("Entro...",response.data);
         return response.data;
       })
       .catch (error => {

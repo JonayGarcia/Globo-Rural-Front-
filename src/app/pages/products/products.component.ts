@@ -9,7 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
   shop: any = {};
-  products: any = [];
+  products: any[] = [];
   constructor(private route:ActivatedRoute, private storesService: StoresService) {
     this.showProducts();
   }
@@ -17,12 +17,18 @@ export class ProductsComponent implements OnInit {
   async showProducts(){
     const name = this.route.snapshot.paramMap.get('name');
     this.shop = await this.storesService.getProductsByShop(name);
-    this.shop.forEach(item=> {
-      this.products.push(item.products);
-    })
-    console.log(this.products);
-    
+    this.getProducts();
+    console.log("Esto es shop--->",this.shop);
   }
+
+  getProducts(){
+    this.shop.forEach( store=> {
+      console.log("Esto son los items con products", store.products);
+      this.products = store.products;
+    })
+    console.log("Esto es products--->",this.products);
+  }
+
 
   ngOnInit(): void {
   }
