@@ -5,6 +5,7 @@
       "name": "Tienda1",
       "email": "Sincere@april.biz",
       "postCode": "35018",
+      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14343984/media/35c85ad9172eb95a292d363c287ae918.jpg",
       "products":  [
           {
           "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
@@ -97,6 +98,7 @@
       "name": "Tienda2",
       "email": "Shanna@melissa.tv",
       "postCode": "35018",
+      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14365732/media/9744573663695e5c4b12a97ecd5064ba.jpg",
       "products":  [
           {
           "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
@@ -188,6 +190,7 @@
       "id": 3,
       "name": "Tienda3",
       "postCode": "35200",
+      "logo": "https://cdn.dribbble.com/users/24078/screenshots/13972510/media/84fffa5c27472436f50ad8ac544dea31.jpg",
       "products":  [
           {
           "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
@@ -280,6 +283,7 @@
       "name": "Tienda4",
       "email": "Julianne.OConner@kory.org",
       "postCode": "35400",
+      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14533792/media/7e9dd669880bab07e025b563d1d92199.jpg",
       "products":  [
           {
           "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
@@ -372,6 +376,7 @@
       "name": "Tienda5",
       "email": "Karley_Dach@jasper.info",
       "postCode": "35018",
+      "logo": "https://cdn.dribbble.com/users/13604/screenshots/14459739/media/e6d0447abca04c409cb5f0d63ab83aa2.jpg",
       "products":  [
           {
           "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
@@ -464,6 +469,7 @@
       "name": "Tienda6",
       "email": "Sherwood@rosamond.me",
       "postCode": "35200",
+      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14562865/media/130e993838dec40962316d5fde601ec2.jpg",
       "products":  [
           {
           "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
@@ -556,6 +562,7 @@
       "name": "Tienda7",
       "email": "Chaim_McDermott@dana.io",
       "postCode": "35400",
+      "logo": "https://cdn.dribbble.com/users/52084/screenshots/14307957/media/5b726212f3b7f7c7f58c91b77fbbe4a5.jpg",
       "products":  [
           {
           "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
@@ -648,6 +655,7 @@
       "name": "Tienda8",
       "email": "Rey.Padberg@karina.biz",
       "postCode": "35219",
+      "logo": "https://cdn.dribbble.com/users/230124/screenshots/14349126/media/ae035ed4da5b9f34179d8bd2e1460d17.jpg",
       "products":  [
           {
           "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
@@ -740,6 +748,7 @@
       "name": "Tienda9",
       "email": "Rey.Padberg@karina.biz",
       "postCode": "35200",
+      "logo": "https://cdn.dribbble.com/users/13604/screenshots/14443801/media/4258f865fe493d5103ca14f0c3a48f53.jpg",
       "products":  [
           {
           "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
@@ -832,6 +841,7 @@
       "name": "Tienda10",
       "email": "Rey.Padberg@karina.biz",
       "postCode": "35200",
+      "logo": "https://cdn.dribbble.com/users/230124/screenshots/14392993/media/4536da1ab367f3083a07281820c311e2.jpg",
       "products":  [
           {
           "name": "Navidul Jamón curado de Extremadura, lonchas 138g",

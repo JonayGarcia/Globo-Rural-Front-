@@ -8,6 +8,16 @@ const routes: Routes = [
   {
     path: '',
     component: PostCodesComponent
+  },
+  { 
+    path: 'postCode/:postCode',
+    component: ShopsComponent,
+    children: [
+      {
+        path: 'shop/:name',
+        component: ProductsComponent
+      }
+    ]
   }
 ];
 

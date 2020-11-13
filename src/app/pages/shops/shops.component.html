@@ -1,1 +1,7 @@
-<p>shops works!</p>
+<div class="container">
+    <div *ngFor="let shop of shops">
+        <img [src]="shop.logo" class="logos">
+        <div class="textName">{{shop.name}}</div>
+    </div>
+</div>
+
