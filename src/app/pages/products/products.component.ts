@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ProductsComponent implements OnInit {
   shop: any = {};
+  shopName: string;
+  shopLogo: string;
   products: any[] = [];
   constructor(private route:ActivatedRoute, private storesService: StoresService) {
     this.showProducts();
@@ -24,10 +26,13 @@ export class ProductsComponent implements OnInit {
   getProducts(){
     this.shop.forEach( store=> {
       console.log("Esto son los items con products", store.products);
+      this.shopName = store.name;
+      this.shopLogo = store.logo;
       this.products = store.products;
     })
     console.log("Esto es products--->",this.products);
   }
+
 
 
   ngOnInit(): void {

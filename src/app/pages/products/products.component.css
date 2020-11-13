@@ -1,6 +1,8 @@
-.logos{
-  width: 200px;
-  height: 200px;
+.card-img-top {
+  align-self: center;
+  width: 250px;
+  height: 250px;
+  padding-top: 10px;
 }
 
 .container{
@@ -16,3 +18,49 @@
 .textName{
   text-align: center;
 }
+
+.btn-kart {
+  display: flex;
+  justify-content: center
+}
+
+.card {
+  width: 300px;
+  height: 450px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+ .header {
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: center;
+   margin-top: 50px;
+ }
+
+ .header img{
+   width: 60px;
+   height:  60px;
+   border-radius: 30px;
+   margin-left: 50px;
+ }
+
+ .nav{
+   display: flex;
+   justify-content: flex-end;
+   background-color: rgb(10, 100, 2);
+   color: white;
+ }
+
+ .nav-container{
+   margin-right: 40px;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .nav-container div{
+   margin-left: 20px;
+ }
+
+ .nav-container div:hover{
+  background-color: rgb(68, 102, 65);
+ }

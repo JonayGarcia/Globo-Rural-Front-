@@ -1,9 +1,33 @@
-<div>
-    <h1>Tus compras mas sencillas desde casa. Encuentra tu Mercado más cercano</h1>
+
+<div class="main">
+
+    <div class="main-title">
+        <h1>Globo Rural</h1>
+    </div>
+
+    <img class="logo" src="/assets/images/logo.png" alt="logo">
+
+    <div class="main-description">
+        <h3>Tus compras mas sencillas desde casa</h3>
+        <h3> Encuentra tu Mercado más cercano</h3>
+    </div>
+
     <div class="dropdown">
         <div class="dropHeader">Selecciona un Código Postal</div>
         <div class="dropdown-content">
             <div *ngFor="let option of postCodes" [routerLink]="['/postCode', option]">{{option}}</div>
         </div>
     </div>
+
+    <div>
+      <input type="text" class="input_code" >
+      <!--<input type="text" class="input_code"  [(ngModel)]="text_input" >-->
+    </div>
+
+    <div>
+       <button class="button_find" >Buscar tiendas</button>
+      </div>
+
 </div>
+
+
