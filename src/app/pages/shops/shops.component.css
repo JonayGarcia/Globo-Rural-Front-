@@ -16,3 +16,10 @@
 .textName{
     text-align: center;
 }
+
+.card {
+    margin-bottom: 25px;
+    border-radius: 5px;
+
+
+}

@@ -8,11 +8,11 @@
       "logo": "https://cdn.dribbble.com/users/24078/screenshots/14343984/media/35c85ad9172eb95a292d363c287ae918.jpg",
       "products":  [
           {
-          "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
-          "price": "2.89",
-          "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-          "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
-          "stock": 4
+                "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
+                "price": "2.89",
+                "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+                "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
+                "stock": 4
           },
           {
               "name": "ASTURIANA leche entera envase 1 lt",

@@ -1,8 +1,35 @@
+<div class="nav">
+  <div class="nav-container">
+    <div>Cambiar Código Postal</div>
+    <div>Ir a otra Tienda</div>
+  </div>
+</div>
+
+<div class="header">
+  <h1>{{shopName}}</h1>
+  <img [src]="shopLogo" class="logo">
+
+</div>
+
 <div class="container">
     <div *ngFor="let product of products">
-        <img [src]="product.image" class="logos">
+        <!-- <img [src]="product.image" class="logos">
         <div class="textName">{{product.name}}</div>
-        <div class="textName">{{product.price}}</div>
+        <div class="textName">{{product.price}}</div> -->
 
-    </div>
+
+
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" [src]="product.image" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text">Precio: {{product.price}} €</p>
+            <div class="btn-kart">
+              <a href="#" class="btn btn-primary">Añadir al Carrito</a>
+            </div>
+          </div>
+        </div>
+
+
+  </div>
 </div>
