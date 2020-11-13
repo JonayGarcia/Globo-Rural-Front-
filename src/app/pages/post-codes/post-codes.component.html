@@ -1,1 +1,9 @@
-<p>post-codes works!</p>
+<div>
+    <h1>Tus compras mas sencillas desde casa. Encuentra tu Mercado más cercano</h1>
+    <div class="dropdown">
+        <div class="dropHeader">Selecciona un Código Postal</div>
+        <div class="dropdown-content">
+            <div *ngFor="let option of postCodes" [routerLink]="['/postCode', option]">{{option}}</div>
+        </div>
+    </div>
+</div>
