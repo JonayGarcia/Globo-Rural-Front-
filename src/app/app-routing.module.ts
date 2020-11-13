@@ -12,12 +12,16 @@ const routes: Routes = [
   { 
     path: 'postCode/:postCode',
     component: ShopsComponent,
-    children: [
-      {
-        path: 'shop/:name',
-        component: ProductsComponent
-      }
-    ]
+    // children: [
+    //   {
+    //     path: 'shop/:name',
+    //     component: ProductsComponent
+    //   }
+    // ]
+  },
+  {
+    path: 'postCode/:postCode/shop/:name',
+    component: ProductsComponent
   }
 ];
 

@@ -5,7 +5,7 @@ import axios from 'axios';
   providedIn: 'root'
 })
 export class StoresService {
-
+  
   constructor() { }
 
   getAllShops() {
@@ -21,6 +21,16 @@ export class StoresService {
 
   getShopsByPostCode(cp:string){
     return axios.get("http://localhost:3000/shops?postCode="+cp)
+      .then (response => {
+        return response.data;
+      })
+      .catch (error => {
+        console.log("Se ha producido el error" ,error);
+      })
+  }
+
+  getProductsByShop(name:string){
+    return axios.get("http://localhost:3000/shops?name="+name)
       .then (response => {
         return response.data;
       })
