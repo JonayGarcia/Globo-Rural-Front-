@@ -5,6 +5,11 @@
   padding-top: 10px;
 }
 
+.appLogo{
+  width: 70px;
+  height: 70px;
+}
+
 .container{
   display:flex;
   flex-direction: row;
@@ -45,21 +50,32 @@
  }
 
  .nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(10, 100, 2);
+  color: white;
+}
+
+
+ .nav-logo{
    display: flex;
-   justify-content: flex-end;
-   background-color: rgb(10, 100, 2);
-   color: white;
+   margin-left: 40px;
+   align-items: center;
  }
 
- .nav-container{
-   margin-right: 40px;
-   display: flex;
-   justify-content: space-between;
- }
+.nav-container{
+  margin-right: 40px;
+  display: flex;
+  justify-content: space-between;
+}
 
- .nav-container div{
-   margin-left: 20px;
- }
+.nav-container div{
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
  .nav-container div:hover{
   background-color: rgb(68, 102, 65);

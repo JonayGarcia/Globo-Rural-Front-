@@ -44,6 +44,7 @@ export class PostCodesComponent implements OnInit {
       this.router.navigate(['/postCode',CP]);
       console.log("El CP es---->",CP);
     }
+    this.textInput="";
   }
 
 

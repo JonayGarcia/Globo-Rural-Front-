@@ -19,6 +19,16 @@ export class StoresService {
       })
   }
 
+  getOneShop(name: string){
+    return axios.get('http://localhost:3000/shops?name='+name)
+      .then (response => {
+        return response.data;
+      })
+      .catch (error => {
+        console.log("Se ha producido el error" ,error);
+      })
+  }
+
   getShopsByPostCode(cp:string){
     return axios.get("http://localhost:3000/shops?postCode="+cp)
       .then (response => {
@@ -29,10 +39,10 @@ export class StoresService {
       })
   }
 
-  getProductsByShop(name:string){
-    return axios.get("http://localhost:3000/shops?name="+name)
+  getProductsByShop(shop_id:number){
+    console.log(shop_id);
+    return axios.get("http://localhost:3000/products?shop_id="+shop_id)
       .then (response => {
-        console.log("Entro...",response.data);
         return response.data;
       })
       .catch (error => {

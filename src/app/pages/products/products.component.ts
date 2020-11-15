@@ -11,6 +11,8 @@ export class ProductsComponent implements OnInit {
   shop: any = {};
   shopName: string;
   shopLogo: string;
+  shop_id: number;
+  shopPostCode: string;
   products: any[] = [];
   constructor(private route:ActivatedRoute, private storesService: StoresService) {
     this.showProducts();
@@ -18,18 +20,20 @@ export class ProductsComponent implements OnInit {
 
   async showProducts(){
     const name = this.route.snapshot.paramMap.get('name');
-    this.shop = await this.storesService.getProductsByShop(name);
-    this.getProducts();
+    this.shop = await this.storesService.getOneShop(name);
     console.log("Esto es shop--->",this.shop);
+    this.getProducts();
   }
 
-  getProducts(){
+  async getProducts(){
     this.shop.forEach( store=> {
-      console.log("Esto son los items con products", store.products);
+      console.log("Esto son los items con products", store.id);
+      this.shop_id = store.id;
+      this.shopPostCode = store.postCode;
       this.shopName = store.name;
       this.shopLogo = store.logo;
-      this.products = store.products;
     })
+    this.products = await this.storesService.getProductsByShop(this.shop_id)
     console.log("Esto es products--->",this.products);
   }
 

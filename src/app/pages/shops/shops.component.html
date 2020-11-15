@@ -1,28 +1,19 @@
-<!--
-<div class="container">
-    <div *ngFor="let shop of shops" [routerLink]="['./shop', shop.name]">
-        <img [src]="shop.logo" class="logos">
-        <div class="textName">{{shop.name}}</div>
+<div class="nav">
+    <div class="nav-logo">
+      <img src="/assets/images/logo.png" class="appLogo">
+      <h2 class="appName">Penguin Express</h2>
     </div>
-</div>
--->
-
+    <div class="nav-container">
+      <div routerLink="">Cambiar Código Postal</div>
+    </div>
+  </div>
 <div class="container">
   <div *ngFor="let shop of shops" [routerLink]="['./shop', shop.name]">
-      <!-- <img [src]="product.image" class="logos">
-      <div class="textName">{{product.name}}</div>
-      <div class="textName">{{product.price}}</div> -->
-
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" [src]="shop.logo" alt="Card image cap">
         <div class="card-body">
             <div class="textName">{{shop.name}}</div>
-
         </div>
       </div>
-
-
+    </div>
 </div>
-</div>
-
-<!-- <router-outlet></router-outlet> -->
