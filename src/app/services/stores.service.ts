@@ -39,15 +39,23 @@ export class StoresService {
       })
   }
 
-  getProductsByShop(shop_id:number){
-    console.log(shop_id);
-    return axios.get("http://localhost:3000/products?shop_id="+shop_id)
+  getProductsByShop(shop_id:number, category?: string){
+    if (category) {
+      return axios.get("http://localhost:3000/products?shop_id="+shop_id+"&category="+category)
       .then (response => {
         return response.data;
       })
       .catch (error => {
         console.log("Se ha producido el error" ,error);
       })
+    } else {
+      return axios.get("http://localhost:3000/products?shop_id="+shop_id)
+      .then (response => {
+        return response.data;
+      })
+      .catch (error => {
+        console.log("Se ha producido el error" ,error);
+      })
+    }
   }
-
 }

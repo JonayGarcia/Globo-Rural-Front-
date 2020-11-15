@@ -20,7 +20,7 @@
   -->
 
     <div>
-      <input type="text" class="input_code" [(ngModel)]="textInput" >
+      <input type="text" class="input_code" [(ngModel)]="textInput" (keyup.enter)="findCode(textInput)" >
     </div>
 
     <div>

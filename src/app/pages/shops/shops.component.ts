@@ -16,6 +16,13 @@ export class ShopsComponent implements OnInit {
   async showShops(){
     const cp= this.route.snapshot.paramMap.get('postCode');
     this.shops= await this.storesService.getShopsByPostCode(cp);
+    this.modifiedShop();
+  }
+
+  modifiedShop(){
+    this.shops.forEach(shop => {
+      shop.shopName = shop.name.split(" ").join("-");
+    })
   }
 
   ngOnInit(): void {

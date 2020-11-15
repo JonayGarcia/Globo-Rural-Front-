@@ -19,22 +19,19 @@ export class ProductsComponent implements OnInit {
   }
 
   async showProducts(){
-    const name = this.route.snapshot.paramMap.get('name');
+    const name = this.route.snapshot.paramMap.get('name').split("-").join(" ");
     this.shop = await this.storesService.getOneShop(name);
-    console.log("Esto es shop--->",this.shop);
     this.getProducts();
   }
 
   async getProducts(){
     this.shop.forEach( store=> {
-      console.log("Esto son los items con products", store.id);
       this.shop_id = store.id;
       this.shopPostCode = store.postCode;
       this.shopName = store.name;
       this.shopLogo = store.logo;
     })
     this.products = await this.storesService.getProductsByShop(this.shop_id)
-    console.log("Esto es products--->",this.products);
   }
 
 

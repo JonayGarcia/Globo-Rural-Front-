@@ -2,69 +2,69 @@
   "shops" : [
     {
       "id": 1,
-      "name": "Tienda1",
+      "name": "La Tienda 1",
       "email": "Sincere@april.biz",
       "postCode": "35018",
       "logo": "https://cdn.dribbble.com/users/24078/screenshots/14343984/media/35c85ad9172eb95a292d363c287ae918.jpg"
     },
     {
       "id": 2,
-      "name": "Tienda2",
+      "name": "La Tienda 2",
       "email": "Shanna@melissa.tv",
       "postCode": "35018",
       "logo": "https://cdn.dribbble.com/users/24078/screenshots/14365732/media/9744573663695e5c4b12a97ecd5064ba.jpg"
     },
     {
       "id": 3,
-      "name": "Tienda3",
+      "name": "La Tienda 3",
       "postCode": "35200",
       "logo": "https://cdn.dribbble.com/users/24078/screenshots/13972510/media/84fffa5c27472436f50ad8ac544dea31.jpg"
     },
     {
       "id": 4,
-      "name": "Tienda4",
+      "name": "La Tienda 4",
       "email": "Julianne.OConner@kory.org",
       "postCode": "35400",
       "logo": "https://cdn.dribbble.com/users/24078/screenshots/14533792/media/7e9dd669880bab07e025b563d1d92199.jpg"
     },
     {
       "id": 5,
-      "name": "Tienda5",
+      "name": "La Tienda 5",
       "email": "Karley_Dach@jasper.info",
       "postCode": "35018",
       "logo": "https://cdn.dribbble.com/users/13604/screenshots/14459739/media/e6d0447abca04c409cb5f0d63ab83aa2.jpg"
     },
     {
       "id": 6,
-      "name": "Tienda6",
+      "name": "La Tienda 6",
       "email": "Sherwood@rosamond.me",
       "postCode": "35200",
       "logo": "https://cdn.dribbble.com/users/24078/screenshots/14562865/media/130e993838dec40962316d5fde601ec2.jpg"
     },
     {
       "id": 7,
-      "name": "Tienda7",
+      "name": "La Tienda 7",
       "email": "Chaim_McDermott@dana.io",
       "postCode": "35400",
       "logo": "https://cdn.dribbble.com/users/52084/screenshots/14307957/media/5b726212f3b7f7c7f58c91b77fbbe4a5.jpg"
     },
     {
       "id": 8,
-      "name": "Tienda8",
+      "name": "La Tienda 8",
       "email": "Rey.Padberg@karina.biz",
       "postCode": "35219",
       "logo": "https://cdn.dribbble.com/users/230124/screenshots/14349126/media/ae035ed4da5b9f34179d8bd2e1460d17.jpg"
     },
     {
       "id": 9,
-      "name": "Tienda9",
+      "name": "La Tienda 9",
       "email": "Rey.Padberg@karina.biz",
       "postCode": "35200",
       "logo": "https://cdn.dribbble.com/users/13604/screenshots/14443801/media/4258f865fe493d5103ca14f0c3a48f53.jpg"
     },
     {
       "id": 10,
-      "name": "Tienda10",
+      "name": "La Tienda 10",
       "email": "Rey.Padberg@karina.biz",
       "postCode": "35200",
       "logo": "https://cdn.dribbble.com/users/230124/screenshots/14392993/media/4536da1ab367f3083a07281820c311e2.jpg"

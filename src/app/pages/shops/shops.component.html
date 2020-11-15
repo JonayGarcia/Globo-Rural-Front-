@@ -8,7 +8,7 @@
     </div>
   </div>
 <div class="container">
-  <div *ngFor="let shop of shops" [routerLink]="['./shop', shop.name]">
+  <div *ngFor="let shop of shops" [routerLink]="['./shop', shop.shopName]">
       <div class="card" style="width: 18rem;">
         <img class="card-img-top" [src]="shop.logo" alt="Card image cap">
         <div class="card-body">
