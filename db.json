@@ -2,932 +2,1575 @@
   "shops" : [
     {
       "id": 1,
-      "name": "Tienda1",
+      "name": "La Tienda 1",
       "email": "Sincere@april.biz",
       "postCode": "35018",
-      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14343984/media/35c85ad9172eb95a292d363c287ae918.jpg",
-      "products":  [
-          {
-                "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
-                "price": "2.89",
-                "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-                "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
-                "stock": 4
-          },
-          {
-              "name": "ASTURIANA leche entera envase 1 lt",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
-              "stock": 4
-          },
-          {
-              "name": "KELLOGGS cereales corn flakes caja 500 gr",
-              "price": "2.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "Huevos frescos categoría A clase L estuche 12 uds",
-              "price": "1.45",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
-              "price": "2.64",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA light sin cafeína lata 33 cl ",
-              "price": "0.69",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA clásica pack 12 latas 33 cl ",
-              "price": "7.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
-              "price": "1.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
-              "price": "1.85",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HELLMANN'S mayonesa frasco 450 ml  ",
-              "price": "1.89",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CHIPS AHOY mini galletas caja 160 gr  ",
-              "price": "1.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HIDA tomate doble concentrado lata 170 gr   ",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
-              "stock": 4
-          }
-      ]
+      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14343984/media/35c85ad9172eb95a292d363c287ae918.jpg"
     },
     {
       "id": 2,
-      "name": "Tienda2",
+      "name": "La Tienda 2",
       "email": "Shanna@melissa.tv",
       "postCode": "35018",
-      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14365732/media/9744573663695e5c4b12a97ecd5064ba.jpg",
-      "products":  [
-          {
-          "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
-          "price": "2.89",
-          "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-          "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
-          "stock": 4
-          },
-          {
-              "name": "ASTURIANA leche entera envase 1 lt",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
-              "stock": 4
-          },
-          {
-              "name": "KELLOGGS cereales corn flakes caja 500 gr",
-              "price": "2.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "Huevos frescos categoría A clase L estuche 12 uds",
-              "price": "1.45",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
-              "price": "2.64",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA light sin cafeína lata 33 cl ",
-              "price": "0.69",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA clásica pack 12 latas 33 cl ",
-              "price": "7.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
-              "price": "1.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
-              "price": "1.85",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HELLMANN'S mayonesa frasco 450 ml  ",
-              "price": "1.89",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CHIPS AHOY mini galletas caja 160 gr  ",
-              "price": "1.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HIDA tomate doble concentrado lata 170 gr   ",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
-              "stock": 4
-          }
-      ]
+      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14365732/media/9744573663695e5c4b12a97ecd5064ba.jpg"
     },
     {
       "id": 3,
-      "name": "Tienda3",
+      "name": "La Tienda 3",
       "postCode": "35200",
-      "logo": "https://cdn.dribbble.com/users/24078/screenshots/13972510/media/84fffa5c27472436f50ad8ac544dea31.jpg",
-      "products":  [
-          {
-          "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
-          "price": "2.89",
-          "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-          "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
-          "ammount": 4
-          },
-          {
-              "name": "ASTURIANA leche entera envase 1 lt",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
-              "stock": 4
-          },
-          {
-              "name": "KELLOGGS cereales corn flakes caja 500 gr",
-              "price": "2.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "Huevos frescos categoría A clase L estuche 12 uds",
-              "price": "1.45",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
-              "price": "2.64",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA light sin cafeína lata 33 cl ",
-              "price": "0.69",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA clásica pack 12 latas 33 cl ",
-              "price": "7.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
-              "price": "1.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
-              "price": "1.85",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HELLMANN'S mayonesa frasco 450 ml  ",
-              "price": "1.89",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CHIPS AHOY mini galletas caja 160 gr  ",
-              "price": "1.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HIDA tomate doble concentrado lata 170 gr   ",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
-              "stock": 4
-          }
-      ]
+      "logo": "https://cdn.dribbble.com/users/24078/screenshots/13972510/media/84fffa5c27472436f50ad8ac544dea31.jpg"
     },
     {
       "id": 4,
-      "name": "Tienda4",
+      "name": "La Tienda 4",
       "email": "Julianne.OConner@kory.org",
       "postCode": "35400",
-      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14533792/media/7e9dd669880bab07e025b563d1d92199.jpg",
-      "products":  [
-          {
-          "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
-          "price": "2.89",
-          "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-          "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
-          "stock": 4
-          },
-          {
-              "name": "ASTURIANA leche entera envase 1 lt",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
-              "stock": 4
-          },
-          {
-              "name": "KELLOGGS cereales corn flakes caja 500 gr",
-              "price": "2.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "Huevos frescos categoría A clase L estuche 12 uds",
-              "price": "1.45",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
-              "price": "2.64",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA light sin cafeína lata 33 cl ",
-              "price": "0.69",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA clásica pack 12 latas 33 cl ",
-              "price": "7.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
-              "price": "1.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
-              "price": "1.85",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HELLMANN'S mayonesa frasco 450 ml  ",
-              "price": "1.89",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CHIPS AHOY mini galletas caja 160 gr  ",
-              "price": "1.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HIDA tomate doble concentrado lata 170 gr   ",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
-              "stock": 4
-          }
-      ]
+      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14533792/media/7e9dd669880bab07e025b563d1d92199.jpg"
     },
     {
       "id": 5,
-      "name": "Tienda5",
+      "name": "La Tienda 5",
       "email": "Karley_Dach@jasper.info",
       "postCode": "35018",
-      "logo": "https://cdn.dribbble.com/users/13604/screenshots/14459739/media/e6d0447abca04c409cb5f0d63ab83aa2.jpg",
-      "products":  [
-          {
-          "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
-          "price": "2.89",
-          "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-          "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
-          "stock": 4
-          },
-          {
-              "name": "ASTURIANA leche entera envase 1 lt",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
-              "stock": 4
-          },
-          {
-              "name": "KELLOGGS cereales corn flakes caja 500 gr",
-              "price": "2.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "Huevos frescos categoría A clase L estuche 12 uds",
-              "price": "1.45",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
-              "price": "2.64",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA light sin cafeína lata 33 cl ",
-              "price": "0.69",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA clásica pack 12 latas 33 cl ",
-              "price": "7.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
-              "price": "1.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
-              "price": "1.85",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HELLMANN'S mayonesa frasco 450 ml  ",
-              "price": "1.89",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CHIPS AHOY mini galletas caja 160 gr  ",
-              "price": "1.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HIDA tomate doble concentrado lata 170 gr   ",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
-              "stock": 4
-          }
-      ]
+      "logo": "https://cdn.dribbble.com/users/13604/screenshots/14459739/media/e6d0447abca04c409cb5f0d63ab83aa2.jpg"
     },
     {
       "id": 6,
-      "name": "Tienda6",
+      "name": "La Tienda 6",
       "email": "Sherwood@rosamond.me",
       "postCode": "35200",
-      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14562865/media/130e993838dec40962316d5fde601ec2.jpg",
-      "products":  [
-          {
-          "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
-          "price": "2.89",
-          "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-          "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
-          "stock": 4
-          },
-          {
-              "name": "ASTURIANA leche entera envase 1 lt",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
-              "stock": 4
-          },
-          {
-              "name": "KELLOGGS cereales corn flakes caja 500 gr",
-              "price": "2.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "Huevos frescos categoría A clase L estuche 12 uds",
-              "price": "1.45",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
-              "price": "2.64",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA light sin cafeína lata 33 cl ",
-              "price": "0.69",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA clásica pack 12 latas 33 cl ",
-              "price": "7.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
-              "price": "1.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
-              "price": "1.85",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HELLMANN'S mayonesa frasco 450 ml  ",
-              "price": "1.89",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CHIPS AHOY mini galletas caja 160 gr  ",
-              "price": "1.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HIDA tomate doble concentrado lata 170 gr   ",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
-              "stock": 4
-          }
-      ]
+      "logo": "https://cdn.dribbble.com/users/24078/screenshots/14562865/media/130e993838dec40962316d5fde601ec2.jpg"
     },
     {
       "id": 7,
-      "name": "Tienda7",
+      "name": "La Tienda 7",
       "email": "Chaim_McDermott@dana.io",
       "postCode": "35400",
-      "logo": "https://cdn.dribbble.com/users/52084/screenshots/14307957/media/5b726212f3b7f7c7f58c91b77fbbe4a5.jpg",
-      "products":  [
-          {
-          "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
-          "price": "2.89",
-          "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-          "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
-          "stock": 4
-          },
-          {
-              "name": "ASTURIANA leche entera envase 1 lt",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
-              "stock": 4
-          },
-          {
-              "name": "KELLOGGS cereales corn flakes caja 500 gr",
-              "price": "2.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "Huevos frescos categoría A clase L estuche 12 uds",
-              "price": "1.45",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
-              "price": "2.64",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA light sin cafeína lata 33 cl ",
-              "price": "0.69",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA clásica pack 12 latas 33 cl ",
-              "price": "7.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
-              "price": "1.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
-              "price": "1.85",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HELLMANN'S mayonesa frasco 450 ml  ",
-              "price": "1.89",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CHIPS AHOY mini galletas caja 160 gr  ",
-              "price": "1.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HIDA tomate doble concentrado lata 170 gr   ",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
-              "stock": 4
-          }
-      ]
+      "logo": "https://cdn.dribbble.com/users/52084/screenshots/14307957/media/5b726212f3b7f7c7f58c91b77fbbe4a5.jpg"
     },
     {
       "id": 8,
-      "name": "Tienda8",
+      "name": "La Tienda 8",
       "email": "Rey.Padberg@karina.biz",
       "postCode": "35219",
-      "logo": "https://cdn.dribbble.com/users/230124/screenshots/14349126/media/ae035ed4da5b9f34179d8bd2e1460d17.jpg",
-      "products":  [
-          {
-          "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
-          "price": "2.89",
-          "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-          "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
-          "stock": 4
-          },
-          {
-              "name": "ASTURIANA leche entera envase 1 lt",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
-              "stock": 4
-          },
-          {
-              "name": "KELLOGGS cereales corn flakes caja 500 gr",
-              "price": "2.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "Huevos frescos categoría A clase L estuche 12 uds",
-              "price": "1.45",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
-              "price": "2.64",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA light sin cafeína lata 33 cl ",
-              "price": "0.69",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA clásica pack 12 latas 33 cl ",
-              "price": "7.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
-              "price": "1.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
-              "price": "1.85",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HELLMANN'S mayonesa frasco 450 ml  ",
-              "price": "1.89",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CHIPS AHOY mini galletas caja 160 gr  ",
-              "price": "1.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HIDA tomate doble concentrado lata 170 gr   ",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
-              "stock": 4
-          }
-      ]
+      "logo": "https://cdn.dribbble.com/users/230124/screenshots/14349126/media/ae035ed4da5b9f34179d8bd2e1460d17.jpg"
     },
     {
       "id": 9,
-      "name": "Tienda9",
+      "name": "La Tienda 9",
       "email": "Rey.Padberg@karina.biz",
       "postCode": "35200",
-      "logo": "https://cdn.dribbble.com/users/13604/screenshots/14443801/media/4258f865fe493d5103ca14f0c3a48f53.jpg",
-      "products":  [
-          {
-          "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
-          "price": "2.89",
-          "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-          "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
-          "stock": 4
-          },
-          {
-              "name": "ASTURIANA leche entera envase 1 lt",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
-              "stock": 4
-          },
-          {
-              "name": "KELLOGGS cereales corn flakes caja 500 gr",
-              "price": "2.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "Huevos frescos categoría A clase L estuche 12 uds",
-              "price": "1.45",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
-              "price": "2.64",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA light sin cafeína lata 33 cl ",
-              "price": "0.69",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA clásica pack 12 latas 33 cl ",
-              "price": "7.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
-              "price": "1.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
-              "price": "1.85",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HELLMANN'S mayonesa frasco 450 ml  ",
-              "price": "1.89",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CHIPS AHOY mini galletas caja 160 gr  ",
-              "price": "1.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HIDA tomate doble concentrado lata 170 gr   ",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
-              "stock": 4
-          }
-      ]
+      "logo": "https://cdn.dribbble.com/users/13604/screenshots/14443801/media/4258f865fe493d5103ca14f0c3a48f53.jpg"
     },
     {
       "id": 10,
-      "name": "Tienda10",
+      "name": "La Tienda 10",
       "email": "Rey.Padberg@karina.biz",
       "postCode": "35200",
-      "logo": "https://cdn.dribbble.com/users/230124/screenshots/14392993/media/4536da1ab367f3083a07281820c311e2.jpg",
-      "products":  [
-          {
-          "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
-          "price": "2.89",
-          "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-          "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
-          "stock": 4
-          },
-          {
-              "name": "ASTURIANA leche entera envase 1 lt",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
-              "stock": 4
-          },
-          {
-              "name": "KELLOGGS cereales corn flakes caja 500 gr",
-              "price": "2.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "Huevos frescos categoría A clase L estuche 12 uds",
-              "price": "1.45",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
-              "price": "2.64",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA light sin cafeína lata 33 cl ",
-              "price": "0.69",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
-              "stock": 4
-          },
-          {
-              "name": "COCA COLA clásica pack 12 latas 33 cl ",
-              "price": "7.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
-              "price": "1.99",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
-              "stock": 4
-          },
-          {
-              "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
-              "price": "1.85",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HELLMANN'S mayonesa frasco 450 ml  ",
-              "price": "1.89",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
-              "stock": 4
-          },
-          {
-              "name": "CHIPS AHOY mini galletas caja 160 gr  ",
-              "price": "1.59",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
-              "stock": 4
-          },
-          {
-              "name": "HIDA tomate doble concentrado lata 170 gr   ",
-              "price": "0.79",
-              "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
-              "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
-              "stock": 4
-          }
-      ]
+      "logo": "https://cdn.dribbble.com/users/230124/screenshots/14392993/media/4536da1ab367f3083a07281820c311e2.jpg"
     }
-  ]
+  ],
+  "products":  [
+    {
+        "id": 1,  
+        "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
+        "price": "2.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Charcuteria",
+        "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
+        "stock": 4
+    },
+    {
+        "id": 2,
+        "name": "ASTURIANA leche entera envase 1 lt",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
+        "stock": 4
+    },
+    {
+        "id": 3,
+        "name": "KELLOGGS cereales corn flakes caja 500 gr",
+        "price": "2.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Cereales",
+        "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 4,
+        "name": "Huevos frescos categoría A clase L estuche 12 uds",
+        "price": "1.45",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 5,
+        "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
+        "price": "2.64",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Comida Preparada",
+        "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
+        "stock": 4
+    },
+    {
+        "id": 6,
+        "name": "COCA COLA light sin cafeína lata 33 cl ",
+        "price": "0.69",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Bebidas",
+        "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
+        "stock": 4
+    },
+    {
+        "id": 7,
+        "name": "COCA COLA clásica pack 12 latas 33 cl ",
+        "price": "7.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Bebidas",
+        "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
+        "stock": 4
+    },
+    {
+        "id": 8,
+        "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
+        "price": "1.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
+        "stock": 4
+    },
+    {
+        "id": 9,
+        "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
+        "price": "1.85",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
+        "stock": 4
+    },
+    {
+        "id": 10,
+        "name": "HELLMANN'S mayonesa frasco 450 ml  ",
+        "price": "1.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Salsas",
+        "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
+        "stock": 4
+    },
+    {
+        "id": 11,
+        "name": "CHIPS AHOY mini galletas caja 160 gr  ",
+        "price": "1.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Galletas",
+        "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 12,
+        "name": "HIDA tomate doble concentrado lata 170 gr   ",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category":"Salsas",
+        "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
+        "stock": 4
+    },
+    {
+        "id": 13,  
+        "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
+        "price": "2.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Charcuteria",
+        "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
+        "stock": 4
+    },
+    {
+        "id": 14,
+        "name": "ASTURIANA leche entera envase 1 lt",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
+        "stock": 4
+    },
+    {
+        "id": 15,
+        "name": "KELLOGGS cereales corn flakes caja 500 gr",
+        "price": "2.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Cereales",
+        "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 16,
+        "name": "Huevos frescos categoría A clase L estuche 12 uds",
+        "price": "1.45",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 17,
+        "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
+        "price": "2.64",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Comida Preparada",
+        "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
+        "stock": 4
+    },
+    {
+        "id": 18,
+        "name": "COCA COLA light sin cafeína lata 33 cl ",
+        "price": "0.69",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Bebidas",
+        "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
+        "stock": 4
+    },
+    {
+        "id": 19,
+        "name": "COCA COLA clásica pack 12 latas 33 cl ",
+        "price": "7.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Bebidas",
+        "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
+        "stock": 4
+    },
+    {
+        "id": 20,
+        "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
+        "price": "1.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
+        "stock": 4
+    },
+    {
+        "id": 21,
+        "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
+        "price": "1.85",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
+        "stock": 4
+    },
+    {
+        "id": 22,
+        "name": "HELLMANN'S mayonesa frasco 450 ml  ",
+        "price": "1.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Salsas",
+        "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
+        "stock": 4
+    },
+    {
+        "id": 23,
+        "name": "CHIPS AHOY mini galletas caja 160 gr  ",
+        "price": "1.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Galletas",
+        "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 24,
+        "name": "HIDA tomate doble concentrado lata 170 gr   ",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category":"Enlatados",
+        "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
+        "stock": 4
+    },
+    {
+        "id": 25,  
+        "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
+        "price": "2.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Charcuteria",
+        "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
+        "stock": 4
+    },
+    {
+        "id": 26,
+        "name": "ASTURIANA leche entera envase 1 lt",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
+        "stock": 4
+    },
+    {
+        "id": 27,
+        "name": "KELLOGGS cereales corn flakes caja 500 gr",
+        "price": "2.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Cereales",
+        "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 28,
+        "name": "Huevos frescos categoría A clase L estuche 12 uds",
+        "price": "1.45",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 29,
+        "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
+        "price": "2.64",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Comida Preparada",
+        "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
+        "stock": 4
+    },
+    {
+        "id": 30,
+        "name": "COCA COLA light sin cafeína lata 33 cl ",
+        "price": "0.69",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Bebidas",
+        "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
+        "stock": 4
+    },
+    {
+        "id": 31,
+        "name": "COCA COLA clásica pack 12 latas 33 cl ",
+        "price": "7.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Bebidas",
+        "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
+        "stock": 4
+    },
+    {
+        "id": 32,
+        "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
+        "price": "1.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
+        "stock": 4
+    },
+    {
+        "id": 33,
+        "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
+        "price": "1.85",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
+        "stock": 4
+    },
+    {
+        "id": 34,
+        "name": "HELLMANN'S mayonesa frasco 450 ml  ",
+        "price": "1.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Salsas",
+        "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
+        "stock": 4
+    },
+    {
+        "id": 35,
+        "name": "CHIPS AHOY mini galletas caja 160 gr  ",
+        "price": "1.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Galletas",
+        "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 36,
+        "name": "HIDA tomate doble concentrado lata 170 gr   ",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category":"Enlatados",
+        "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
+        "stock": 4
+    },
+    {
+        "id": 37,  
+        "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
+        "price": "2.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Charcuteria",
+        "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
+        "stock": 4
+    },
+    {
+        "id": 38,
+        "name": "ASTURIANA leche entera envase 1 lt",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
+        "stock": 4
+    },
+    {
+        "id": 39,
+        "name": "KELLOGGS cereales corn flakes caja 500 gr",
+        "price": "2.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Cereales",
+        "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 40,
+        "name": "Huevos frescos categoría A clase L estuche 12 uds",
+        "price": "1.45",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 41,
+        "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
+        "price": "2.64",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Comida Preparada",
+        "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
+        "stock": 4
+    },
+    {
+        "id": 42,
+        "name": "COCA COLA light sin cafeína lata 33 cl ",
+        "price": "0.69",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Bebidas",
+        "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
+        "stock": 4
+    },
+    {
+        "id": 43,
+        "name": "COCA COLA clásica pack 12 latas 33 cl ",
+        "price": "7.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Bebidas",
+        "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
+        "stock": 4
+    },
+    {
+        "id": 44,
+        "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
+        "price": "1.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
+        "stock": 4
+    },
+    {
+        "id": 45,
+        "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
+        "price": "1.85",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
+        "stock": 4
+    },
+    {
+        "id": 46,
+        "name": "HELLMANN'S mayonesa frasco 450 ml  ",
+        "price": "1.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Salsas",
+        "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
+        "stock": 4
+    },
+    {
+        "id": 47,
+        "name": "CHIPS AHOY mini galletas caja 160 gr  ",
+        "price": "1.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Galletas",
+        "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 48,
+        "name": "HIDA tomate doble concentrado lata 170 gr   ",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category":"Enlatados",
+        "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
+        "stock": 4
+    },
+    {
+        "id": 49,  
+        "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
+        "price": "2.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Charcuteria",
+        "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
+        "stock": 4
+    },
+    {
+        "id": 50,
+        "name": "ASTURIANA leche entera envase 1 lt",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
+        "stock": 4
+    },
+    {
+        "id": 51,
+        "name": "KELLOGGS cereales corn flakes caja 500 gr",
+        "price": "2.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Cereales",
+        "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 52,
+        "name": "Huevos frescos categoría A clase L estuche 12 uds",
+        "price": "1.45",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 53,
+        "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
+        "price": "2.64",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Comida Preparada",
+        "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
+        "stock": 4
+    },
+    {
+        "id": 54,
+        "name": "COCA COLA light sin cafeína lata 33 cl ",
+        "price": "0.69",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Bebidas",
+        "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
+        "stock": 4
+    },
+    {
+        "id": 55,
+        "name": "COCA COLA clásica pack 12 latas 33 cl ",
+        "price": "7.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Bebidas",
+        "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
+        "stock": 4
+    },
+    {
+        "id": 56,
+        "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
+        "price": "1.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
+        "stock": 4
+    },
+    {
+        "id": 57,
+        "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
+        "price": "1.85",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
+        "stock": 4
+    },
+    {
+        "id": 58,
+        "name": "HELLMANN'S mayonesa frasco 450 ml  ",
+        "price": "1.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Salsas",
+        "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
+        "stock": 4
+    },
+    {
+        "id": 59,
+        "name": "CHIPS AHOY mini galletas caja 160 gr  ",
+        "price": "1.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Galletas",
+        "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 60,
+        "name": "HIDA tomate doble concentrado lata 170 gr   ",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category":"Enlatados",
+        "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
+        "stock": 4
+    },
+    {
+        "id": 61,  
+        "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
+        "price": "2.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Charcuteria",
+        "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
+        "stock": 4
+    },
+    {
+        "id": 62,
+        "name": "ASTURIANA leche entera envase 1 lt",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
+        "stock": 4
+    },
+    {
+        "id": 63,
+        "name": "KELLOGGS cereales corn flakes caja 500 gr",
+        "price": "2.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Cereales",
+        "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 64,
+        "name": "Huevos frescos categoría A clase L estuche 12 uds",
+        "price": "1.45",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 65,
+        "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
+        "price": "2.64",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Comida Preparada",
+        "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
+        "stock": 4
+    },
+    {
+        "id": 66,
+        "name": "COCA COLA light sin cafeína lata 33 cl ",
+        "price": "0.69",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Bebidas",
+        "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
+        "stock": 4
+    },
+    {
+        "id": 67,
+        "name": "COCA COLA clásica pack 12 latas 33 cl ",
+        "price": "7.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Bebidas",
+        "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
+        "stock": 4
+    },
+    {
+        "id": 68,
+        "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
+        "price": "1.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
+        "stock": 4
+    },
+    {
+        "id": 69,
+        "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
+        "price": "1.85",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
+        "stock": 4
+    },
+    {
+        "id": 70,
+        "name": "HELLMANN'S mayonesa frasco 450 ml  ",
+        "price": "1.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Salsas",
+        "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
+        "stock": 4
+    },
+    {
+        "id": 71,
+        "name": "CHIPS AHOY mini galletas caja 160 gr  ",
+        "price": "1.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Galletas",
+        "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 72,
+        "name": "HIDA tomate doble concentrado lata 170 gr   ",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category":"Enlatados",
+        "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
+        "stock": 4
+    },
+    {
+        "id": 73,  
+        "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
+        "price": "2.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Charcuteria",
+        "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
+        "stock": 4
+    },
+    {
+        "id": 74,
+        "name": "ASTURIANA leche entera envase 1 lt",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
+        "stock": 4
+    },
+    {
+        "id": 75,
+        "name": "KELLOGGS cereales corn flakes caja 500 gr",
+        "price": "2.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Cereales",
+        "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 76,
+        "name": "Huevos frescos categoría A clase L estuche 12 uds",
+        "price": "1.45",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 77,
+        "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
+        "price": "2.64",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Comida Preparada",
+        "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
+        "stock": 4
+    },
+    {
+        "id": 78,
+        "name": "COCA COLA light sin cafeína lata 33 cl ",
+        "price": "0.69",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Bebidas",
+        "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
+        "stock": 4
+    },
+    {
+        "id": 79,
+        "name": "COCA COLA clásica pack 12 latas 33 cl ",
+        "price": "7.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Bebidas",
+        "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
+        "stock": 4
+    },
+    {
+        "id": 80,
+        "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
+        "price": "1.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
+        "stock": 4
+    },
+    {
+        "id": 81,
+        "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
+        "price": "1.85",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
+        "stock": 4
+    },
+    {
+        "id": 82,
+        "name": "HELLMANN'S mayonesa frasco 450 ml  ",
+        "price": "1.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Salsas",
+        "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
+        "stock": 4
+    },
+    {
+        "id": 83,
+        "name": "CHIPS AHOY mini galletas caja 160 gr  ",
+        "price": "1.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Galletas",
+        "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 84,
+        "name": "HIDA tomate doble concentrado lata 170 gr   ",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category":"Enlatados",
+        "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
+        "stock": 4
+    },
+    {
+        "id": 85,  
+        "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
+        "price": "2.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Charcuteria",
+        "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
+        "stock": 4
+    },
+    {
+        "id": 86,
+        "name": "ASTURIANA leche entera envase 1 lt",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
+        "stock": 4
+    },
+    {
+        "id": 87,
+        "name": "KELLOGGS cereales corn flakes caja 500 gr",
+        "price": "2.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Cereales",
+        "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 88,
+        "name": "Huevos frescos categoría A clase L estuche 12 uds",
+        "price": "1.45",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 89,
+        "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
+        "price": "2.64",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Comida Preparada",
+        "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
+        "stock": 4
+    },
+    {
+        "id": 90,
+        "name": "COCA COLA light sin cafeína lata 33 cl ",
+        "price": "0.69",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Bebidas",
+        "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
+        "stock": 4
+    },
+    {
+        "id": 91,
+        "name": "COCA COLA clásica pack 12 latas 33 cl ",
+        "price": "7.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Bebidas",
+        "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
+        "stock": 4
+    },
+    {
+        "id": 92,
+        "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
+        "price": "1.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
+        "stock": 4
+    },
+    {
+        "id": 93,
+        "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
+        "price": "1.85",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
+        "stock": 4
+    },
+    {
+        "id": 94,
+        "name": "HELLMANN'S mayonesa frasco 450 ml  ",
+        "price": "1.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Salsas",
+        "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
+        "stock": 4
+    },
+    {
+        "id": 95,
+        "name": "CHIPS AHOY mini galletas caja 160 gr  ",
+        "price": "1.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Galletas",
+        "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 96,
+        "name": "HIDA tomate doble concentrado lata 170 gr   ",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category":"Enlatados",
+        "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
+        "stock": 4
+    },
+    {
+        "id": 97,  
+        "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
+        "price": "2.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Charcuteria",
+        "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
+        "stock": 4
+    },
+    {
+        "id": 98,
+        "name": "ASTURIANA leche entera envase 1 lt",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
+        "stock": 4
+    },
+    {
+        "id": 99,
+        "name": "KELLOGGS cereales corn flakes caja 500 gr",
+        "price": "2.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Cereales",
+        "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 100,
+        "name": "Huevos frescos categoría A clase L estuche 12 uds",
+        "price": "1.45",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 101,
+        "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
+        "price": "2.64",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Comida Preparada",
+        "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
+        "stock": 4
+    },
+    {
+        "id": 102,
+        "name": "COCA COLA light sin cafeína lata 33 cl ",
+        "price": "0.69",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Bebidas",
+        "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
+        "stock": 4
+    },
+    {
+        "id": 103,
+        "name": "COCA COLA clásica pack 12 latas 33 cl ",
+        "price": "7.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Bebidas",
+        "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
+        "stock": 4
+    },
+    {
+        "id": 104,
+        "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
+        "price": "1.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
+        "stock": 4
+    },
+    {
+        "id": 105,
+        "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
+        "price": "1.85",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Panes",
+        "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
+        "stock": 4
+    },
+    {
+        "id": 106,
+        "name": "HELLMANN'S mayonesa frasco 450 ml  ",
+        "price": "1.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Salsas",
+        "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
+        "stock": 4
+    },
+    {
+        "id": 107,
+        "name": "CHIPS AHOY mini galletas caja 160 gr  ",
+        "price": "1.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Galletas",
+        "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 108,
+        "name": "HIDA tomate doble concentrado lata 170 gr   ",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category":"Enlatados",
+        "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
+        "stock": 4
+    },
+    {
+        "id": 109,  
+        "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
+        "price": "2.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category":"Charcuteria",
+        "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
+        "stock": 4
+    },
+    {
+        "id": 110,
+        "name": "ASTURIANA leche entera envase 1 lt",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category":"Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/h79/hd3/10248592195614.jpg",
+        "stock": 4
+    },
+    {
+        "id": 111,
+        "name": "KELLOGGS cereales corn flakes caja 500 gr",
+        "price": "2.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Cereales",
+        "image": "https://s1.dia.es/medias/hb0/h74/10020531666974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 112,
+        "name": "Huevos frescos categoría A clase L estuche 12 uds",
+        "price": "1.45",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Lácteos y Huevos",
+        "image": "https://s0.dia.es/medias/hf5/h58/10174922194974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 113,
+        "name": "CASA TARRADELLAS pizza jamón y queso envase 405 gr ",
+        "price": "2.64",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Comida Preparada",
+        "image": "https://s2.dia.es/medias/heb/hc9/10280254537758.jpg",
+        "stock": 4
+    },
+    {
+        "id": 114,
+        "name": "COCA COLA light sin cafeína lata 33 cl ",
+        "price": "0.69",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Bebidas",
+        "image": "https://s0.dia.es/medias/h2b/h10/10314369368094.jpg",
+        "stock": 4
+    },
+    {
+        "id": 115,
+        "name": "COCA COLA clásica pack 12 latas 33 cl ",
+        "price": "7.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Bebidas",
+        "image": "https://s3.dia.es/medias/h0a/h98/10259077300254.jpg",
+        "stock": 4
+    },
+    {
+        "id": 116,
+        "name": "BIMBO pan de molde blanco sin corteza bolsa 450 gr ",
+        "price": "1.99",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Panes",
+        "image": "https://s0.dia.es/medias/hbe/h21/10268049637406.jpg",
+        "stock": 4
+    },
+    {
+        "id": 117,
+        "name": "BIMBO pan de hamburguesas 4 uds bolsa 300 gr ",
+        "price": "1.85",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Panes",
+        "image": "https://s0.dia.es/medias/ha9/he4/9001529081886.jpg",
+        "stock": 4
+    },
+    {
+        "id": 118,
+        "name": "HELLMANN'S mayonesa frasco 450 ml  ",
+        "price": "1.89",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Salsas",
+        "image": "https://s2.dia.es/medias/hf8/h88/10335757107230.jpg",
+        "stock": 4
+    },
+    {
+        "id": 119,
+        "name": "CHIPS AHOY mini galletas caja 160 gr  ",
+        "price": "1.59",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Galletas",
+        "image": "https://s0.dia.es/medias/h70/h45/10299379154974.jpg",
+        "stock": 4
+    },
+    {
+        "id": 120,
+        "name": "HIDA tomate doble concentrado lata 170 gr   ",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Enlatados",
+        "image": "https://s1.dia.es/medias/hcc/h6d/10322705514526.jpg",
+        "stock": 4
+    },
+    {
+        "id": 121,
+        "name": "Banana unidad (220 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category": "Frutas",
+        "image": "https://s2.dia.es/medias/h24/hd0/10335796396062.jpg",
+        "stock": 4
+    },
+    {
+        "id": 122,
+        "name": "Banana unidad (220 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category": "Frutas",
+        "image": "https://s2.dia.es/medias/h24/hd0/10335796396062.jpg",
+        "stock": 4
+    },
+    {
+        "id": 123,
+        "name": "Banana unidad (220 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category": "Frutas",
+        "image": "https://s2.dia.es/medias/h24/hd0/10335796396062.jpg",
+        "stock": 4
+    },
+    {
+        "id": 124,
+        "name": "Banana unidad (220 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category": "Frutas",
+        "image": "https://s2.dia.es/medias/h24/hd0/10335796396062.jpg",
+        "stock": 4
+    },
+    {
+        "id": 125,
+        "name": "Banana unidad (220 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category": "Frutas",
+        "image": "https://s2.dia.es/medias/h24/hd0/10335796396062.jpg",
+        "stock": 4
+    },
+    {
+        "id": 126,
+        "name": "Banana unidad (220 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category": "Frutas",
+        "image": "https://s2.dia.es/medias/h24/hd0/10335796396062.jpg",
+        "stock": 4
+    },
+    {
+        "id": 127,
+        "name": "Banana unidad (220 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category": "Frutas",
+        "image": "https://s2.dia.es/medias/h24/hd0/10335796396062.jpg",
+        "stock": 4
+    },
+    {
+        "id": 128,
+        "name": "Banana unidad (220 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category": "Frutas",
+        "image": "https://s2.dia.es/medias/h24/hd0/10335796396062.jpg",
+        "stock": 4
+    },
+    {
+        "id": 129,
+        "name": "Banana unidad (220 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category": "Frutas",
+        "image": "https://s2.dia.es/medias/h24/hd0/10335796396062.jpg",
+        "stock": 4
+    },
+    {
+        "id": 130,
+        "name": "Banana unidad (220 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Frutas",
+        "image": "https://s2.dia.es/medias/h24/hd0/10335796396062.jpg",
+        "stock": 4
+    },
+    {
+        "id": 131,
+        "name": "Mandarina unidad (150 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category": "Frutas",
+        "image": "https://s3.dia.es/medias/h2b/hcc/8833873018910.jpg",
+        "stock": 4
+    },
+    {
+        "id": 132,
+        "name": "Mandarina unidad (150 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category": "Frutas",
+        "image": "https://s3.dia.es/medias/h2b/hcc/8833873018910.jpg",
+        "stock": 4
+    },
+    {
+        "id": 133,
+        "name": "Mandarina unidad (150 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category": "Frutas",
+        "image": "https://s3.dia.es/medias/h2b/hcc/8833873018910.jpg",
+        "stock": 4
+    },
+    {
+        "id": 134,
+        "name": "Mandarina unidad (150 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category": "Frutas",
+        "image": "https://s3.dia.es/medias/h2b/hcc/8833873018910.jpg",
+        "stock": 4
+    },
+    {
+        "id": 135,
+        "name": "Mandarina unidad (150 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category": "Frutas",
+        "image": "https://s3.dia.es/medias/h2b/hcc/8833873018910.jpg",
+        "stock": 4
+    },
+    {
+        "id": 136,
+        "name": "Mandarina unidad (150 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category": "Frutas",
+        "image": "https://s3.dia.es/medias/h2b/hcc/8833873018910.jpg",
+        "stock": 4
+    },
+    {
+        "id": 137,
+        "name": "Mandarina unidad (150 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category": "Frutas",
+        "image": "https://s3.dia.es/medias/h2b/hcc/8833873018910.jpg",
+        "stock": 4
+    },
+    {
+        "id": 138,
+        "name": "Mandarina unidad (150 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category": "Frutas",
+        "image": "https://s3.dia.es/medias/h2b/hcc/8833873018910.jpg",
+        "stock": 4
+    },
+    {
+        "id": 139,
+        "name": "Mandarina unidad (150 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category": "Frutas",
+        "image": "https://s3.dia.es/medias/h2b/hcc/8833873018910.jpg",
+        "stock": 4
+    },
+    {
+        "id": 140,
+        "name": "Mandarina unidad (150 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Frutas",
+        "image": "https://s3.dia.es/medias/h2b/hcc/8833873018910.jpg",
+        "stock": 4
+    },
+    {
+        "id": 141,
+        "name": "Limón unidad (210 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 1,
+        "category": "Frutas",
+        "image": "https://s1.dia.es/medias/h28/h10/8833872494622.jpg",
+        "stock": 4
+    },
+    {
+        "id": 142,
+        "name": "Limón unidad (210 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 2,
+        "category": "Frutas",
+        "image": "https://s1.dia.es/medias/h28/h10/8833872494622.jpg",
+        "stock": 4
+    },
+    {
+        "id": 143,
+        "name": "Limón unidad (210 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 3,
+        "category": "Frutas",
+        "image": "https://s1.dia.es/medias/h28/h10/8833872494622.jpg",
+        "stock": 4
+    },
+    {
+        "id": 144,
+        "name": "Limón unidad (210 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 4,
+        "category": "Frutas",
+        "image": "https://s1.dia.es/medias/h28/h10/8833872494622.jpg",
+        "stock": 4
+    },
+    {
+        "id": 145,
+        "name": "Limón unidad (210 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 5,
+        "category": "Frutas",
+        "image": "https://s1.dia.es/medias/h28/h10/8833872494622.jpg",
+        "stock": 4
+    },
+    {
+        "id": 146,
+        "name": "Limón unidad (210 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 6,
+        "category": "Frutas",
+        "image": "https://s1.dia.es/medias/h28/h10/8833872494622.jpg",
+        "stock": 4
+    },
+    {
+        "id": 147,
+        "name": "Limón unidad (210 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 7,
+        "category": "Frutas",
+        "image": "https://s1.dia.es/medias/h28/h10/8833872494622.jpg",
+        "stock": 4
+    },
+    {
+        "id": 148,
+        "name": "Limón unidad (210 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 8,
+        "category": "Frutas",
+        "image": "https://s1.dia.es/medias/h28/h10/8833872494622.jpg",
+        "stock": 4
+    },
+    {
+        "id": 149,
+        "name": "Limón unidad (210 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 9,
+        "category": "Frutas",
+        "image": "https://s1.dia.es/medias/h28/h10/8833872494622.jpg",
+        "stock": 4
+    },
+    {
+        "id": 150,
+        "name": "Limón unidad (210 gr aprox.)",
+        "price": "0.79",
+        "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
+        "shop_id": 10,
+        "category": "Frutas",
+        "image": "https://s1.dia.es/medias/h28/h10/8833872494622.jpg",
+        "stock": 4
+    }
+    ]
 }
+

@@ -35,11 +35,12 @@
     text-decoration: none;
     display: block;
 }
-.main h1 {
-    margin-top: 50px;
+.title{
+  display: block;
+    margin-top: 30px;
     text-align: center;
 }
-.main h3 {
+.slogan {
     text-align: center;
 }
 
@@ -59,12 +60,13 @@
 
 .input_code{
   display: block;
+  margin-top: 30px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .button_find{
-  margin-top: 10px;
+  margin-top: 20px;
   background-color:#EDFAFF;
   border: none;
   text-align: center;
@@ -88,4 +90,19 @@
 .button_find:active{
   box-shadow: 0 4px #666;
 
+}
+
+h6{
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+body {
+  background: rgb(93,218,251);
+  background: linear-gradient(180deg, rgba(93,218,251,1) 0%, rgba(87,161,228,1) 6%, rgba(96,144,231,1) 11%, rgba(105,153,219,1) 19%, rgba(105,153,219,1) 25%, rgba(124,173,240,1) 44%, rgba(124,173,240,1) 80%, rgba(93,218,251,1) 100%);
+  background-repeat: repeat;
+  width: 100%;
+  margin:0px;
 }

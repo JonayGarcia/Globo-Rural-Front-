@@ -1,33 +1,34 @@
 
-<div class="main">
 
-    <div class="main-title">
-        <h1>Globo Rural</h1>
-    </div>
+
+    <h1 class="title">Globo Rural</h1>
 
     <img class="logo" src="/assets/images/logo.png" alt="logo">
 
-    <div class="main-description">
+    <div class="slogan">
         <h3>Tus compras mas sencillas desde casa</h3>
         <h3> Encuentra tu Mercado más cercano</h3>
     </div>
-
-    <div class="dropdown">
+    <!--
+    Parte de Jose
+      <div class="dropdown">
         <div class="dropHeader">Selecciona un Código Postal</div>
         <div class="dropdown-content">
             <div *ngFor="let option of postCodes" [routerLink]="['/postCode', option]">{{option}}</div>
         </div>
     </div>
+  -->
 
     <div>
-      <input type="text" class="input_code" >
-      <!--<input type="text" class="input_code"  [(ngModel)]="text_input" >-->
+      <input type="text" class="input_code" [(ngModel)]="textInput" (keyup.enter)="findCode(textInput)" >
     </div>
 
     <div>
-       <button class="button_find" >Buscar tiendas</button>
-      </div>
+       <button class="button_find" (click)="findCode(textInput)" >Buscar tiendas</button>
+    </div>
 
-</div>
+    <div *ngIf="codeFound.length == 0 && notFound==0">
+        <h6>Código no encontrado</h6>
 
+    </div>
 

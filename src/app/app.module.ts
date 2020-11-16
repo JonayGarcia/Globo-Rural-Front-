@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ShopsComponent } from './pages/shops/shops.component';
 import { PostCodesComponent } from './pages/post-codes/post-codes.component';
+import { FormsModule } from '@angular/forms';
+import { FilterComponent } from './component/filter/filter.component';
+import { FilterByCategoryComponent } from './pages/filter-by-category/filter-by-category.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductsComponent,
     ShopsComponent,
-    PostCodesComponent
+    PostCodesComponent,
+    FilterComponent,
+    FilterByCategoryComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

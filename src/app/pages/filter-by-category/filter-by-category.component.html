@@ -16,7 +16,14 @@
 </div>
 
 <div class="mainContainer">
-  <app-filter class="filter"></app-filter>
+  <div class="filter">
+    <h3>Categoría</h3>
+    <br>
+    <div>
+        <p>{{category}}</p>
+        <button (click)="goBack()">Mostrar todos los productos</button>
+    </div>
+  </div>
 
   <div class="board">
       <div *ngFor="let product of products">
@@ -33,4 +40,3 @@
     </div>
   </div>
 </div>
-<router-outlet></router-outlet>
