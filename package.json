@@ -47,5 +47,17 @@
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
-  }
+  },
+  "description": "Proyecto Final Globo Rural",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonayGarcia/Globo-Rural-Front-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonayGarcia/Globo-Rural-Front-/issues"
+  },
+  "homepage": "https://github.com/JonayGarcia/Globo-Rural-Front-#readme"
 }

@@ -72,12 +72,12 @@
   ],
   "products":  [
     {
-        "id": 1,  
+        "id": 1,
         "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
         "price": "2.89",
         "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
         "shop_id": 1,
-        "category":"Charcuteria",
+        "category":"Charcutería",
         "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
         "stock": 4
     },
@@ -192,12 +192,12 @@
         "stock": 4
     },
     {
-        "id": 13,  
+        "id": 13,
         "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
         "price": "2.89",
         "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
         "shop_id": 2,
-        "category":"Charcuteria",
+        "category":"Charcutería",
         "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
         "stock": 4
     },
@@ -312,12 +312,12 @@
         "stock": 4
     },
     {
-        "id": 25,  
+        "id": 25,
         "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
         "price": "2.89",
         "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
         "shop_id": 3,
-        "category":"Charcuteria",
+        "category":"Charcutería",
         "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
         "stock": 4
     },
@@ -432,12 +432,12 @@
         "stock": 4
     },
     {
-        "id": 37,  
+        "id": 37,
         "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
         "price": "2.89",
         "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
         "shop_id": 4,
-        "category":"Charcuteria",
+        "category":"Charcutería",
         "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
         "stock": 4
     },
@@ -552,12 +552,12 @@
         "stock": 4
     },
     {
-        "id": 49,  
+        "id": 49,
         "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
         "price": "2.89",
         "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
         "shop_id": 5,
-        "category":"Charcuteria",
+        "category":"Charcutería",
         "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
         "stock": 4
     },
@@ -672,12 +672,12 @@
         "stock": 4
     },
     {
-        "id": 61,  
+        "id": 61,
         "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
         "price": "2.89",
         "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
         "shop_id": 6,
-        "category":"Charcuteria",
+        "category":"Charcutería",
         "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
         "stock": 4
     },
@@ -792,12 +792,12 @@
         "stock": 4
     },
     {
-        "id": 73,  
+        "id": 73,
         "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
         "price": "2.89",
         "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
         "shop_id": 7,
-        "category":"Charcuteria",
+        "category":"Charcutería",
         "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
         "stock": 4
     },
@@ -912,12 +912,12 @@
         "stock": 4
     },
     {
-        "id": 85,  
+        "id": 85,
         "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
         "price": "2.89",
         "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
         "shop_id": 8,
-        "category":"Charcuteria",
+        "category":"Charcutería",
         "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
         "stock": 4
     },
@@ -1032,12 +1032,12 @@
         "stock": 4
     },
     {
-        "id": 97,  
+        "id": 97,
         "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
         "price": "2.89",
         "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
         "shop_id": 9,
-        "category":"Charcuteria",
+        "category":"Charcutería",
         "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
         "stock": 4
     },
@@ -1152,12 +1152,12 @@
         "stock": 4
     },
     {
-        "id": 109,  
+        "id": 109,
         "name": "Navidul Jamón curado de Extremadura, lonchas 138g",
         "price": "2.89",
         "description": "Lonchas de Jamón Curado Extremadura, un producto elaborado en nuestras bodegas de Trujillo (Cáceres). Con este producto podrás disfrutar del mejor sabor, listo para consumir y disfrutaren cualquier momento. Sin colorantes, sin gluten y sin lactosa. Cada producto tiene un peso total de 138g ",
         "shop_id": 10,
-        "category":"Charcuteria",
+        "category":"Charcutería",
         "image": "https://s0.dia.es/medias/h91/hc6/9997490028574.jpg",
         "stock": 4
     },

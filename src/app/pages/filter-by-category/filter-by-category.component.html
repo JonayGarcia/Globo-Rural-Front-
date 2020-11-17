@@ -21,7 +21,7 @@
     <br>
     <div>
         <p>{{category}}</p>
-        <button (click)="goBack()">Mostrar todos los productos</button>
+        <button (click)="goBack()" class="showProducts">Mostrar todos los productos</button>
     </div>
   </div>
 
@@ -32,9 +32,13 @@
             <div class="card-body">
               <h5 class="card-title">{{product.name}}</h5>
               <p class="card-text">Precio: {{product.price}} €</p>
+
+              <!--
               <div class="btn-kart">
                 <a href="#" class="btn btn-primary">Añadir al Carrito</a>
               </div>
+              -->
+
             </div>
           </div>
     </div>

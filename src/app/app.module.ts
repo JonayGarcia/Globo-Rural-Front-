@@ -9,6 +9,7 @@ import { PostCodesComponent } from './pages/post-codes/post-codes.component';
 import { FormsModule } from '@angular/forms';
 import { FilterComponent } from './component/filter/filter.component';
 import { FilterByCategoryComponent } from './pages/filter-by-category/filter-by-category.component';
+import { FooterComponent } from './pages/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FilterByCategoryComponent } from './pages/filter-by-category/filter-by-
     ShopsComponent,
     PostCodesComponent,
     FilterComponent,
-    FilterByCategoryComponent
+    FilterByCategoryComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
