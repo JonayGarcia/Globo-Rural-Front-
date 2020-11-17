@@ -101,3 +101,22 @@
     height: 25px;
 
    }
+
+   .selected{
+    background-color: rgb(10, 100, 2);
+    color: white;
+   }
+
+   .categoriesListed div p{
+     padding-left: 10px;
+     cursor: pointer;
+   }
+
+   .categoriesListed div:hover {
+    background: rgba(106, 146, 80, 0.178);
+    border-radius: 5px;
+  }
+
+  .filter{
+    margin-bottom: 20px;
+  }

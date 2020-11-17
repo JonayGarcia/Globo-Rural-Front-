@@ -19,8 +19,10 @@
   <div class="filter">
     <h3>Categoría</h3>
     <br>
-    <div>
-        <p>{{category}}</p>
+    <div class="categoriesListed">
+          <div *ngFor="let category2 of categories" class="clickCategories">
+              <p (click)="selectCategory(category2)" [ngClass]="{selected: category2==category}">{{category2}}</p>
+          </div>
         <button (click)="goBack()" class="showProducts">Mostrar todos los productos</button>
     </div>
   </div>
