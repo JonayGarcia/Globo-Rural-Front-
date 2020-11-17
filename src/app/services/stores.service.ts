@@ -47,7 +47,7 @@ export class StoresService {
     if (category) {
       return axios
         .get(
-          `http://${this.api_host}/api/products/shop/${shop_id}&category=${category}`// PENDIENTE DE IMPLEMENTAR EN EL BACKEND
+          `http://${this.api_host}/api/products/shop/${shop_id}?category=${category}`// PENDIENTE DE IMPLEMENTAR EN EL BACKEND
         )
         .then((response) => {
           return response.data;
