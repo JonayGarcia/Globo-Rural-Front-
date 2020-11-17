@@ -1,54 +1,53 @@
 import { Component, OnInit } from '@angular/core';
-import {StoresService} from '../../services/stores.service';
+import { StoresService } from '../../services/stores.service';
 import { Router } from '@angular/router';
+import { Shop } from 'src/app/models';
 //import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-post-codes',
   templateUrl: './post-codes.component.html',
-  styleUrls: ['./post-codes.component.css']
+  styleUrls: ['./post-codes.component.css'],
 })
 export class PostCodesComponent implements OnInit {
-  shops: any = [];
+  shops: Shop[] = [];
   codeFound: any = [];
-  postCodes : string[] =[]
-  textInput : string;
-  numberCode : number;
-  notFound : number;
+  postCodes: string[] = [];
+  textInput: string;
+  numberCode: number;
+  notFound: number;
 
-  constructor ( private storesService: StoresService, public router: Router){
+  constructor(private storesService: StoresService, public router: Router) {}
+
+  ngOnInit(): void {
     this.getShops();
   }
 
-  async getShops (){
+  async getShops() {
     this.shops = await this.storesService.getAllShops();
     this.getPostCodes();
-
   }
 
-  getPostCodes(){
-    this.shops.forEach(shop => {
-      if(this.postCodes.includes(shop.postCode) == false)
-        this.postCodes.push(shop.postCode);
-      })
-      console.log("Mis tiendas---->",this.shops);
+  getPostCodes() {
+    // SI QUIEREN TENER UNA LISTA DE CODIGOS POSTALES,
+    // SE PUEDE IMPLEMENTAR EN LA API DIRECTAMENTE... comentadlo en el grupo!
+    this.shops.forEach((shop: Shop) => {
+      if (this.postCodes.includes(shop.postcode) == false)
+        this.postCodes.push(shop.postcode);
+    });
+    console.log('Mis tiendas---->', this.shops);
   }
 
-  async findCode(CP: string){
-    this.codeFound = await this.storesService.getShopsByPostCode(CP);
-    if(this.codeFound.length == 0){
-      this.notFound=0;
-      console.log("No se ha encontrado el CP");
-    }else{
-      this.notFound=1;
-      this.router.navigate(['/postCode',CP]);
-      console.log("El CP es---->",CP);
+  async findCode(postalcode: string) {
+    this.codeFound = await this.storesService.getShopsByPostCode(postalcode);
+    if (this.codeFound.length == 0) {
+      this.notFound = 0;
+      console.log('No se ha encontrado el CP');
+    } else {
+      this.notFound = 1;
+      this.router.navigate(['/postCode', postalcode]);
+      console.log('El CP es---->', postalcode);
     }
-    this.textInput="";
+    this.textInput = '';
   }
-
-
-  ngOnInit(): void {
-  }
-
 }

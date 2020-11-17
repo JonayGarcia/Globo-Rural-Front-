@@ -1,51 +1,51 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {StoresService} from '../../services/stores.service';
+import { StoresService } from '../../services/stores.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { Shop, Product } from 'src/app/models';
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
-  styleUrls: ['./filter.component.css']
+  styleUrls: ['./filter.component.css'],
 })
 export class FilterComponent implements OnInit {
-  products: any = [];
-  categories : string[] =[];
-  shop: any = [];
-  shop_id : number;
-  filtered = false;
-  constructor (private route:ActivatedRoute, private storesService: StoresService, public router: Router){
+  products: Product[] = [];
+  categories: string[] = [];
+  shop: Shop;
+  filtered: boolean = false;
+
+  constructor(
+    private route: ActivatedRoute,
+    private storesService: StoresService,
+    public router: Router
+  ) {}
+
+  ngOnInit(): void {
     this.showCategories();
   }
 
-  async showCategories(){
-    const name = this.route.snapshot.paramMap.get('name').split("-").join(" ");
-    console.log(name);
-    this.shop = await this.storesService.getOneShop(name);
+  async showCategories() {
+    const id = this.route.snapshot.paramMap.get('name');
+    this.shop = await this.storesService.getOneShop(id);
     this.getProducts();
   }
 
-  async getProducts(){
-    this.shop.forEach(store=> {
-      this.shop_id = store.id;
-    })
-    this.products = await this.storesService.getProductsByShop(this.shop_id);
-    this.getCategories()
+  async getProducts() {
+    this.products = await this.storesService.getProductsByShop(this.shop._id);
+    this.getCategories();
   }
 
-  getCategories(){
-    this.products.forEach(product => {
-      if(this.categories.includes(product.category) == false)
+  getCategories() {
+    // PENDIENTE DE AÑADIR LAS CATEGORIAS EN EL BACKEND
+    this.products.forEach((product) => {
+      if (this.categories.includes(product.category) == false)
         this.categories.push(product.category);
-      })
+    });
   }
 
-  isFiltered(){
-    this.filtered=true;
+  isFiltered() {
+    this.filtered = true;
     console.log(this.filtered);
   }
-
-  ngOnInit(): void {
-  }
-
 }

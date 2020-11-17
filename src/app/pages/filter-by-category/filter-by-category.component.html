@@ -19,9 +19,11 @@
   <div class="filter">
     <h3>Categoría</h3>
     <br>
-    <div>
-        <p>{{category}}</p>
-        <button (click)="goBack()">Mostrar todos los productos</button>
+    <div class="categoriesListed">
+          <div *ngFor="let category2 of categories" class="clickCategories">
+              <p (click)="selectCategory(category2)" [ngClass]="{selected: category2==category}">{{category2}}</p>
+          </div>
+        <button (click)="goBack()" class="showProducts">Mostrar todos los productos</button>
     </div>
   </div>
 
@@ -32,9 +34,13 @@
             <div class="card-body">
               <h5 class="card-title">{{product.name}}</h5>
               <p class="card-text">Precio: {{product.price}} €</p>
+
+              <!--
               <div class="btn-kart">
                 <a href="#" class="btn btn-primary">Añadir al Carrito</a>
               </div>
+              -->
+
             </div>
           </div>
     </div>

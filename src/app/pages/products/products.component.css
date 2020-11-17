@@ -74,6 +74,7 @@
    display: flex;
    margin-left: 40px;
    align-items: center;
+   cursor: pointer;
  }
 
 .nav-container{

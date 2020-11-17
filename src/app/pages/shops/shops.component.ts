@@ -1,31 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import {StoresService} from '../../services/stores.service';
+import { StoresService } from '../../services/stores.service';
 import { ActivatedRoute } from '@angular/router';
+import { Shop } from 'src/app/models';
 
 @Component({
   selector: 'app-shops',
   templateUrl: './shops.component.html',
-  styleUrls: ['./shops.component.css']
+  styleUrls: ['./shops.component.css'],
 })
 export class ShopsComponent implements OnInit {
-  shops: any = [];
-  constructor(private route:ActivatedRoute, private storesService: StoresService) {
+  shops: Shop[] = [];
+
+  constructor(
+    private route: ActivatedRoute,
+    private storesService: StoresService
+  ) {}
+
+  ngOnInit(): void {
     this.showShops();
   }
 
-  async showShops(){
-    const cp= this.route.snapshot.paramMap.get('postCode');
-    this.shops= await this.storesService.getShopsByPostCode(cp);
-    this.modifiedShop();
+  async showShops() {
+    const postalcode: string = this.route.snapshot.paramMap.get('postCode');
+    this.shops = await this.storesService.getShopsByPostCode(postalcode);
   }
-
-  modifiedShop(){
-    this.shops.forEach(shop => {
-      shop.shopName = shop.name.split(" ").join("-");
-    })
-  }
-
-  ngOnInit(): void {
-  }
-
 }

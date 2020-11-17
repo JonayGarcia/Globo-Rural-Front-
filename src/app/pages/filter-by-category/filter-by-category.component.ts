@@ -16,22 +16,24 @@ export class FilterByCategoryComponent implements OnInit {
   shop_id: number;
   shopPostCode: string;
   products: any[] = [];
+  products2: any[] = [];
   category: string;
+  categories : string[] =[];
 
   constructor(private route:ActivatedRoute, private storesService: StoresService, public router: Router) {
     // this.route.parent.params.subscribe(params => {
     //   this.nameShop = params.name.split("-").join(" ");
     //   console.log(this.nameShop)
     // });
-    this.showProducts();
+    // this.showProducts();
   }
 
 
   async showProducts(){
-    this.route.parent.params.subscribe(params => {
-      this.nameShop = params.name.split("-").join(" ");
-      console.log(this.nameShop)
-    });
+    // this.route.parent.params.subscribe(params => {
+    //   this.nameShop = params.name.split("-").join(" ");
+    //   console.log(this.nameShop)
+    // });
     this.shop = await this.storesService.getOneShop(this.nameShop);
     this.getProducts();
   }
@@ -43,8 +45,18 @@ export class FilterByCategoryComponent implements OnInit {
       this.shopName = store.name;
       this.shopLogo = store.logo;
     })
-    this.category = this.route.snapshot.paramMap.get("category")
-    this.products = await this.storesService.getProductsByShop(this.shop_id, this.category)
+    // this.category = this.route.snapshot.paramMap.get("category")
+    this.products = await this.storesService.getProductsByShop(this.shop_id, this.category);
+    console.log(this.category)
+    this.products2 = await this.storesService.getProductsByShop(this.shop_id);
+    this.getCategories();
+  }
+
+  getCategories(){
+    this.products2.forEach(product => {
+      if(this.categories.includes(product.category) == false)
+        this.categories.push(product.category);
+      })
   }
 
   goBack(): void {
@@ -52,6 +64,20 @@ export class FilterByCategoryComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.route.parent.params.subscribe(params => {
+      this.nameShop = params.name.split("-").join(" ");
+      console.log(this.nameShop)
+    });
+    this.route.params
+       .subscribe(params => {
+         console.log('Esto significa que cambió la categoría')
+         this.category = params['category'];
+         this.showProducts();
+       });
   }
+
+  selectCategory(category: string) {
+    this.router.navigate(['../', category], {relativeTo: this.route });
+ }
 
 }
