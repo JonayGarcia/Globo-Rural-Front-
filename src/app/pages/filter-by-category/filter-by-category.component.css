@@ -4,24 +4,24 @@
     height: 250px;
     padding-top: 10px;
   }
-  
+
   .appLogo{
     width: 70px;
     height: 70px;
   }
-  
+
   .mainContainer{
     display: flex;
     margin-top: 80px;
     justify-content: space-between;
     width: 100%;
   }
-  
+
   .filter{
     width: 20vw;
     margin-left: 30px;
   }
-  
+
   .board{
     display:flex;
     flex-direction: row;
@@ -31,16 +31,16 @@
     margin: auto;
     justify-content: space-around;
   }
-  
+
   .textName{
     text-align: center;
   }
-  
+
   .btn-kart {
     display: flex;
     justify-content: center
   }
-  
+
   .card {
     width: 300px;
     height: 450px;
@@ -53,14 +53,14 @@
      justify-content: center;
      margin-top: 50px;
    }
-  
+
    .header img{
      width: 60px;
      height:  60px;
      border-radius: 30px;
      margin-left: 50px;
    }
-  
+
    .nav{
     display: flex;
     justify-content: space-between;
@@ -68,28 +68,55 @@
     background-color: rgb(10, 100, 2);
     color: white;
   }
-  
-  
+
+
    .nav-logo{
      display: flex;
      margin-left: 40px;
      align-items: center;
    }
-  
+
   .nav-container{
     margin-right: 40px;
     display: flex;
     justify-content: space-between;
   }
-  
+
   .nav-container div{
     margin-left: 20px;
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
   }
-  
+
    .nav-container div:hover{
     background-color: rgb(68, 102, 65);
    }
-  
+
+   .showProducts{
+    background: rgba(106, 146, 80, 0.178);
+    border-radius: 5px;
+    width: 225px;
+    border: none;
+    height: 25px;
+
+   }
+
+   .selected{
+    background-color: rgb(10, 100, 2);
+    color: white;
+   }
+
+   .categoriesListed div p{
+     padding-left: 10px;
+     cursor: pointer;
+   }
+
+   .categoriesListed div:hover {
+    background: rgba(106, 146, 80, 0.178);
+    border-radius: 5px;
+  }
+
+  .filter{
+    margin-bottom: 20px;
+  }

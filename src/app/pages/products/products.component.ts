@@ -1,42 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import {StoresService} from '../../services/stores.service';
+import { StoresService } from '../../services/stores.service';
 import { ActivatedRoute } from '@angular/router';
+import { Shop, Product } from 'src/app/models';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.css']
+  styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-  shop: any = {};
-  shopName: string;
-  shopLogo: string;
-  shop_id: number;
-  shopPostCode: string;
-  products: any[] = [];
-  constructor(private route:ActivatedRoute, private storesService: StoresService) {
+  public shop: Shop;
+  public products: Product[] = [];
+
+  constructor(
+    private route: ActivatedRoute,
+    private storesService: StoresService
+  ) {}
+
+  ngOnInit(): void {
     this.showProducts();
   }
 
-  async showProducts(){
-    const name = this.route.snapshot.paramMap.get('name').split("-").join(" ");
-    this.shop = await this.storesService.getOneShop(name);
-    this.getProducts();
+  async showProducts() {
+    const id = this.route.snapshot.paramMap.get('name');
+    this.shop = await this.storesService.getOneShop(id);
+    this.products = await this.storesService.getProductsByShop(id);
   }
-
-  async getProducts(){
-    this.shop.forEach( store=> {
-      this.shop_id = store.id;
-      this.shopPostCode = store.postCode;
-      this.shopName = store.name;
-      this.shopLogo = store.logo;
-    })
-    this.products = await this.storesService.getProductsByShop(this.shop_id)
-  }
-
-
-
-  ngOnInit(): void {
-  }
-
 }
