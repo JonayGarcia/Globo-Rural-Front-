@@ -5,6 +5,8 @@ export interface Shop {
   name: string;
   email: string;
   postcode: string;
+  // esto es solo para trabajar con la fakeapi
+  postCode: string;
   phone: string;
   logo: string;
 }

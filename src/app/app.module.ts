@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { FilterComponent } from './component/filter/filter.component';
 import { FilterByCategoryComponent } from './pages/filter-by-category/filter-by-category.component';
 import { FooterComponent } from './pages/footer/footer.component';
+import { RegisterComponent } from './pages/register/register.component';
+import { LoginComponent } from './pages/login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { FooterComponent } from './pages/footer/footer.component';
     PostCodesComponent,
     FilterComponent,
     FilterByCategoryComponent,
-    FooterComponent
+    FooterComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

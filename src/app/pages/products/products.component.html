@@ -5,7 +5,7 @@
   </div>
   <div class="nav-container">
     <div routerLink="">Cambiar Código Postal</div>
-    <div [routerLink]="['/postCode', shop?.postcode]">Ir a otra Tienda</div>
+    <div [routerLink]="['/postCode', shop?.postCode]">Ir a otra Tienda</div>
   </div>
 </div>
 
@@ -39,11 +39,17 @@
           <h5 class="card-title">{{ product.name }}</h5>
           <p class="card-text">Precio: {{ product.price }} €</p>
 
-          <!--
-              <div class="btn-kart">
-                <a href="#" class="btn btn-primary">Añadir al Carrito</a>
-              </div>
-            -->
+          <div class="card-Ammount">
+            <img src="../../../assets/images/less.png" (click)=decrease()>
+            <input type="number" [(ngModel)]="ammount">
+            <img src="../../../assets/images/more.png" (click)=increase()>
+          </div>
+          <div class="btn-kart"> 
+            <button href="#" class="btn btn-primary">
+              <img src="../../../assets/images/addToCart.png" width="30px" height="30px">
+              <p>Añadir al Carrito</p>
+            </button>
+          </div>  
         </div>
       </div>
     </div>

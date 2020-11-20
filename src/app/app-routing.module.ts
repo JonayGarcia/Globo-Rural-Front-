@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import {PostCodesComponent} from './pages/post-codes/post-codes.component';
 import {ProductsComponent} from './pages/products/products.component';
 import {ShopsComponent} from './pages/shops/shops.component';
-import {FilterByCategoryComponent} from './pages/filter-by-category/filter-by-category.component';
+import {RegisterComponent} from './pages/register/register.component';
+import {LoginComponent} from './pages/login/login.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
   },
   { 
     path: 'postCode/:postCode',
-    component: ShopsComponent,
+    component: ShopsComponent
   },
   {
     path: 'postCode/:postCode/shop/:id',
@@ -27,6 +28,14 @@ const routes: Routes = [
         // component: FilterByCategoryComponent
       }
     ]
+  },
+  {
+    path:"register",
+    component: RegisterComponent
+  },
+  {
+    path:"login",
+    component:LoginComponent
   }
 ];
 

@@ -17,6 +17,7 @@ export class ProductsComponent implements OnInit {
   id: number;
   category: string ="";
   categories : string[] =[];
+  ammount: number = 0;
 
   constructor(
     private route: ActivatedRoute,
@@ -44,9 +45,11 @@ export class ProductsComponent implements OnInit {
 
   async showProducts() {
     if(this.category==""){
-      console.log("no se esta filtrando by category");0
+      console.log("no se esta filtrando by category");
       this.shop = await this.storesService.getOneShop(this.id);
       this.products = await this.storesService.getProductsByShop(this.id);
+      
+      console.log(this.products)
     } else {
       this.shop = await this.storesService.getOneShop(this.id);
       console.log(this.shop)
@@ -78,5 +81,15 @@ export class ProductsComponent implements OnInit {
 
   goBack(): void {
     this.router.navigate(['../'], { relativeTo: this.route });
+  }
+
+  decrease(){
+    if(this.ammount>=0) {
+      this.ammount -=1;
+    }
+  }
+
+  increase(){
+    this.ammount +=1;
   }
 }
