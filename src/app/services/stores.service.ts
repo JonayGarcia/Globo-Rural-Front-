@@ -6,13 +6,15 @@ import { Shop, Product } from 'src/app/models';
   providedIn: 'root',
 })
 export class StoresService {
-  private api_host: string = '192.168.99.102:3000';
+  // private api_host: string = '192.168.99.102:3000';
+  private api_host: string = 'http://localhost:3000';
 
   constructor() {}
 
   getAllShops(): Promise<Shop[]> {
     return axios
-      .get(`http://${this.api_host}/api/shops`) // CONECTADO
+      // .get(`http://${this.api_host}/api/shops`) // CONECTADO
+      .get(`${this.api_host}/shops`)
       .then((response) => {
         return response.data;
       })
@@ -21,9 +23,11 @@ export class StoresService {
       });
   }
 
-  getOneShop(id: string): Promise<Shop> {
+  // getOneShop(id: string): Promise<Shop> { BACKEND
+  getOneShop(id: number): Promise<Shop> {
     return axios
-      .get(`http://${this.api_host}/api/shops/${id}`) // CONECTADO
+      // .get(`http://${this.api_host}/api/shops/${id}`) // CONECTADO
+      .get(`${this.api_host}/shops/${id}`)
       .then((response) => {
         return response.data;
       })
@@ -34,7 +38,8 @@ export class StoresService {
 
   getShopsByPostCode(postalcode: string): Promise<Shop[]> {
     return axios
-      .get(`http://${this.api_host}/api/shops?postcode=${postalcode}`) // CONECTADO
+      // .get(`http://${this.api_host}/api/shops?postcode=${postalcode}`) // CONECTADO
+      .get(`${this.api_host}/shops?postCode=${postalcode}`)
       .then((response) => {
         return response.data;
       })
@@ -43,11 +48,13 @@ export class StoresService {
       });
   }
 
-  getProductsByShop(shop_id: string, category?: string): Promise<Product[]> {
+  // getProductsByShop(shop_id: string, category?: string): Promise<Product[]> { BACKEND
+  getProductsByShop(shop_id: number, category?: string): Promise<Product[]> {
     if (category) {
       return axios
         .get(
-          `http://${this.api_host}/api/products/shop/${shop_id}?category=${category}`// PENDIENTE DE IMPLEMENTAR EN EL BACKEND
+          // `http://${this.api_host}/api/products/shop/${shop_id}?category=${category}`// PENDIENTE DE IMPLEMENTAR EN EL BACKEND
+          `${this.api_host}/products?shop_id=${shop_id}&category=${category}`
         )
         .then((response) => {
           return response.data;
@@ -57,7 +64,8 @@ export class StoresService {
         });
     } else {
       return axios
-        .get(`http://${this.api_host}/api/products/shop/${shop_id}`) // CONECTADO
+        // .get(`http://${this.api_host}/api/products/shop/${shop_id}`) // CONECTADO
+        .get(`${this.api_host}/products?shop_id=${shop_id}`)
         .then((response) => {
           return response.data;
         })

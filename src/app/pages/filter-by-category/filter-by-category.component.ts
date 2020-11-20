@@ -11,9 +11,10 @@ import { Router } from '@angular/router';
 export class FilterByCategoryComponent implements OnInit {
   nameShop : string;
   shop: any = {};
-  shopName: string;
+  // id: string; BACKEND
+  id: number;
   shopLogo: string;
-  shop_id: number;
+  shop_id: string;
   shopPostCode: string;
   products: any[] = [];
   products2: any[] = [];
@@ -21,34 +22,20 @@ export class FilterByCategoryComponent implements OnInit {
   categories : string[] =[];
 
   constructor(private route:ActivatedRoute, private storesService: StoresService, public router: Router) {
-    // this.route.parent.params.subscribe(params => {
-    //   this.nameShop = params.name.split("-").join(" ");
-    //   console.log(this.nameShop)
-    // });
-    // this.showProducts();
   }
 
 
   async showProducts(){
-    // this.route.parent.params.subscribe(params => {
-    //   this.nameShop = params.name.split("-").join(" ");
-    //   console.log(this.nameShop)
-    // });
-    this.shop = await this.storesService.getOneShop(this.nameShop);
+    this.shop = await this.storesService.getOneShop(this.id);
+    console.log(this.shop)
     this.getProducts();
   }
 
   async getProducts(){
-    this.shop.forEach( store=> {
-      this.shop_id = store.id;
-      this.shopPostCode = store.postCode;
-      this.shopName = store.name;
-      this.shopLogo = store.logo;
-    })
-    // this.category = this.route.snapshot.paramMap.get("category")
-    this.products = await this.storesService.getProductsByShop(this.shop_id, this.category);
-    console.log(this.category)
-    this.products2 = await this.storesService.getProductsByShop(this.shop_id);
+    // this.products = await this.storesService.getProductsByShop(this.shop._id, this.category); BACKEND
+    this.products = await this.storesService.getProductsByShop(this.shop.id, this.category);
+    // this.products2 = await this.storesService.getProductsByShop(this.shop._id); BACKEND
+    this.products2 = await this.storesService.getProductsByShop(this.shop.id);
     this.getCategories();
   }
 
@@ -65,12 +52,10 @@ export class FilterByCategoryComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.parent.params.subscribe(params => {
-      this.nameShop = params.name.split("-").join(" ");
-      console.log(this.nameShop)
+      this.id = params.id;
     });
     this.route.params
        .subscribe(params => {
-         console.log('Esto significa que cambió la categoría')
          this.category = params['category'];
          this.showProducts();
        });

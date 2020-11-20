@@ -22,7 +22,8 @@ export class ProductsComponent implements OnInit {
   }
 
   async showProducts() {
-    const id = this.route.snapshot.paramMap.get('name');
+    // const id = this.route.snapshot.paramMap.get('id'); BACKEND
+    const id = +this.route.snapshot.paramMap.get('id');
     this.shop = await this.storesService.getOneShop(id);
     this.products = await this.storesService.getProductsByShop(id);
   }

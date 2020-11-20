@@ -26,13 +26,16 @@ export class FilterComponent implements OnInit {
   }
 
   async showCategories() {
-    const id = this.route.snapshot.paramMap.get('name');
+    // const id = this.route.snapshot.paramMap.get('id'); BACKEND
+    const id = +this.route.snapshot.paramMap.get('id');
     this.shop = await this.storesService.getOneShop(id);
+    console.log(this.shop)
     this.getProducts();
   }
 
   async getProducts() {
-    this.products = await this.storesService.getProductsByShop(this.shop._id);
+    // this.products = await this.storesService.getProductsByShop(this.shop._id); BACKEND
+    this.products = await this.storesService.getProductsByShop(this.shop.id);
     this.getCategories();
   }
 
@@ -42,10 +45,5 @@ export class FilterComponent implements OnInit {
       if (this.categories.includes(product.category) == false)
         this.categories.push(product.category);
     });
-  }
-
-  isFiltered() {
-    this.filtered = true;
-    console.log(this.filtered);
   }
 }

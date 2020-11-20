@@ -21,7 +21,7 @@ const routes: Routes = [
     // ]
   },
   {
-    path: 'postCode/:postCode/shop/:name',
+    path: 'postCode/:postCode/shop/:id',
     children: [
       {
         path:'',
@@ -34,7 +34,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'postCode/:postCode/shop/:name/category/:category',
+    path: 'postCode/:postCode/shop/:id/category/:category',
     component: FilterByCategoryComponent
   }
 ];
