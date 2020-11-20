@@ -15,6 +15,7 @@
   margin-top: 80px;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .filter{
@@ -93,3 +94,18 @@
  .nav-container div:hover{
   background-color: rgb(68, 102, 65);
  }
+
+ .selected{
+  background-color: rgb(10, 100, 2);
+  color: white;
+ }
+
+ .categoriesListed div p{
+   padding-left: 10px;
+   cursor: pointer;
+ }
+
+ .categoriesListed div:hover {
+  background: rgba(106, 146, 80, 0.178);
+  border-radius: 5px;
+}

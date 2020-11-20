@@ -13,12 +13,6 @@ const routes: Routes = [
   { 
     path: 'postCode/:postCode',
     component: ShopsComponent,
-    // children: [
-    //   {
-    //     path: 'shop/:name',
-    //     component: ProductsComponent
-    //   }
-    // ]
   },
   {
     path: 'postCode/:postCode/shop/:id',
@@ -29,13 +23,10 @@ const routes: Routes = [
       },
       {
         path: ":category",
-        component: FilterByCategoryComponent
+        component: ProductsComponent
+        // component: FilterByCategoryComponent
       }
     ]
-  },
-  {
-    path: 'postCode/:postCode/shop/:id/category/:category',
-    component: FilterByCategoryComponent
   }
 ];
 
