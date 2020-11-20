@@ -14,4 +14,5 @@ export interface Product {
   stock: number;
   image: string;
   shop_id: string;
+  category: string;
 }
