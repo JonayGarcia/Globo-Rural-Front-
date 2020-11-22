@@ -13,6 +13,7 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ShoppingCartComponent } from './component/shopping-cart/shopping-cart.component';
+import { RegisterDaughterComponent } from './pages/register-daughter/register-daughter.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ShoppingCartComponent } from './component/shopping-cart/shopping-cart.c
     FooterComponent,
     RegisterComponent,
     LoginComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,
+    RegisterDaughterComponent
   ],
   imports: [
     BrowserModule,

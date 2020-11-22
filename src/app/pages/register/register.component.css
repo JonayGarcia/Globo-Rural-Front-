@@ -1,0 +1,92 @@
+.textName{
+  text-align: center;
+}
+
+body{
+ /*position: absolute;*/
+
+
+ background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+   height: 739px;
+   /*background-color: rgb(237, 252, 255); */
+   background-color: rgb(237, 252, 255);
+  z-index: 1;
+   /*background-color: rgb(0, 0, 0);
+   opacity: 0.5;
+*/
+ }
+
+ .backgroundOpacity{
+  /*position: absolute;*/
+   background-color: rgb(0, 0, 0);
+   opacity: 0.5;
+   height: 739px;
+
+
+ }
+
+ .inputRegisterC{
+   position: absolute;
+  z-index: 2;
+  height: 739px;
+  width: 100vw;
+  opacity: none;
+
+ }
+
+ .formClient{
+  z-index: 2;
+  margin:auto;
+  margin-top:200px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+
+  width: 50vw;
+ }
+
+ .newDiv1{
+   position: absolute;
+   width: 40px;
+   height: 80px;
+   background-color:tomato;
+   z-index: 1;
+ }
+
+ .newDiv2{
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background-color:blue;
+  z-index: 2;
+}
+
+ .card{
+ border-radius: 20px;
+}
+
+.divRegister{
+  margin-top: 20px;
+
+}
+
+.cursorPointer{
+  cursor: pointer;
+}
+
+.registerUsers{
+  margin-top: 10px;
+}
+
+.appLogo{
+  width: 20px;
+  height: 20px;
+}
+
+.imgDeliver{
+  width:318px;
+  width:318px;
+}
+

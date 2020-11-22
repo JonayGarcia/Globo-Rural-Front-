@@ -1,19 +1,175 @@
+<body id="registerID" [ngClass]="{backgroundOpacity: showBuyer==true}">
+  <!--
 <div>
     email
     phone
     password
-    name   
+    name
     surname
     zip_code
+    address
     avatar
 </div>
-<div class="card" style="width: 18rem;">
-    <h1>hola</h1>
-    <img class="card-img-top" src="..." alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+-->
+<header class="container-fluid bg-dark ">
+
+  <div class="row ">
+      <div class="col d-flex justify-content-center">
+        <img src="/assets/images/mini-logo.png" routerLink="" class="appLogo cursorPointer">
+        <div class="text-white cursorPointer" routerLink=""  >Penguin Express</div>
+      </div>
   </div>
+
+</header>
+
+
+<div *ngIf="showBuyer" class="inputRegisterC"  >
+  <app-register-daughter></app-register-daughter>
+  </div>
+
+
+<div class="container ">
+
+  <div class="row registerUsers justify-content-between">
+      <div class="col-sm-3 ">
+          <div class="card" style="width: 23rem;">
+            <h1 class="textName">Comprador</h1>
+            <img class="card-img-top" src="/assets/images/buyer.jpg" alt="Comprador">
+            <div class="card-body">
+
+                 <div class="container">
+                      <div class="row">
+                            <div class="col-2">
+                               <img src="/assets/images/check.png" alt="check">
+                            </div>
+                            <div class="col-10">
+                              Compra cuando desees
+                            </div>
+                      </div>
+
+                      <div class="row">
+                            <div class="col-2">
+                              <img src="/assets/images/check.png" alt="check">
+                            </div>
+                            <div class="col-10">
+                              Encuentra tus tiendas en tu zona
+                            </div>
+                      </div>
+
+                      <div class="row">
+                            <div class="col-2">
+                              <img src="/assets/images/check.png" alt="check">
+                            </div>
+                            <div class="col-10">
+                              Paga de forma segura
+                            </div>
+                      </div>
+                  </div>
+
+                  <div class="d-flex justify-content-center divRegister">
+                      <a class="btn btn-primary" (click)="registerC()" >Registrarse</a>
+                  </div>
+
+            </div>
+         </div>
+      </div>
+
+
+      <div class="col-sm-3">
+        <div class="card" style="width: 23rem;">
+          <h1 class="textName">Tienda</h1>
+          <img class="card-img-top" src="/assets/images/shop_register.jpg" alt="Tienda">
+          <div class="card-body">
+
+            <div class="container">
+              <div class="row">
+                    <div class="col-2">
+                       <img src="/assets/images/check.png" alt="check">
+                    </div>
+                    <div class="col-10">
+                      Vende cuando desees
+                    </div>
+              </div>
+
+              <div class="row">
+                    <div class="col-2">
+                      <img src="/assets/images/check.png" alt="check">
+                    </div>
+                    <div class="col-10">
+                      Administra tus productos
+                    </div>
+              </div>
+
+              <div class="row">
+                    <div class="col-2">
+                      <img src="/assets/images/check.png" alt="check">
+                    </div>
+                    <div class="col-10">
+                      Mayor alcance geográfico
+                    </div>
+              </div>
+          </div>
+
+          <div class="d-flex justify-content-center divRegister">
+              <a href="#" class="btn btn-primary">Registrarse</a>
+          </div>
+
+          </div>
+        </div>
+    </div>
+
+    <div class="col-sm-3">
+      <div class="card" style="width: 23rem;">
+        <h1 class="textName">Repartidor</h1>
+        <img class="card-img-top " src="/assets/images/delivery.png" alt="Deliver">
+        <div class="card-body">
+
+          <div class="container">
+            <div class="row">
+                  <div class="col-2">
+                     <img src="/assets/images/check.png" alt="check">
+                  </div>
+                  <div class="col-10">
+                    Elige cuando trabajar
+                  </div>
+            </div>
+
+            <div class="row">
+                  <div class="col-2">
+                    <img src="/assets/images/check.png" alt="check">
+                  </div>
+                  <div class="col-10">
+                    Usa tu propio vehículo
+                  </div>
+            </div>
+
+            <div class="row">
+                  <div class="col-2">
+                    <img src="/assets/images/check.png" alt="check">
+                  </div>
+                  <div class="col-10">
+                    Buen ambiente de trabajo
+                  </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center divRegister">
+            <a href="#" class="btn btn-primary">Registrarse</a>
+        </div>
+
+        </div>
+      </div>
+  </div>
+
+</div>
+</div>
+
+
+
+</body>
+
+
+
+
+
 
