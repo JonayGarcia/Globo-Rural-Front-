@@ -16,12 +16,12 @@
  }
 
  .close{
-   width: 15px;
-   height: 15px;
-   cursor: pointer;
- }
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
 
- .alignClose{
-   float: right;
-   padding: 0;
- }
+.alignClose{
+  float: right;
+  padding: 0;
+}

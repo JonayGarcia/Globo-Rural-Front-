@@ -1,5 +1,9 @@
 <div class="formClient">
 
+      <div class="col alignClose" >
+        <img class="card-img-top close" routerLink="../register"(click)="close()" src="/assets/images/close.png" alt="close">
+      </div>
+
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">Name</label>
@@ -9,7 +13,7 @@
         </div>
         <div class="form-group col-md-6">
           <label for="inputPassword4">Surname</label>
-          <input type="password" class="form-control" [(ngModel)]="surname" placeholder="López">
+          <input type="text" class="form-control" [(ngModel)]="surname" placeholder="surname">
         </div>
       </div>
 
@@ -20,30 +24,30 @@
         </div>
         <div class="form-group col-md-4">
           <label for="inputPassword4">Phone</label>
-          <input type="password" class="form-control"[(ngModel)]="phone" placeholder="Phone">
+          <input type="text" class="form-control"[(ngModel)]="phone" placeholder="Phone">
         </div>
         <div class="form-group col-md-2">
           <label for="inputZip">Zip</label>
-          <input type="text" class="form-control" [(ngModel)]="zip">
+          <input type="text" class="form-control" [(ngModel)]="zip" placeholder="Zip">
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group col">
           <label for="inputEmail4">Contraseña</label>
-          <input type="email" class="form-control" [(ngModel)]="key" placeholder="Contraseña">
+          <input type="password" class="form-control" [(ngModel)]="key" placeholder="Contraseña">
         </div>
 
       </div>
 
       <div class="form-group">
         <label for="inputAddress">Address</label>
-        <input type="text" class="form-control" [(ngModel)]="address" placeholder="1234 Main St">
+        <input type="text" class="form-control" [(ngModel)]="address" placeholder="Address">
       </div>
 
       <div class="form-group">
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck">
+          <input class="form-check-input" type="checkbox"  [(ngModel)]="check" >
           <label class="form-check-label" for="gridCheck">
             He leído y acepto las <a href="#">Condiciones de uso</a> y la <a href="#">Política de privacidad</a>
           </label>
