@@ -17,7 +17,9 @@ export class ProductsComponent implements OnInit {
   id: number;
   category: string ="";
   categories : string[] =[];
-  ammount: number = 0;
+  search: string;
+  public productsTocart : Product[] = [];
+  isInCart: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -83,13 +85,24 @@ export class ProductsComponent implements OnInit {
     this.router.navigate(['../'], { relativeTo: this.route });
   }
 
-  decrease(){
-    if(this.ammount>=0) {
-      this.ammount -=1;
-    }
+  addToCart(product){
+    product.isInCart = true; 
+    product.quantity = 1;
+    this.productsTocart.push(product);
+    console.log(product);
+    console.log(this.productsTocart)
   }
 
-  increase(){
-    this.ammount +=1;
+  removeFromCart(product){
+    product.isInCart = false;
+    this.productsTocart = this.productsTocart.filter(item => item.id != product.id)
+    console.log(this.productsTocart)
   }
+
+  deleteProductFromCart(product){
+    product.isInCart = false;
+    this.productsTocart = this.productsTocart.filter(item => item.id != product.id)
+    console.log(this.productsTocart)
+  }
+
 }

@@ -12,6 +12,7 @@ import { FilterByCategoryComponent } from './pages/filter-by-category/filter-by-
 import { FooterComponent } from './pages/footer/footer.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ShoppingCartComponent } from './component/shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { LoginComponent } from './pages/login/login.component';
     FilterByCategoryComponent,
     FooterComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    ShoppingCartComponent
   ],
   imports: [
     BrowserModule,

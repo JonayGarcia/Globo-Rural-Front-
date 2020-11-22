@@ -1,0 +1,11 @@
+<div *ngFor="let product of productsInCart">
+    <p>{{product.name}}</p>
+    <p>{{product.price}} €</p>
+    <div class="card-Ammount">
+        <img src="../../../assets/images/less.png" (click)=decrease(product)>
+        <input type="number" [(ngModel)]="product.quantity">
+        <img src="../../../assets/images/more.png" (click)=increase(product)>
+      </div>
+</div>
+
+

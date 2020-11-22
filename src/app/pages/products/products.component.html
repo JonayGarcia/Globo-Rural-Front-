@@ -8,6 +8,21 @@
     <div [routerLink]="['/postCode', shop?.postCode]">Ir a otra Tienda</div>
   </div>
 </div>
+<div class="second-nav">
+  <p>Tus compras mas sencillas desde casa<p>
+  <div class="second-nav-search">
+    <input type="text" [(ngModel)]="search" placeholder="Busca en la tienda">
+    <img src="../../../assets/images/search.png">
+  </div>
+  <p>0,00 €</p>
+</div>
+<div class="dropdown">
+  <div class="dropHeader"><img src="../../../assets/images/shoppingCart.png"></div>
+  <div class="dropdown-content">
+    <app-shopping-cart [productsInCart]="productsTocart"
+    (removeProductFromCart)="deleteProductFromCart($event)"></app-shopping-cart>
+  </div>
+</div>
 
 <div class="header">
   <h1>{{ shop?.name }}</h1>
@@ -39,15 +54,21 @@
           <h5 class="card-title">{{ product.name }}</h5>
           <p class="card-text">Precio: {{ product.price }} €</p>
 
-          <div class="card-Ammount">
+          <!-- <div class="card-Ammount">
             <img src="../../../assets/images/less.png" (click)=decrease()>
             <input type="number" [(ngModel)]="ammount">
             <img src="../../../assets/images/more.png" (click)=increase()>
-          </div>
-          <div class="btn-kart"> 
-            <button href="#" class="btn btn-primary">
+          </div> -->
+          <div class="btn-kart" *ngIf="!product.isInCart"> 
+            <button href="#" class="btn btn-primary" (click)="addToCart(product)">
               <img src="../../../assets/images/addToCart.png" width="30px" height="30px">
               <p>Añadir al Carrito</p>
+            </button>
+          </div>  
+          <div class="btn-kart" *ngIf="product.isInCart"> 
+            <button href="#" class="btn btn-success" (click)="removeFromCart(product)">
+              <img src="../../../assets/images/removeFromCart.png" width="30px" height="30px">
+              <p>Eliminar del Carrito</p>
             </button>
           </div>  
         </div>

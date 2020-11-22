@@ -47,6 +47,10 @@
   align-items: center;
 }
 
+.inCart {
+  background-color: rgb(10, 100, 2);
+}
+
 .btn-kart button p{
   padding-top: 10px;
 }
@@ -103,6 +107,64 @@
  .nav-container div:hover{
   background-color: rgb(68, 102, 65);
  }
+
+ .second-nav{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-left: 15px;
+   padding-right: 15px;
+   width: 93vw;
+ }
+
+ .second-nav p{
+   font-size: 22px;
+   font-weight: 400;
+   color: rgb(10, 100, 2);
+   padding-top: 15px;
+ }
+
+ .second-nav-search{
+  border: 1px solid rgb(10, 100, 2);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+ }
+
+ .second-nav-search input{
+   margin-left: 10px;
+   width: 50vw;
+   border: none;
+ }
+
+ .second-nav-search img{
+   margin-right: 15px;
+ }
+
+ .dropdown {
+  position: absolute;
+  display: inline-block;
+  align-self: center;
+  top: 85px; 
+  right: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 500px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+ .dropdown-content div:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropHeader {cursor: pointer;}
 
  .selected{
   background-color: rgb(10, 100, 2);
