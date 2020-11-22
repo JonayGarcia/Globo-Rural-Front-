@@ -1,4 +1,4 @@
-<body id="registerID" [ngClass]="{backgroundOpacity: showBuyer==true}">
+<body id="registerID" >
   <!--
 <div>
     email
@@ -11,7 +11,7 @@
     avatar
 </div>
 -->
-<header class="container-fluid bg-dark ">
+<header class="container-fluid bg-dark" [ngClass]="{backgroundOpacity: showBuyer==true || showClient==true || showdDealer==true}">
 
   <div class="row ">
       <div class="col d-flex justify-content-center">
@@ -23,12 +23,22 @@
 </header>
 
 
+
 <div *ngIf="showBuyer" class="inputRegisterC"  >
   <app-register-daughter></app-register-daughter>
-  </div>
+</div>
+
+<div *ngIf="showClient" class="inputRegisterC"  >
+    <app-register-shop></app-register-shop>
+</div>
+
+<div *ngIf="showdDealer" class="inputRegisterC"  >
+  <app-register-daughter></app-register-daughter>
+</div>
 
 
-<div class="container ">
+
+<div class="container " [ngClass]="{backgroundOpacity: showBuyer==true || showClient==true || showdDealer==true}">
 
   <div class="row registerUsers justify-content-between">
       <div class="col-sm-3 ">
@@ -111,7 +121,7 @@
           </div>
 
           <div class="d-flex justify-content-center divRegister">
-              <a href="#" class="btn btn-primary">Registrarse</a>
+              <a class="btn btn-primary" (click)="registerS()">Registrarse</a>
           </div>
 
           </div>
@@ -154,7 +164,7 @@
         </div>
 
         <div class="d-flex justify-content-center divRegister">
-            <a href="#" class="btn btn-primary">Registrarse</a>
+            <a class="btn btn-primary" (click)="registerD()">Registrarse</a>
         </div>
 
         </div>

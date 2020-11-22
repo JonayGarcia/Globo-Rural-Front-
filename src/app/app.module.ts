@@ -14,6 +14,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ShoppingCartComponent } from './component/shopping-cart/shopping-cart.component';
 import { RegisterDaughterComponent } from './pages/register-daughter/register-daughter.component';
+import { RegisterShopComponent } from './pages/register-shop/register-shop.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RegisterDaughterComponent } from './pages/register-daughter/register-da
     RegisterComponent,
     LoginComponent,
     ShoppingCartComponent,
-    RegisterDaughterComponent
+    RegisterDaughterComponent,
+    RegisterShopComponent
   ],
   imports: [
     BrowserModule,
