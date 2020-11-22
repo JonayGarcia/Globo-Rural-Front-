@@ -1,0 +1,54 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.empty{
+  color: rgb(10, 100, 2);
+  font-weight: 400;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.cartWithProducts{
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartWithProducts img{
+  width: 40px;
+  height: 40px;
+}
+
+.name{
+  width: 300px;
+  font-size: 20px;
+}
+
+.card-Ammount input{
+  width: 30px;
+  border-radius: 10px;
+}
+
+.card-Ammount img{
+  width: 30px;
+  height: 30px;
+}
+
+.cart-footer p{
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(10, 100, 2);
+  text-align: end;
+  margin-right: 20px;
+}
+

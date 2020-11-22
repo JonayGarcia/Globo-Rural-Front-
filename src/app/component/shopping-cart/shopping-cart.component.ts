@@ -9,9 +9,10 @@ import { Product } from 'src/app/models';
 export class ShoppingCartComponent implements OnInit {
   @Input() public productsInCart: Product[] =[];
   @Output() removeProductFromCart = new EventEmitter();
-  ammount: number = 0;
+  @Output() totalToPayCart = new EventEmitter();
+  totalToPay: number = 0;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
@@ -23,6 +24,12 @@ export class ShoppingCartComponent implements OnInit {
     if(product.quantity==0) {
       this.removeProductFromCart.emit(product)
     }
+  }
+
+  total(){
+    this.totalToPay = +this.productsInCart.reduce((sum, prod) => sum += prod.quantity*prod.price ,0).toFixed(2);
+    this.totalToPayCart.emit(this.totalToPay);
+    return +this.productsInCart.reduce((sum, prod) => sum += prod.quantity*prod.price ,0).toFixed(2) 
   }
 
   increase(product){
