@@ -13,8 +13,8 @@ export class ProductsComponent implements OnInit {
   public shop: Shop;
   public products: Product[] = [];
   public products2: Product[] = [];
-  // id: string; BACKEND
-  id: number;
+  id: string;
+  // id: number; FAKE API
   category: string ="";
   categories : string[] =[];
   search: string;
@@ -54,7 +54,8 @@ export class ProductsComponent implements OnInit {
       this.productsTocart = JSON.parse(localStorage.getItem('productsTocart'))
       for (let i=0; i<this.productsTocart.length;i++){
         for (let j=0; j<this.products.length;j++){
-          if(this.products[j].id === this.productsTocart[i].id){
+          // if(this.products[j].id === this.productsTocart[i].id){ FAKE API
+          if(this.products[j]._id === this.productsTocart[i]._id){
             this.products[j].isInCart = true;
             break
           } else{
@@ -66,14 +67,15 @@ export class ProductsComponent implements OnInit {
     } else {
       this.shop = await this.storesService.getOneShop(this.id);
       console.log(this.shop)
-      // this.products = await this.storesService.getProductsByShop(this.shop._id, this.category); BACKEND
-      this.products = await this.storesService.getProductsByShop(this.shop.id, this.category);
-      // this.products2 = await this.storesService.getProductsByShop(this.shop._id); BACKEND
-      this.products2 = await this.storesService.getProductsByShop(this.shop.id);
+      this.products = await this.storesService.getProductsByShop(this.shop._id, this.category); 
+      // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category); FAKE API
+      this.products2 = await this.storesService.getProductsByShop(this.shop._id); 
+      // this.products2 = await this.storesService.getProductsByShop(this.shop.id); FAKE API
       this.productsTocart = JSON.parse(localStorage.getItem('productsTocart'))
       for (let i=0; i<this.productsTocart.length;i++){
         for (let j=0; j<this.products.length;j++){
-          if(this.products[j].id === this.productsTocart[i].id){
+          // if(this.products[j].id === this.productsTocart[i].id){ FAKE API
+          if(this.products[j]._id === this.productsTocart[i]._id){
             this.products[j].isInCart = true;
             break
           } else{
