@@ -11,12 +11,12 @@ export class RegisterDaughterComponent implements OnInit {
 
 
   name:string;
-  surname:string;
+  //surname:string;
   email:string;
-  phone:number;
-  zip:number;
+  phone:string;
+  zip:string;
   key:string;
-  address:string;
+  //address:string;
   check:boolean=false;
 
   constructor( public _location: Location,  public router: Router) { }
@@ -27,8 +27,8 @@ export class RegisterDaughterComponent implements OnInit {
   checkRegister(){
 
 
-    if(this.name == undefined || this.surname == undefined ||this.email == undefined || this.phone == undefined || this.zip == undefined
-       || this.key == undefined ||  this.address == undefined ||  this.check == undefined){
+    if(this.name == undefined ||this.email == undefined || this.phone == undefined || this.zip == undefined
+       || this.key == undefined ||  this.check == undefined){
       console.log("Debes rellenar todos los parámetros");
 
 

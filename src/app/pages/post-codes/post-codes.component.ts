@@ -40,6 +40,7 @@ export class PostCodesComponent implements OnInit {
 
   async findCode(postalcode: string) {
     this.codeFound = await this.storesService.getShopsByPostCode(postalcode);
+    console.log("--->><<<", this.codeFound);
     if (this.codeFound.length == 0) {
       this.notFound = 0;
       console.log('No se ha encontrado el CP');
