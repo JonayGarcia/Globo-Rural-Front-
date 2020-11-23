@@ -20,7 +20,7 @@
 <div class="dropdown">
   <div class="dropHeader"><img src="../../../assets/images/shoppingCart.png"></div>
   <div class="dropdown-content">
-    <app-shopping-cart 
+    <app-shopping-cart
     [productsInCart]="productsTocart"
     (removeProductFromCart)="removeFromCart($event)"
     (totalToPayCart)="showTotalToPay($event)"></app-shopping-cart>

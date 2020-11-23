@@ -7,7 +7,7 @@ import { Shop, Product } from 'src/app/models';
 })
 export class StoresService {
   // private api_host: string = '192.168.99.102:3000';
-  private api_url: string = 'http://localhost:3000/api';
+  private api_url: string = 'http://15.236.218.147:3000/api';
   // private api_url: string = 'http://localhost:3000'; FAKE API
 
   constructor() {}
@@ -24,7 +24,7 @@ export class StoresService {
       });
   }
 
-  getOneShop(id: string): Promise<Shop> { 
+  getOneShop(id: string): Promise<Shop> {
   // getOneShop(id: number): Promise<Shop> {
     return axios
       .get(`${this.api_url}/shops/${id}`) // CONECTADO

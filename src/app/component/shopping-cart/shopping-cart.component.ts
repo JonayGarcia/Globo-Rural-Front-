@@ -7,7 +7,7 @@ import { Product } from 'src/app/models';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
-  @Input() public productsInCart: Product[] =[];
+  @Input() public productsInCart: Product[];
   @Output() removeProductFromCart = new EventEmitter();
   @Output() totalToPayCart = new EventEmitter();
   totalToPay: number = 0;
@@ -15,6 +15,7 @@ export class ShoppingCartComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
+
   }
 
   decrease(product){
@@ -27,9 +28,9 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   total(){
-    this.totalToPay = +this.productsInCart.reduce((sum, prod) => sum += prod.quantity*prod.price ,0).toFixed(2);
+    this.totalToPay = this.productsInCart.length == 0? 0:(+this.productsInCart.reduce((sum, prod) => sum += prod.quantity*prod.price ,0).toFixed(2));
     this.totalToPayCart.emit(this.totalToPay);
-    return +this.productsInCart.reduce((sum, prod) => sum += prod.quantity*prod.price ,0).toFixed(2) 
+    return +this.productsInCart.reduce((sum, prod) => sum += prod.quantity*prod.price ,0).toFixed(2)
   }
 
   increase(product){
