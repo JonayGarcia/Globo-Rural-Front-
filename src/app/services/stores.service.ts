@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import axios from 'axios';
 import { Shop, Product } from 'src/app/models';
 
@@ -10,7 +11,7 @@ export class StoresService {
   //private api_url: string = 'http://15.236.218.147:3000/api';
    private api_url: string = 'http://localhost:3000/api';// FAKE API
 
-  constructor() {}
+  constructor(public router: Router) {}
 
   getAllShops(): Promise<Shop[]> {
     return axios
@@ -75,4 +76,20 @@ export class StoresService {
         });
     }
   }
+
+
+  registerUser(newRegister){
+    return axios.post(`${this.api_url}/user`,newRegister)
+    .then((response) =>{
+      this.router.navigate(['/register']);
+    });
+  }
+
+  loginUser(email:string, password: string){
+    return axios.post(`${this.api_url}/user/login`,{email,password})
+    .then((response) =>{
+      this.router.navigate(['/register']);
+    });
+  }
+
 }

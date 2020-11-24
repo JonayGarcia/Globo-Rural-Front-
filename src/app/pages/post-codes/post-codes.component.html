@@ -49,7 +49,7 @@
      <button class="button_find" (click)="findCode(textInput)" >Buscar tiendas</button>
   </div>
 
-  <div *ngIf="codeFound.length == 0 && notFound==0">
+  <div *ngIf="codeFound == undefined || notFound==1">
       <div class="msn_error">Código no encontrado</div>
 
   </div>

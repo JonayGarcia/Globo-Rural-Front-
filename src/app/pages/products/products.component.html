@@ -36,13 +36,14 @@
   <div class="filter">
     <h3>Categoría</h3>
     <br>
-    <div *ngIf="category==''">
-      <div *ngFor="let category of categories" class="clickCategories">
-        <p [routerLink]="category">{{category}}</p>
+    <div class="categoriesListed" *ngIf="category==''">
+      <div *ngFor="let category of categories">
+        <p [routerLink]="category" >{{category}}</p>
       </div>
     </div>
+
     <div class="categoriesListed" *ngIf="category!==''">
-          <div *ngFor="let category2 of categories" class="clickCategories">
+          <div *ngFor="let category2 of categories">
               <p (click)="selectCategory(category2)" [ngClass]="{selected: category2==category}">{{category2}}</p>
           </div>
         <button (click)="goBack()" class="showProducts">Mostrar todos los productos</button>

@@ -19,7 +19,7 @@
 }
 
 .filter{
-  width: 20vw;
+  width: 10vw;
   margin-left: 30px;
 }
 
@@ -164,8 +164,11 @@
 
  .selected{
   background-color: rgb(10, 100, 2);
+  border-radius: 5px;
   color: white;
  }
+
+
 
  .categoriesListed div p{
    padding-left: 10px;
@@ -187,4 +190,8 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.showProducts{
+  border-radius: 5px;
 }
