@@ -24,7 +24,7 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private storesService: StoresService, 
+    private storesService: StoresService,
     public router: Router
   ) {}
 
@@ -98,6 +98,7 @@ export class ProductsComponent implements OnInit {
           this.categories.push(product.category);
         })
     }
+    console.log(this.categories);
   }
 
   selectCategory(category: string) {
@@ -109,7 +110,7 @@ export class ProductsComponent implements OnInit {
   }
 
   addToCart(product){
-    product.isInCart = true; 
+    product.isInCart = true;
     product.quantity = 1;
     this.productsTocart.push(product);
     localStorage.setItem('productsTocart', JSON.stringify(this.productsTocart));

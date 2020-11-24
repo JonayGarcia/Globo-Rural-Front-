@@ -7,8 +7,6 @@ import { ProductsComponent } from './pages/products/products.component';
 import { ShopsComponent } from './pages/shops/shops.component';
 import { PostCodesComponent } from './pages/post-codes/post-codes.component';
 import { FormsModule } from '@angular/forms';
-import { FilterComponent } from './component/filter/filter.component';
-import { FilterByCategoryComponent } from './pages/filter-by-category/filter-by-category.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -22,8 +20,6 @@ import { RegisterShopComponent } from './pages/register-shop/register-shop.compo
     ProductsComponent,
     ShopsComponent,
     PostCodesComponent,
-    FilterComponent,
-    FilterByCategoryComponent,
     FooterComponent,
     RegisterComponent,
     LoginComponent,

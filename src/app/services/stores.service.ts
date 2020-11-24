@@ -24,7 +24,7 @@ export class StoresService {
       });
   }
 
-  getOneShop(id: string): Promise<Shop> { 
+  getOneShop(id: string): Promise<Shop> {
   // getOneShop(id: number): Promise<Shop> {
     return axios
       .get(`${this.api_url}/shops/${id}`) // CONECTADO
