@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class RegisterShopComponent implements OnInit {
   nameShop:string;
   name:string;
-  surname:string;
+ // surname:string;
   email:string;
-  phone:number;
-  zip:number;
+  phone:string;
+  zip:string;
   key:string;
-  address:string;
+  //address:string;
   check:boolean=false;
 
   constructor() { }
@@ -23,8 +23,8 @@ export class RegisterShopComponent implements OnInit {
 
   checkRegister(){
 
-    if(this.nameShop == undefined || this.name == undefined || this.surname == undefined ||this.email == undefined || this.phone == undefined || this.zip == undefined
-      || this.key == undefined ||  this.address == undefined ||  this.check == undefined){
+    if(this.nameShop == undefined || this.name == undefined ||this.email == undefined || this.phone == undefined || this.zip == undefined
+      || this.key == undefined ||  this.check == undefined){
      console.log("Debes rellenar todos los parámetros");
 
 

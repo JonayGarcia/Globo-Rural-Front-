@@ -14,8 +14,8 @@ export class PostCodesComponent implements OnInit {
   codeFound: any = [];
   postCodes: string[] = [];
   textInput: string;
-  numberCode: number;
-  notFound: number;
+  notFound: number = 0;
+  //numberCode: number;
 
   constructor(private storesService: StoresService, public router: Router) {}
 
@@ -35,19 +35,20 @@ export class PostCodesComponent implements OnInit {
       if (this.postCodes.includes(shop.postcode) == false)
         this.postCodes.push(shop.postcode);
     });
-    console.log('Mis tiendas---->', this.shops);
+    //console.log('Mis tiendas---->', this.shops);
   }
 
   async findCode(postalcode: string) {
+    //console.log("ESto es postalcode--->",postalcode);
+
     this.codeFound = await this.storesService.getShopsByPostCode(postalcode);
-    if (this.codeFound.length == 0) {
-      this.notFound = 0;
-      console.log('No se ha encontrado el CP');
-    } else {
-      this.notFound = 1;
+    //console.log("ESto es codeFound --->>", this.codeFound);
+    if(this.codeFound != undefined && this.textInput != ""){
+      //console.log("ESto es texInput: ",this.textInput);
       this.router.navigate(['/postCode', postalcode]);
-      console.log('El CP es---->', postalcode);
+      //console.log('El CP es---->', postalcode);
     }
     this.textInput = '';
+    this.notFound=1;
   }
 }

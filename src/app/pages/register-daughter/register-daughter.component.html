@@ -5,16 +5,13 @@
       </div>
 
       <div class="form-row">
-        <div class="form-group col-md-6">
+        <div class="form-group col">
           <label for="inputEmail4">Name</label>
 
           <input type="text" class="form-control" [(ngModel)]="name" placeholder="Name" required>
 
         </div>
-        <div class="form-group col-md-6">
-          <label for="inputPassword4">Surname</label>
-          <input type="text" class="form-control" [(ngModel)]="surname" placeholder="surname">
-        </div>
+
       </div>
 
       <div class="form-row">
@@ -34,16 +31,18 @@
 
       <div class="form-row">
         <div class="form-group col">
-          <label for="inputEmail4">Contraseña</label>
-          <input type="password" class="form-control" [(ngModel)]="key" placeholder="Contraseña">
+          <label for="inputEmail4">Password</label>
+          <input type="password" class="form-control" [(ngModel)]="key" placeholder="Password">
         </div>
 
       </div>
 
+      <!--
       <div class="form-group">
         <label for="inputAddress">Address</label>
         <input type="text" class="form-control" [(ngModel)]="address" placeholder="Address">
       </div>
+      -->
 
       <div class="form-group">
         <div class="form-check">
@@ -56,6 +55,10 @@
 
       <div class="d-flex justify-content-center divRegister">
           <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="checkRegister()">Registrarse</button>
+      </div>
+
+      <div *ngIf="verify" class="msnMistake">
+        Debes introducir todos los campos
       </div>
 
 

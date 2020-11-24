@@ -24,3 +24,13 @@ export interface Product {
   // esto es solo para trabajar con la fakeapi
   id: number
 }
+
+
+export interface User{
+  name: string;
+  email: string;
+  password:string;
+  postcode: string;
+  phone: string;
+  id:string;
+}

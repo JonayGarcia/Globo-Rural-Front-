@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import axios from 'axios';
 import { Shop, Product } from 'src/app/models';
 
@@ -109,4 +110,20 @@ export class StoresService {
         });
     }
   }
+
+
+  registerUser(newRegister){
+    return axios.post(`${this.api_url}/user`,newRegister)
+    .then((response) =>{
+      this.router.navigate(['/register']);
+    });
+  }
+
+  loginUser(email:string, password: string){
+    return axios.post(`${this.api_url}/user/login`,{email,password})
+    .then((response) =>{
+      this.router.navigate(['/register']);
+    });
+  }
+
 }
