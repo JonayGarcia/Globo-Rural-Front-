@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { StoresService } from '../../services/stores.service';
+import { StoresService } from 'src/app/services/stores.service';
 import { ActivatedRoute } from '@angular/router';
 import { Shop, Product } from 'src/app/models';
 import { Router } from '@angular/router';
@@ -57,9 +57,9 @@ export class ProductsComponent implements OnInit {
     } else {
       this.shop = await this.storesService.getOneShop(this.id);
       console.log(this.shop)
-      this.products = await this.storesService.getProductsByShop(this.shop._id, this.category); 
-      // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category); 
-      this.products2 = await this.storesService.getProductsByShop(this.shop._id); 
+      this.products = await this.storesService.getProductsByShop(this.shop._id, this.category);
+      // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category);
+      this.products2 = await this.storesService.getProductsByShop(this.shop._id);
       // this.products2 = await this.storesService.getProductsByShop(this.shop.id);
       this.productsTocart = JSON.parse(localStorage.getItem('productsTocart')) == null ? [] : JSON.parse(localStorage.getItem('productsTocart'));
       this.showsWhosInCart(this.products)
@@ -136,7 +136,7 @@ export class ProductsComponent implements OnInit {
     } else {
       this.totalToPay = 0;
     }
-    return this.totalToPay 
+    return this.totalToPay
   }
 
 }
