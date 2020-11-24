@@ -14,7 +14,7 @@ export class ProductsComponent implements OnInit {
   public products: Product[] = [];
   public products2: Product[] = [];
   id: string;
-  // id: number; FAKE API
+  // id: number;
   category: string ="";
   categories : string[] =[];
   search: string;
@@ -51,40 +51,39 @@ export class ProductsComponent implements OnInit {
       console.log("no se esta filtrando by category");
       this.shop = await this.storesService.getOneShop(this.id);
       this.products = await this.storesService.getProductsByShop(this.id);
-      this.productsTocart = JSON.parse(localStorage.getItem('productsTocart'))
-      for (let i=0; i<this.productsTocart.length;i++){
-        for (let j=0; j<this.products.length;j++){
-          // if(this.products[j].id === this.productsTocart[i].id){ FAKE API
-          if(this.products[j]._id === this.productsTocart[i]._id){
-            this.products[j].isInCart = true;
-            break
-          } else{
-            this.products[j].isInCart = false;
-          }
-        }
-      }
+      this.productsTocart = JSON.parse(localStorage.getItem('productsTocart')) == null ? [] : JSON.parse(localStorage.getItem('productsTocart'));
+      this.showsWhosInCart(this.products)
       console.log(this.products)
     } else {
       this.shop = await this.storesService.getOneShop(this.id);
       console.log(this.shop)
       this.products = await this.storesService.getProductsByShop(this.shop._id, this.category); 
-      // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category); FAKE API
+      // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category); 
       this.products2 = await this.storesService.getProductsByShop(this.shop._id); 
-      // this.products2 = await this.storesService.getProductsByShop(this.shop.id); FAKE API
-      this.productsTocart = JSON.parse(localStorage.getItem('productsTocart'))
+      // this.products2 = await this.storesService.getProductsByShop(this.shop.id);
+      this.productsTocart = JSON.parse(localStorage.getItem('productsTocart')) == null ? [] : JSON.parse(localStorage.getItem('productsTocart'));
+      this.showsWhosInCart(this.products)
+      console.log(this.products)
+    }
+    this.getCategories();
+  }
+
+  showsWhosInCart(products){
+    if(this.productsTocart.length!=0){
       for (let i=0; i<this.productsTocart.length;i++){
-        for (let j=0; j<this.products.length;j++){
-          // if(this.products[j].id === this.productsTocart[i].id){ FAKE API
+        for (let j=0; j<products.length;j++){
+          // if(products[j].id === this.productsTocart[i].id){
           if(this.products[j]._id === this.productsTocart[i]._id){
-            this.products[j].isInCart = true;
+            products[j].isInCart = true;
             break
           } else{
-            this.products[j].isInCart = false;
+            products[j].isInCart = false;
           }
         }
       }
+    } else {
+      products.forEach(product=> product.isInCart=false)
     }
-    this.getCategories();
   }
 
   getCategories(){
@@ -128,6 +127,15 @@ export class ProductsComponent implements OnInit {
 
   showTotalToPay(total){
     this.totalToPay= total;
+  }
+
+  total(){
+    if(this.productsTocart!=null){
+      this.totalToPay = +this.productsTocart.reduce((sum, prod) => sum += prod.quantity*prod.price ,0).toFixed(2);
+    } else {
+      this.totalToPay = 0;
+    }
+    return this.totalToPay 
   }
 
 }

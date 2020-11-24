@@ -7,10 +7,10 @@ import { Product } from 'src/app/models';
   styleUrls: ['./shopping-cart.component.css']
 })
 export class ShoppingCartComponent implements OnInit {
-  @Input() public productsInCart: Product[] =[];
+  @Input() public productsInCart: Product[];
   @Output() removeProductFromCart = new EventEmitter();
   @Output() totalToPayCart = new EventEmitter();
-  totalToPay: number = 0;
+  totalToPay: number;
 
   constructor() {}
 
@@ -20,20 +20,28 @@ export class ShoppingCartComponent implements OnInit {
   decrease(product){
     if(product.quantity>=0) {
       product.quantity -=1;
+      localStorage.setItem('productsTocart', JSON.stringify(this.productsInCart));
     }
     if(product.quantity==0) {
+      product.isInCart = false;
       this.removeProductFromCart.emit(product)
     }
+    // localStorage.setItem('productsTocart', JSON.stringify(this.productsInCart));
   }
 
   total(){
-    this.totalToPay = +this.productsInCart.reduce((sum, prod) => sum += prod.quantity*prod.price ,0).toFixed(2);
+    if(this.productsInCart!=null){
+      this.totalToPay = +this.productsInCart.reduce((sum, prod) => sum += prod.quantity*prod.price ,0).toFixed(2);
+    } else {
+      this.totalToPay = 0;
+    }
     this.totalToPayCart.emit(this.totalToPay);
-    return +this.productsInCart.reduce((sum, prod) => sum += prod.quantity*prod.price ,0).toFixed(2) 
+    return this.totalToPay 
   }
 
   increase(product){
     product.quantity +=1;
+    localStorage.setItem('productsTocart', JSON.stringify(this.productsInCart));
   }
 
 }

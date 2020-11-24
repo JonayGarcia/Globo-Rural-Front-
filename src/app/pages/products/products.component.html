@@ -10,11 +10,11 @@
 </div>
 <div class="second-nav">
   <p>Tus compras mas sencillas desde casa<p>
-  <div class="second-nav-search">
-    <input type="text" [(ngModel)]="search" placeholder="Busca en la tienda">
+  <!-- <div class="second-nav-search">
+    <inut type="text" [(ngModel)]="search" placeholder="Busca en la tienda">
     <img src="../../../assets/images/search.png">
-  </div>
-  <p>{{totalToPay}} €</p>
+  </div>p -->
+  <p>{{total()}} €</p>
 </div>
 
 <div class="dropdown">
@@ -56,12 +56,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ product.name }}</h5>
           <p class="card-text">Precio: {{ product.price }} €</p>
-
-          <!-- <div class="card-Ammount">
-            <img src="../../../assets/images/less.png" (click)=decrease()>
-            <input type="number" [(ngModel)]="ammount">
-            <img src="../../../assets/images/more.png" (click)=increase()>
-          </div> -->
+          <p>{{product.isInCart}}</p>
           <div class="btn-kart" *ngIf="!product.isInCart">
             <button href="#" class="btn btn-primary" (click)="addToCart(product)">
               <img src="../../../assets/images/addToCart.png" width="30px" height="30px">

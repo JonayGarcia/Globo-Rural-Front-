@@ -8,7 +8,7 @@ import { Shop, Product } from 'src/app/models';
 export class StoresService {
   // private api_host: string = '192.168.99.102:3000';
   private api_url: string = 'http://localhost:3000/api';
-  // private api_url: string = 'http://localhost:3000'; FAKE API
+  // private api_url: string = 'http://localhost:3000';
 
   constructor() {}
 
