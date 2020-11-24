@@ -1,4 +1,4 @@
-<div class="nav">
+<div class="nav" >
   <div routerLink="" class="nav-logo">
     <img src="/assets/images/logo.png" class="appLogo" />
     <h2 class="appName">Penguin Express</h2>
@@ -8,7 +8,7 @@
     <div [routerLink]="['/postCode', shop?.postCode]">Ir a otra Tienda</div>
   </div>
 </div>
-<div class="second-nav">
+<div class="second-nav"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
   <p>Tus compras mas sencillas desde casa<p>
   <!-- <div class="second-nav-search">
     <inut type="text" [(ngModel)]="search" placeholder="Busca en la tienda">
@@ -23,16 +23,47 @@
     <app-shopping-cart
     [productsInCart]="productsTocart"
     (removeProductFromCart)="removeFromCart($event)"
-    (totalToPayCart)="showTotalToPay($event)"></app-shopping-cart>
+    (totalToPayCart)="showTotalToPay($event)"
+    (sendPetitionToPay)="startPaying($event)"></app-shopping-cart>
   </div>
 </div>
 
-<div class="header">
+
+<div class="popUp-login" *ngIf="wantToPayF==true" >
+  <div class="formClient">
+    <div class="col alignClose" >
+      <img class="close" (click)="close()" src="/assets/images/close.png" width="20px" height="20px" alt="close">
+    </div>
+    <div class="form-row">
+      <div class="form-group col">
+        <label for="inputEmail4">Usuario</label>
+        <input type="text" class="form-control" [(ngModel)]="user" placeholder="Usuario">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col">
+        <label for="inputEmail4">Contraseña</label>
+        <input type="text" class="form-control" [(ngModel)]="keyLogin" placeholder="Contraseña">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col">
+        ¿Aún no tienes cuenta? <a href="http://localhost:4200/register">Crear cuenta</a>
+      </div>
+    </div>
+     <div class="d-flex justify-content-center divRegister">
+        <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="signIn()">Entrar</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="header"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
   <h1>{{ shop?.name }}</h1>
   <img [src]="shop?.logo" class="logo" />
 </div>
 
-<div class="mainContainer">
+<div class="mainContainer"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
   <div class="filter">
     <h3>Categoría</h3>
     <br>
@@ -75,4 +106,7 @@
     </div>
   </div>
 </div>
+
+
+
 <router-outlet></router-outlet>

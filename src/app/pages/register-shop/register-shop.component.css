@@ -25,3 +25,9 @@
   float: right;
   padding: 0;
 }
+
+.msnMistake{
+  margin-top:10px;
+  text-align: center;
+  color:red;
+}

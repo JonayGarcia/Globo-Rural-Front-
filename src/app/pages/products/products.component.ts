@@ -21,6 +21,10 @@ export class ProductsComponent implements OnInit {
   public productsTocart : Product[] = [];
   isInCart: boolean = false;
   totalToPay: number = 0;
+  wantToPayF: boolean;
+
+  user:string;
+  keyLogin:string;
 
   constructor(
     private route: ActivatedRoute,
@@ -121,7 +125,7 @@ export class ProductsComponent implements OnInit {
     console.log(product);
     product.isInCart = false;
     console.log(product)
-    this.productsTocart = this.productsTocart.filter(item => item.id != product.id)
+    this.productsTocart = this.productsTocart.filter(item => item._id != product._id)
     localStorage.setItem('productsTocart', JSON.stringify(this.productsTocart));
     console.log(this.productsTocart)
   }
@@ -139,4 +143,21 @@ export class ProductsComponent implements OnInit {
     return this.totalToPay
   }
 
+  startPaying(data){
+    console.log("ESto es data-->",data);
+    this.wantToPayF = data;
+    console.log(this.wantToPayF);
+  }
+
+  signIn(){
+    if(this.user==undefined || this.keyLogin == undefined){
+      console.log("Parámetros inválidos");
+    }else{
+      this.storesService.performLogin(this.user, this.keyLogin);
+    }
+  }
+
+  close(){
+    this.wantToPayF= false;
+  }
 }

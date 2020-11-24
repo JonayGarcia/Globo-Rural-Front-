@@ -52,3 +52,37 @@ input[type=number] {
   margin-right: 20px;
 }
 
+.cart-footer{
+  display:flex;
+  flex-direction: column;
+}
+
+.toLogin{
+  display:flex;
+  flex-direction: column;
+}
+
+.toLogin div{
+  background-color: rgb(10, 100, 2);
+  color:white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor:pointer;
+  text-align: center;
+}
+
+.buttonAdd:hover{
+  cursor: pointer;
+}
+
+
+.buttonOrder:hover{
+  cursor: pointer;
+  margin:auto;
+}
+
+.buttonOrder p{
+  background-color: rgb(10, 100, 2);
+  border-radius: 5px;
+  color: white;
+}
