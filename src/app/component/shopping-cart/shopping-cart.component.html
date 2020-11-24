@@ -15,12 +15,11 @@
 </div>
 <div class="cart-footer">
     <div *ngIf="total() != 0">
-        <div class="container-fluid">
-            <div class="row justify-content-between">
+        <div class="container">
+            <div class="row">
                 <div class="col">
-                    <div (click)="saveOrder()"  class="buttonOrder"><p>Guardar Pedido</p></div>
+                    <div  class="buttonOrder" (click)="saveOrder()" ><p>Guardar Pedido</p></div>
                 </div>
-
 
                 <div clas="col">
                     <div class="buttonOrder" (click)="startPayment()"><p>Realizar Pago</p></div>

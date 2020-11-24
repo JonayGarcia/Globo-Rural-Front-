@@ -76,10 +76,7 @@ input[type=number] {
 }
 
 
-.buttonOrder:hover{
-  cursor: pointer;
-  margin:auto;
-}
+
 
 .buttonOrder p{
   background-color: rgb(10, 100, 2);

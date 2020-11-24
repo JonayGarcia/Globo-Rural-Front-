@@ -23,8 +23,8 @@
     <div class="form-row">
       <div class="form-group col">
 
-        <label for="inputEmail4">Usuario</label>
-        <input type="text" class="form-control" [(ngModel)]="user" placeholder="Usuario">
+        <label for="inputEmail4">Email</label>
+        <input type="text" class="form-control" [(ngModel)]="email" placeholder="Email">
 
       </div>
     </div>
@@ -49,6 +49,20 @@
         <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="signIn()">Entrar</button>
     </div>
 
+
+    <div *ngIf="isFormValid" class="msnMistake">
+      Debes introducir todos los campos
+    </div>
+
+    <div *ngIf="isUserLoged" class="msnOk">
+      Has iniciado sesión
+     </div>
+
+     <div *ngIf="failLogin" class="msnMistake">
+      Email o contraseña inválidos
+     </div>
+
+     
 
   </div>
 

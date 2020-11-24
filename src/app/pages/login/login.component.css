@@ -45,3 +45,15 @@ body{
   width: 20px;
   height: 20px;
 }
+
+.msnMistake{
+  margin-top:10px;
+  text-align: center;
+  color:red;
+}
+
+.msnOk{
+  margin-top:10px;
+  text-align: center;
+  color:rgb(60, 206, 53);
+ }

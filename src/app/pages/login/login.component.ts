@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Location} from '@angular/common';
 import { StoresService } from 'src/app/services/stores.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,22 +9,47 @@ import { StoresService } from 'src/app/services/stores.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  user:string;
+  email:string;
   keyLogin:string;
+  failLogin: boolean = false;
+  isUserLoged: boolean = false;
+
+  isFormValid:boolean=false;
+  isUserRegistered :boolean=false;
 
   constructor(
     public _location: Location,
-    private storesService: StoresService
+    private storesService: StoresService,
+    public router: Router
   ) { }
 
   ngOnInit(): void {
   }
 
   signIn(){
-    if(this.user==undefined || this.keyLogin == undefined){
-      console.log("Parámetros inválidos");
+    if(this.email==undefined || this.keyLogin == undefined
+      || this.email=="" || this.keyLogin == ""
+      ){
+      this.isFormValid = true;
+      this.failLogin = false;
+      
     }else{
-      this.storesService.performLogin(this.user, this.keyLogin);
+      console.log("Entro a logearme....>");
+      this.storesService.performLogin(this.email, this.keyLogin)
+      .then( data => {
+        this.isFormValid = false;
+        this.failLogin = false;
+        this.isUserLoged = true;
+        setTimeout(() => {
+          this.router.navigate(['/']);
+        }, 3000);  //3s
+      })
+      .catch((error) => {
+        console.log('Se ha producido el error en el front--->', error);
+        this.failLogin = true;
+        this.isFormValid = false;
+        return error
+      });
     }
   }
 

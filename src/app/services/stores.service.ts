@@ -43,9 +43,24 @@ export class StoresService {
       })
       .catch((error) => {
         console.log('Se ha producido el error', error);
-        return false;
+        throw error;
       });
   }
+
+  
+//this.router.navigate(['/register']);
+  registerUser(newRegister){
+    return axios.post(`${this.api_url}/user`,newRegister)
+    .then((response)=>{
+      console.log("Me he registrado con éxito:", response.data);
+      return response.data;
+    })
+    .catch((error) => {
+      console.log('Se ha producido el error en service.ts:', error);
+      throw error;
+    });
+  }
+  
 
   getAllShops(): Promise<Shop[]> {
     return axios
@@ -112,12 +127,8 @@ export class StoresService {
   }
 
 
-  registerUser(newRegister){
-    return axios.post(`${this.api_url}/user`,newRegister)
-    .then((response) =>{
-      this.router.navigate(['/register']);
-    });
-  }
+
+
 
   loginUser(email:string, password: string){
     return axios.post(`${this.api_url}/user/login`,{email,password})

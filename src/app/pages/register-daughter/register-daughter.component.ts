@@ -15,12 +15,15 @@ export class RegisterDaughterComponent implements OnInit {
  // surname:string;
   email:string;
   phone:string;
-  zip:string;
+  postcode:string;
   key:string;
   //address:string;
   check:boolean=false;
   checkUserRegister:boolean=false;
-  verify:boolean=false;
+  isFormValid:boolean=false;
+  isUserRegistered :boolean=false;
+
+  failRegister:boolean=false;
 
   constructor( public _location: Location,  public router: Router, private storesService: StoresService ) { }
 
@@ -31,18 +34,18 @@ export class RegisterDaughterComponent implements OnInit {
     console.log("1:",this.name);
     console.log("2:",this.email);
     console.log("3:",this.phone);
-    console.log("4:",this.zip);
+    console.log("4:",this.postcode);
     console.log("5:",this.key);
 
 
-    if(this.name == undefined ||this.email == undefined || this.phone == undefined || this.zip == undefined
+    if(this.name == undefined ||this.email == undefined || this.phone == undefined || this.postcode == undefined
        || this.key == undefined ||  this.check == false ||
-       this.name == "" ||this.email == "" || this.phone == "" || this.zip == ""
+       this.name == "" ||this.email == "" || this.phone == "" || this.postcode == ""
        || this.key == ""
        ){
       
-        this.verify = true;
-        
+        this.isFormValid = true;
+        this.failRegister = false;
       console.log("Debes rellenar todos los parámetros");
 
 
@@ -53,15 +56,30 @@ export class RegisterDaughterComponent implements OnInit {
           name : this.name,
           email: this.email,
           phone: this.phone,
-          postcode: this.zip,
+          postcode: this.postcode,
           password: this.key,
         };
 
-        this.storesService.registerUser(newRegister);
-        this.verify = false;
-        console.log("Puedes registrarte");
-    }
-
+        this.storesService.registerUser(newRegister) 
+        .then( data => {
+          this.failRegister = false;
+          console.log("Esto en el register-->",data);
+          localStorage.setItem('user', JSON.stringify(data));
+          this.isUserRegistered = true;
+          setTimeout(() => {
+            this.router.navigate(['/']);
+          }, 3000);  //3s
+        })
+        .catch((error) => {
+          console.log('Se ha producido el error en el front--->', error);
+          this.failRegister = true;
+          this.isFormValid = false;
+          return error
+        });;
+        
+            
+      
+   }
   }
 
   close(){

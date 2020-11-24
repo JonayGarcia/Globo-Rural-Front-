@@ -38,16 +38,16 @@
 
 
 
-<div class="container " [ngClass]="{backgroundOpacity: showBuyer==true || showClient==true || showdDealer==true}">
+<div class="mainContainer" [ngClass]="{backgroundOpacity: showBuyer==true || showClient==true || showdDealer==true}">
 
   <div class="row registerUsers justify-content-between">
-      <div class="col-sm-3 ">
+      <div class="col">
           <div class="card" style="width: 23rem;">
             <h1 class="textName">Comprador</h1>
             <img class="card-img-top" src="/assets/images/buyer.jpg" alt="Comprador">
             <div class="card-body">
 
-                 <div class="container">
+                 <div class="container-fluid">
                       <div class="row">
                             <div class="col-2">
                                <img src="/assets/images/check.png" alt="check">
@@ -83,93 +83,6 @@
             </div>
          </div>
       </div>
-
-
-      <div class="col-sm-3">
-        <div class="card" style="width: 23rem;">
-          <h1 class="textName">Tienda</h1>
-          <img class="card-img-top" src="/assets/images/shop_register.jpg" alt="Tienda">
-          <div class="card-body">
-
-            <div class="container">
-              <div class="row">
-                    <div class="col-2">
-                       <img src="/assets/images/check.png" alt="check">
-                    </div>
-                    <div class="col-10">
-                      Vende cuando desees
-                    </div>
-              </div>
-
-              <div class="row">
-                    <div class="col-2">
-                      <img src="/assets/images/check.png" alt="check">
-                    </div>
-                    <div class="col-10">
-                      Administra tus productos
-                    </div>
-              </div>
-
-              <div class="row">
-                    <div class="col-2">
-                      <img src="/assets/images/check.png" alt="check">
-                    </div>
-                    <div class="col-10">
-                      Mayor alcance geográfico
-                    </div>
-              </div>
-          </div>
-
-          <div class="d-flex justify-content-center divRegister">
-              <a class="btn btn-primary" (click)="registerS()">Registrarse</a>
-          </div>
-
-          </div>
-        </div>
-    </div>
-
-    <div class="col-sm-3">
-      <div class="card" style="width: 23rem;">
-        <h1 class="textName">Repartidor</h1>
-        <img class="card-img-top " src="/assets/images/delivery.png" alt="Deliver">
-        <div class="card-body">
-
-          <div class="container">
-            <div class="row">
-                  <div class="col-2">
-                     <img src="/assets/images/check.png" alt="check">
-                  </div>
-                  <div class="col-10">
-                    Elige cuando trabajar
-                  </div>
-            </div>
-
-            <div class="row">
-                  <div class="col-2">
-                    <img src="/assets/images/check.png" alt="check">
-                  </div>
-                  <div class="col-10">
-                    Usa tu propio vehículo
-                  </div>
-            </div>
-
-            <div class="row">
-                  <div class="col-2">
-                    <img src="/assets/images/check.png" alt="check">
-                  </div>
-                  <div class="col-10">
-                    Buen ambiente de trabajo
-                  </div>
-            </div>
-        </div>
-
-        <div class="d-flex justify-content-center divRegister">
-            <a class="btn btn-primary" (click)="registerD()">Registrarse</a>
-        </div>
-
-        </div>
-      </div>
-  </div>
 
 </div>
 </div>

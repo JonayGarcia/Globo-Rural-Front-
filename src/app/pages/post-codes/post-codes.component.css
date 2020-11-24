@@ -102,16 +102,7 @@ h6{
   text-align: center;
 }
 
-body{
- background: url("/assets/images/background_v6.jpg");
 
-background-position: center;
- background-size: 50%;
- background-repeat: no-repeat;
-  height: 739px;
-  background-color: rgb(237, 252, 255);
-
-}
 
 .msn_error{
 
@@ -138,8 +129,73 @@ background-position: center;
   cursor: pointer;
 }
 
-.heaaderHome{
-  display: block;
-  height: 30px;
+
+.myHeader{
+
+  background-color: rgb(10, 100, 2);
+  height: 70px;
+  margin:auto;
+  overflow: hidden;
+
 }
 
+.wrapper{
+  width: 100px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.myNav{
+  text-align: right;
+  height: 100%;
+  float: right;
+ 
+ 
+  
+  
+}
+
+ .myButton{
+  display: inline-block;
+  margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  height: 100%;
+ 
+  margin: 0 auto;
+  
+}
+
+
+
+.myText{
+  color:white;
+  cursor: pointer;
+  
+}
+
+.myText:hover{
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  border: 1px solid #000000;
+  color: #000000;;
+  border-radius: 5px;
+  
+
+}
+
+.myBody{
+  min-height: calc( 100vh - 70px - 56px );
+  background-color: rgb(237, 252, 255);
+}
+
+.myRegister{
+  grid-column: 1;
+ 
+}
+
+.mySignIn{
+  grid-column: 2;
+
+}

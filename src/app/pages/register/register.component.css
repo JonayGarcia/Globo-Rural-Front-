@@ -86,4 +86,9 @@ body{
   width:318px;
   width:318px;
 }
+.mainContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center
+}
 
