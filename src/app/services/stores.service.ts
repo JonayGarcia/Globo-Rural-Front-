@@ -12,7 +12,7 @@ export class StoresService {
   // private api_url: string = 'http://localhost:3000';
   private token_item: string = "jwt-token";
 
-  constructor() {
+  constructor(public router: Router) {
     const $this = this;
     axios.interceptors.request.use(function (config) {
       const token = $this.getStoredToken();
