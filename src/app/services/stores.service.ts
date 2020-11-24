@@ -9,8 +9,42 @@ export class StoresService {
   // private api_host: string = '192.168.99.102:3000';
   private api_url: string = 'http://localhost:3000/api';
   // private api_url: string = 'http://localhost:3000';
+  private token_item: string = "jwt-token";
 
-  constructor() {}
+  constructor() {
+    const $this = this;
+    axios.interceptors.request.use(function (config) {
+      const token = $this.getStoredToken();
+      if (token){
+        config.headers.Authorization = token;
+      }
+      return config;
+    }, function (error) {
+      return Promise.reject(error);
+    });
+
+  }
+
+  getStoredToken(): string {
+    return localStorage.getItem(this.token_item);
+  }
+
+  storeToken(token: string){
+    localStorage.setItem(this.token_item, token);
+  }
+
+  performLogin(email: string, password: string): Promise<boolean> {
+    return axios
+      .post(`${this.api_url}/user/login`, {email, password})
+      .then((response) => {
+        this.storeToken(response.data.token);
+        return true;
+      })
+      .catch((error) => {
+        console.log('Se ha producido el error', error);
+        return false;
+      });
+  }
 
   getAllShops(): Promise<Shop[]> {
     return axios
