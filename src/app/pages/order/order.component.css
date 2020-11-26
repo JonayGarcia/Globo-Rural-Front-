@@ -1,0 +1,16 @@
+.containerProducts{
+    margin: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .containerProducts img{
+    width: 60px;
+    height: 60px;
+  }
+
+  .total{
+      margin-right: 15px;
+      text-align: right;
+  }

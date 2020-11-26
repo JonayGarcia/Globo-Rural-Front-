@@ -1,0 +1,11 @@
+<p>order works!</p>
+<div *ngFor="let product of products" class="containerProducts">
+    <img [src]="product.image">
+    <p class="name">{{product.name}}</p>
+    <p class="name">{{product.quantity}}</p>
+    <p class="card-price">{{product.price}}</p>
+    <p>{{+(product.quantity*product.price).toFixed(2)}} €</p>
+</div>
+<div class="total">
+    <p>{{order.totalPrice}}</p>
+</div>

@@ -13,27 +13,28 @@ export class ShoppingCartComponent implements OnInit {
   @Output () sendPetitionToPay = new EventEmitter();
   totalToPay: number;
   wantToPay : boolean = false;
+  productsSaved = [];
+  // id: number;
+  id: string;
 
   constructor() {}
 
   ngOnInit(): void {
-
   }
 
   decrease(product){
     if(product.quantity>=0) {
       product.quantity -=1;
-      localStorage.setItem('productsTocart', JSON.stringify(this.productsInCart));
+      this.actualizeInLocalStorage(product);
     }
     if(product.quantity==0) {
       product.isInCart = false;
       this.removeProductFromCart.emit(product)
     }
-    // localStorage.setItem('productsTocart', JSON.stringify(this.productsInCart));
   }
 
   total(){
-    if(this.productsInCart!=null){
+    if(this.productsInCart.length!=0){
       this.totalToPay = +this.productsInCart.reduce((sum, prod) => sum += prod.quantity*prod.price ,0).toFixed(2);
     } else {
       this.totalToPay = 0;
@@ -44,7 +45,22 @@ export class ShoppingCartComponent implements OnInit {
 
   increase(product){
     product.quantity +=1;
-    localStorage.setItem('productsTocart', JSON.stringify(this.productsInCart));
+    this.actualizeInLocalStorage(product);
+  }
+
+  actualizeInLocalStorage(product){
+    this.productsSaved = JSON.parse(localStorage.getItem('productsSaved'));
+    this.productsSaved.forEach(element =>{
+      if(element.shop_id==product.shop_id){
+        element.products.forEach(x=> {
+          // if(x.id==product.id){
+          if(x._id==product._id){ 
+            x.quantity = product.quantity;
+          }
+        })
+      }
+    });
+    localStorage.setItem('productsSaved', JSON.stringify(this.productsSaved));
   }
 
   saveOrder(){

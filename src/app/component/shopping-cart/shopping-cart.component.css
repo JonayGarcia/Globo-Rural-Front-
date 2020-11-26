@@ -71,15 +71,14 @@ input[type=number] {
   text-align: center;
 }
 
-.buttonAdd:hover{
+.toOrder:hover{
   cursor: pointer;
 }
 
-
-
-
-.buttonOrder p{
+.toOrder p{
+  text-align: center;
   background-color: rgb(10, 100, 2);
   border-radius: 5px;
   color: white;
+  width: 100%
 }
