@@ -3,18 +3,35 @@
       <img src="/assets/images/logo.png" class="appLogo">
       <h2 class="appName">Penguin Express</h2>
     </div>
-    <div class="nav-container">
-      <div routerLink="">Cambiar Código Postal</div>
-    </div>
-  </div>
-<div class="container myCards">
-  <div *ngFor="let shop of shops" [routerLink]="['./shop', shop._id]">
-  <!-- <div *ngFor="let shop of shops" [routerLink]="['./shop', shop.id]"> -->
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" [src]="shop.logo" alt="Card image cap">
-        <div class="card-body">
-            <div class="textName">{{shop.name}}</div>
-        </div>
+    <div class="toRight">
+      <div class="nav-container">
+        <div routerLink="">Cambiar Código Postal</div>
+      </div>
+      <div class="myButton" *ngIf="isLogged == true">
+        <div class=" myText cursorPointer"> {{nameUser}}
+          <img class="icon" src="/assets/images/profile-user.png" width="30px" height="30px"></div>
+      </div>
+      <div class="myButton" *ngIf="isLogged == true">
+        <div class=" myText cursorPointer" (click)="logout()">Cerrar Sesión 
+          <img class="icon" src="/assets/images/logout.png" width="30px" height="30px"></div>
       </div>
     </div>
+  </div>
+
+<div class="myBody">
+
+    <div class="container">
+      <div *ngFor="let shop of shops" [routerLink]="['./shop', shop._id]" class="noBorder">
+      <!-- <div *ngFor="let shop of shops" [routerLink]="['./shop', shop.id]"> -->
+
+          <div class="card cursor" style="width: 18rem;" >
+              <img class="card-img-top" [src]="shop.logo" alt="Card image cap">
+              <div class="card-body">
+                  <div class="textName">{{shop.name}}</div>
+              </div>
+          </div>
+
+        </div>
+    </div>
+
 </div>

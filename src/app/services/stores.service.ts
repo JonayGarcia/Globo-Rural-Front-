@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import axios from 'axios';
-import { Shop, Product } from 'src/app/models';
+import { Shop, Product, Order } from 'src/app/models';
 
 @Injectable({
   providedIn: 'root',
 })
 export class StoresService {
   // private api_host: string = '192.168.99.102:3000';
-  // private api_url: string = 'http://localhost:3000/api';
+  private api_url: string = 'http://localhost:3000/api';
   // private api_url: string = 'http://localhost:3000';
-  private api_url: string = 'http://35.180.18.107:3000/api';
+  // private api_url: string = 'http://35.180.18.107:3000/api';
   private token_item: string = "jwt-token";
 
   constructor(public router: Router) {
@@ -35,12 +35,24 @@ export class StoresService {
     localStorage.setItem(this.token_item, token);
   }
 
-  performLogin(email: string, password: string): Promise<boolean> {
+  existToken(){
+    if (localStorage.getItem(this.token_item)!=null){
+      return true
+    } else {
+      return false
+    }
+  }
+
+  clearToken(){
+    localStorage.removeItem(this.token_item);
+  }
+
+  performLogin(email: string, password: string){
     return axios
       .post(`${this.api_url}/user/login`, {email, password})
       .then((response) => {
         this.storeToken(response.data.token);
-        return true;
+        return response.data;
       })
       .catch((error) => {
         console.log('Se ha producido el error', error);
@@ -48,8 +60,6 @@ export class StoresService {
       });
   }
 
-  
-//this.router.navigate(['/register']);
   registerUser(newRegister){
     return axios.post(`${this.api_url}/user`,newRegister)
     .then((response)=>{
@@ -61,6 +71,29 @@ export class StoresService {
       throw error;
     });
   }
+
+  getUser(id: string){
+    console.log(id)
+    return axios.get(`${this.api_url}/user/${id}`)
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        console.log('Se ha producido el error en getUser', error);
+      });
+  }
+
+  postBuy(order){
+    return axios.post(`${this.api_url}/orders`,order)
+    .then( (response) => {
+      return response.data;
+    })
+    .catch( (error) => {
+      console.log("Error al enviar la compra :(",error);
+      
+    });
+  }
+
   
 
   getAllShops(): Promise<Shop[]> {
@@ -126,16 +159,4 @@ export class StoresService {
         });
     }
   }
-
-
-
-
-
-  loginUser(email:string, password: string){
-    return axios.post(`${this.api_url}/user/login`,{email,password})
-    .then((response) =>{
-      this.router.navigate(['/register']);
-    });
-  }
-
 }

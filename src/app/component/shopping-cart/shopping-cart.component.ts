@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/models';
+import { StoresService } from 'src/app/services/stores.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -16,8 +18,11 @@ export class ShoppingCartComponent implements OnInit {
   productsSaved = [];
   // id: number;
   id: string;
+  orderToPay: {user_id: string, shop_id: string, products: Product[], totalPrice: number };
 
-  constructor() {}
+  constructor( 
+    private storesService: StoresService,
+    public router: Router) {}
 
   ngOnInit(): void {
   }
@@ -68,9 +73,19 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   startPayment(){
-    this.wantToPay =true;
-    this.sendPetitionToPay.emit(this.wantToPay);
-    console.log("Esto es lo que envío:", this.wantToPay);
+    if(this.storesService.existToken()==true){
+      this.orderToPay = {
+        user_id: "1",
+        shop_id: this.id,
+        products: this.productsInCart,
+        totalPrice: this.totalToPay
+      }
+      localStorage.setItem('orderToPay', JSON.stringify(this.orderToPay));
+      this.router.navigate(['/order']);
+    } else {
+      this.wantToPay =true;
+      this.sendPetitionToPay.emit(this.wantToPay);
+    }
   }
 
 }

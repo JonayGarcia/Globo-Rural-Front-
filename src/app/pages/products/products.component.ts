@@ -25,9 +25,17 @@ export class ProductsComponent implements OnInit {
   productsSaved = [];
   newCartFromNewShop: {shop_id: string, products: Product[]} ={shop_id:"", products:[]};
   public productsTocart : Product[] = [];
+  isLogged: boolean = false;
+  nameUser: string;
+  
   user:string;
+  email:string;
   keyLogin:string;
   orderToPay: {user_id: string, shop_id: string, products: Product[], totalPrice: number };
+
+  isFormValid:boolean=false;
+  isUserLoged :boolean=false;
+  failLogin: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -48,6 +56,20 @@ export class ProductsComponent implements OnInit {
           this.showProducts();
          }
        });
+    this.checkIfLog();
+  }
+
+  checkIfLog(){
+    if(this.storesService.existToken()==true){
+      const id = localStorage.getItem("idUser")
+      this.storesService.getUser(id)
+        .then(response=> {
+          this.nameUser = response.name;
+        });
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
   async showProducts() {
@@ -171,16 +193,22 @@ export class ProductsComponent implements OnInit {
   }
 
   signIn(){
-    if(this.user==undefined || this.keyLogin == undefined){
-      console.log("Parámetros inválidos");
+    if(this.email==undefined || this.keyLogin == undefined
+      || this.email=="" || this.keyLogin == ""
+      ){
+      this.isFormValid = true;
+      this.failLogin = false;
+      console.log("Debes introducir todos los campos");
+
     }else{
-      this.storesService.performLogin(this.user, this.keyLogin)
+      this.storesService.performLogin(this.email, this.keyLogin)
       .then( data => {
-        // this.isFormValid = false;
-        // this.failLogin = false;
-        // this.isUserLoged = true;
+        console.log("Entras --->>");
+        this.isFormValid = false;
+        this.failLogin = false;
+        this.isUserLoged = true;
         this.orderToPay = {
-          user_id: "1",
+          user_id: localStorage.getItem("idUser"),
           shop_id: this.id,
           products: this.productsTocart,
           totalPrice: this.totalToPay
@@ -192,8 +220,8 @@ export class ProductsComponent implements OnInit {
       })
       .catch((error) => {
         console.log('Se ha producido el error en el front--->', error);
-        // this.failLogin = true;
-        // this.isFormValid = false;
+        this.failLogin = true;
+        this.isFormValid = false;
         return error
       });
     }
@@ -201,5 +229,11 @@ export class ProductsComponent implements OnInit {
 
   close(){
     this.wantToPayF= false;
+  }
+
+  logout(){
+    this.storesService.clearToken();
+    localStorage.removeItem("idUser")
+    this.isLogged = false;
   }
 }

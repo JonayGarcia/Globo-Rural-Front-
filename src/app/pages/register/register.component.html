@@ -1,95 +1,72 @@
-<body id="registerID" >
-  <!--
-<div>
-    email
-    phone
-    password
-    name
-    surname
-    zip_code
-    address
-    avatar
-</div>
--->
-<header class="container-fluid bg-dark" [ngClass]="{backgroundOpacity: showBuyer==true || showClient==true || showdDealer==true}">
 
-  <div class="row ">
-      <div class="col d-flex justify-content-center">
-        <img src="/assets/images/mini-logo.png" routerLink="" class="appLogo cursorPointer">
-        <div class="text-white cursorPointer" routerLink=""  >Penguin Express</div>
-      </div>
-  </div>
+
+<header class="myHeader">
+
+
+          <img src="/assets/images/logo.png" routerLink="" class="appLogo cursorPointer">
+          <h2 class="appName cursorPointer" routerLink="">Penguin Express</h2>
+
 
 </header>
 
+<div class="myBody">
+
+    <div *ngIf="showBuyer" class="inputRegisterC"  >
+      <app-register-daughter></app-register-daughter>
+    </div>
 
 
-<div *ngIf="showBuyer" class="inputRegisterC"  >
-  <app-register-daughter></app-register-daughter>
-</div>
+    <div class="mainContainer registerUsers" [ngClass]="{backgroundOpacity: showBuyer==true || showClient==true || showdDealer==true}">
 
-<div *ngIf="showClient" class="inputRegisterC"  >
-    <app-register-shop></app-register-shop>
-</div>
+      <div class="row  justify-content-between">
+          <div class="col">
+              <div class="card" style="width: 23rem;">
+                <h1 class="textName">Comprador</h1>
+                <img class="card-img-top" src="/assets/images/buyer.jpg" alt="Comprador">
+                <div class="card-body">
 
-<div *ngIf="showdDealer" class="inputRegisterC"  >
-  <app-register-daughter></app-register-daughter>
-</div>
+                    <div class="container-fluid">
+                          <div class="row">
+                                <div class="col-2">
+                                  <img src="/assets/images/check.png" alt="check">
+                                </div>
+                                <div class="col-10">
+                                  Compra cuando desees
+                                </div>
+                          </div>
 
+                          <div class="row">
+                                <div class="col-2">
+                                  <img src="/assets/images/check.png" alt="check">
+                                </div>
+                                <div class="col-10">
+                                  Encuentra tus tiendas en tu zona
+                                </div>
+                          </div>
 
-
-<div class="mainContainer" [ngClass]="{backgroundOpacity: showBuyer==true || showClient==true || showdDealer==true}">
-
-  <div class="row registerUsers justify-content-between">
-      <div class="col">
-          <div class="card" style="width: 23rem;">
-            <h1 class="textName">Comprador</h1>
-            <img class="card-img-top" src="/assets/images/buyer.jpg" alt="Comprador">
-            <div class="card-body">
-
-                 <div class="container-fluid">
-                      <div class="row">
-                            <div class="col-2">
-                               <img src="/assets/images/check.png" alt="check">
-                            </div>
-                            <div class="col-10">
-                              Compra cuando desees
-                            </div>
+                          <div class="row">
+                                <div class="col-2">
+                                  <img src="/assets/images/check.png" alt="check">
+                                </div>
+                                <div class="col-10">
+                                  Paga de forma segura
+                                </div>
+                          </div>
                       </div>
 
-                      <div class="row">
-                            <div class="col-2">
-                              <img src="/assets/images/check.png" alt="check">
-                            </div>
-                            <div class="col-10">
-                              Encuentra tus tiendas en tu zona
-                            </div>
+                      <div class="d-flex justify-content-center divRegister">
+                          <a class="btn btn-primary" (click)="registerC()" >Registrarse</a>
                       </div>
 
-                      <div class="row">
-                            <div class="col-2">
-                              <img src="/assets/images/check.png" alt="check">
-                            </div>
-                            <div class="col-10">
-                              Paga de forma segura
-                            </div>
-                      </div>
-                  </div>
-
-                  <div class="d-flex justify-content-center divRegister">
-                      <a class="btn btn-primary" (click)="registerC()" >Registrarse</a>
-                  </div>
-
+                </div>
             </div>
-         </div>
-      </div>
+          </div>
 
-</div>
-</div>
+    </div>
+    </div>
 
+    </div>
 
-
-</body>
 
 
 

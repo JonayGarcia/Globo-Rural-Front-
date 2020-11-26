@@ -1,3 +1,17 @@
+<header class="myHeader">
+    <div routerLink=""  class="nav-logo">
+        <img src="/assets/images/logo.png" class="appLogo">
+        <h2 class="appName">Penguin Express</h2>
+      </div>
+      
+      <div class="nav-container">
+        <div (click)="goBack()">Volver a la tienda</div>
+      </div>
+
+</header>
+
+
+
 <div class="mainContainer">
     <p class="title">Generar Pedido</p>
     <table>
@@ -11,7 +25,7 @@
     </table>
     
     <div class="total">
-        <p>{{order.totalPrice}} €</p>
+        <p>{{productsInCart.totalPrice}} €</p>
     </div>
 
     <div>
@@ -19,9 +33,23 @@
         <input [(ngModel)]="delivery_address" placeholder="Dirección de envío">
     </div>
     <div>
-        <label>Código Posta</label>
+        <label>Código Postal</label>
         <input [(ngModel)]="postCode" placeholder="Código Postal" (change)="checkIfSame()">
     </div>
+
+    <div class="d-flex justify-content-center divBuy">
+        <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="buy()">Comprar</button>
+    </div>
+
+    <div *ngIf="isFormValid" class="msnMistake">
+        Debes introducir todos los campos
+      </div>
+      
+      <div *ngIf="isBuyValid" class="msnOk">
+        Has comprado con éxito
+      </div>
+
+
     
 </div>
 

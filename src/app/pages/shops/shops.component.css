@@ -3,14 +3,44 @@
     height: 200px;
 }
 
+.toRight{
+  display: flex;
+  margin-right: 15px;
+}
+
+.myButton{
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.myText{
+  color:white;
+  cursor: pointer;
+  
+}
+
+.myText:hover{
+  cursor: pointer;
+  background-color: rgb(255,255,255);
+  border: 1px solid #000000;
+  color: #000000;;
+  border-radius: 5px;
+}
+
+.icon{
+  filter: invert(100%)
+}
+
 .container{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 80vw;
-    margin: auto;
+    /*width: 80vw;*/
+    /*margin: auto;*/
     justify-content: space-around;
-    margin-top: 80px;
+    padding-top: 20px;
+
 }
 
 .textName{
@@ -60,6 +90,17 @@
     background-color: rgb(68, 102, 65);
    }
 
-   .myCards{
-    min-height: calc( 100vh - 70px - 56px );
+
+   .cursor{
+     cursor: pointer;
    }
+
+   .noBorder:active{
+     border: none;
+     border-color: white;
+   }
+
+   .myBody{
+    min-height: calc( 100vh - 70px - 56px );
+    background-color: rgb(237, 252, 255);
+  }

@@ -11,11 +11,11 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   email:string;
   keyLogin:string;
-  failLogin: boolean = false;
-  isUserLoged: boolean = false;
+  idUSer: string;
 
   isFormValid:boolean=false;
-  isUserRegistered :boolean=false;
+  isUserLoged: boolean = false;
+  failLogin: boolean = false;
 
   constructor(
     public _location: Location,
@@ -40,6 +40,10 @@ export class LoginComponent implements OnInit {
         this.isFormValid = false;
         this.failLogin = false;
         this.isUserLoged = true;
+
+        this.idUSer = data.user_id;
+        localStorage.setItem('idUser', this.idUSer);
+        console.log(this.storesService.existToken());
         setTimeout(() => {
           this.router.navigate(['/']);
         }, 3000);  //3s
@@ -54,7 +58,8 @@ export class LoginComponent implements OnInit {
   }
 
   close(){
-
+    //this.router.navigateByUrl('/DummyComponent');
+    //this.router.navigate(["Landing"]);
     this._location.back();
    // this.router.navigate(['/register']);
     //console.log("---cerrar");

@@ -125,9 +125,6 @@ h6{
 
 }
 
-.cursorPointer{
-  cursor: pointer;
-}
 
 
 .myHeader{
@@ -167,9 +164,27 @@ h6{
   
 }
 
+.myButtonWithoutH{
+  display: inline-block;
+  margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  height: 100%;
+ 
+  margin: 0 auto;
+  
+}
+
+
 
 
 .myText{
+  color:white;
+  cursor: pointer;
+  
+}
+.myTextWithoutCursor{
   color:white;
   cursor: pointer;
   
@@ -198,4 +213,8 @@ h6{
 .mySignIn{
   grid-column: 2;
 
+}
+
+.icon{
+  filter: invert(100%)
 }

@@ -82,3 +82,7 @@ input[type=number] {
   color: white;
   width: 100%
 }
+
+.myButton{
+  cursor: pointer;
+}

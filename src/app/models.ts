@@ -22,7 +22,7 @@ export interface Product {
   quantity: number;
   isInCart: boolean;
   // esto es solo para trabajar con la fakeapi
-  id: number
+  id: number;
 }
 
 
@@ -33,4 +33,20 @@ export interface User{
   postcode: string;
   phone: string;
   id:string;
+}
+
+export interface Order{
+  delivery_address: string;
+  products: any[];
+  totalPrice: number;
+}
+
+
+export interface ProductInOrder{
+  _id: string;
+  shop_id: string;
+  name:string; 
+  units: number;
+  unit_price: number;
+  image: string;
 }

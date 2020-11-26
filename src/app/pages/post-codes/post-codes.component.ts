@@ -15,12 +15,28 @@ export class PostCodesComponent implements OnInit {
   postCodes: string[] = [];
   textInput: string;
   notFound: number = 0;
+  isLogged: boolean = false;
+  nameUser: string;
   //numberCode: number;
 
   constructor(private storesService: StoresService, public router: Router) {}
 
   ngOnInit(): void {
     this.getShops();
+    this.checkIfLog();
+  }
+
+  checkIfLog(){
+    if(this.storesService.existToken()==true){
+      const id = localStorage.getItem("idUser")
+      this.storesService.getUser(id)
+        .then(response=> {
+          this.nameUser = response.name;
+        });
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
   async getShops() {
@@ -50,5 +66,11 @@ export class PostCodesComponent implements OnInit {
     }
     this.textInput = '';
     this.notFound=1;
+  }
+
+  logout(){
+    this.storesService.clearToken();
+    localStorage.removeItem("idUser")
+    this.isLogged = false;
   }
 }

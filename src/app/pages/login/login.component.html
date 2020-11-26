@@ -1,19 +1,20 @@
 
 
-<body id="registerID" >
-
-  <header class="container-fluid bg-dark">
-
-    <div class="row ">
-        <div class="col d-flex justify-content-center">
-          <img src="/assets/images/mini-logo.png" routerLink="" class="appLogo cursorPointer">
-          <div class="text-white cursorPointer" routerLink=""  >Penguin Express</div>
-        </div>
-    </div>
-
-  </header>
+<header class="myHeader">
 
 
+  <img src="/assets/images/logo.png" routerLink="" class="appLogo cursorPointer">
+  <h2 class="appName cursorPointer" routerLink="">Penguin Express</h2>
+
+
+</header>
+
+
+
+<div class="myBody">
+
+
+<div class="divLogin">
   <div class="formClient">
 
     <div class="col alignClose" >
@@ -55,7 +56,7 @@
     </div>
 
     <div *ngIf="isUserLoged" class="msnOk">
-      Has iniciado sesión
+      <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
      </div>
 
      <div *ngIf="failLogin" class="msnMistake">
@@ -66,10 +67,9 @@
 
   </div>
 
+</div>
+</div>
 
-
-
-</body>
 
 
 

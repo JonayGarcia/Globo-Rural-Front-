@@ -2,20 +2,10 @@
   text-align: center;
 }
 
-body{
- /*position: absolute;
- background-position: center;
-  background-size: 50%;
-  background-repeat: no-repeat;*/
-
-   height: 739px;
-   /*background-color: rgb(237, 252, 255); */
-   background-color: rgb(237, 252, 255);
-  z-index: 1;
-   /*background-color: rgb(0, 0, 0);
-   opacity: 0.5;
-   */
- }
+.myBody{
+  min-height: calc( 100vh - 70px - 56px );
+  background-color: rgb(237, 252, 255);
+}
 
  .backgroundOpacity{
   /*position: absolute;*/
@@ -74,12 +64,12 @@ body{
 }
 
 .registerUsers{
-  margin-top: 40px;
+  padding-top: 20px;
 }
 
 .appLogo{
-  width: 20px;
-  height: 20px;
+  width: 70px;
+  height: 70px;
 }
 
 .imgDeliver{
@@ -89,6 +79,23 @@ body{
 .mainContainer{
   display: flex;
   flex-direction: row;
-  justify-content: center
+  justify-content: center;
+ 
 }
 
+.myHeader{
+
+  background-color: rgb(10, 100, 2);
+  height: 70px;
+  margin:auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+
+}
+
+.appName{
+  color:white;
+}

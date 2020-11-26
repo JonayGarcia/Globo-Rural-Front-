@@ -62,8 +62,14 @@
       </div>
 
       <div *ngIf="isUserRegistered" class="msnOk">
-       Te has registrado con éxito
-      </div>
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+       </div>
+
+       <!--
+      <div *ngIf="isUserRegistered" class="msnOk">
+        Te has registrado con éxito
+       </div>
+      -->
 
       <div *ngIf="failRegister" class="msnMistake">
         Usuario o Email ya registrados, prueba con otro usuario o email

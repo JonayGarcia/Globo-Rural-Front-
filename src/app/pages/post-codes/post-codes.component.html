@@ -4,14 +4,21 @@
 
 
       <div class=" myNav">  
-          <div class="myButton">
-            <div class=" myText cursorPointer" routerLink="/register">Regístrate</div>
+          <div class="myButton" *ngIf="isLogged == false">
+            <div class=" myText " routerLink="/register">Regístrate</div>
           </div>
-          <div class="myButton">
-            <div class=" myText cursorPointer" routerLink="/login">Iniciar sesión</div>
+          <div class="myButton" *ngIf="isLogged == false">
+            <div class=" myText " routerLink="/login">Iniciar sesión</div>
           </div>
-        </div>
-
+          <div class="myButton" *ngIf="isLogged == true">
+            <div class=" myTextWithoutCursor "> {{nameUser}}
+              <img class="icon" src="/assets/images/profile-user.png" width="40px" height="40px"></div>
+          </div>
+          <div class="myButton" *ngIf="isLogged == true">
+            <div class=" myTextWithoutCursor " (click)="logout()">Cerrar Sesión 
+              <img class="icon" src="/assets/images/logout.png" width="40px" height="40px"></div>
+          </div>
+      </div>
   </header>
 
 
