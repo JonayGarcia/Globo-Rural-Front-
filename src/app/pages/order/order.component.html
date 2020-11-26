@@ -1,11 +1,27 @@
-<p>order works!</p>
-<div *ngFor="let product of products" class="containerProducts">
-    <img [src]="product.image">
-    <p class="name">{{product.name}}</p>
-    <p class="name">{{product.quantity}}</p>
-    <p class="card-price">{{product.price}}</p>
-    <p>{{+(product.quantity*product.price).toFixed(2)}} €</p>
+<div class="mainContainer">
+    <p class="title">Generar Pedido</p>
+    <table>
+        <tr *ngFor="let product of products" class="containerProducts">
+            <td><img [src]="product.image"></td>
+            <td class="name">{{product.name}}</td>
+            <td class="card-price">{{product.price}} €</td>
+            <td class="quantity">{{product.quantity}}</td>
+            <td class="price">{{+(product.quantity*product.price).toFixed(2)}} €</td>
+        </tr>
+    </table>
+    
+    <div class="total">
+        <p>{{order.totalPrice}} €</p>
+    </div>
+
+    <div>
+        <label>Dirección de Envío</label>
+        <input [(ngModel)]="delivery_address" placeholder="Dirección de envío">
+    </div>
+    <div>
+        <label>Código Posta</label>
+        <input [(ngModel)]="postCode" placeholder="Código Postal" (change)="checkIfSame()">
+    </div>
+    
 </div>
-<div class="total">
-    <p>{{order.totalPrice}}</p>
-</div>
+

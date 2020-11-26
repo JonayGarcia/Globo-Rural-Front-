@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models';
+import { StoresService } from 'src/app/services/stores.service';
 
 @Component({
   selector: 'app-order',
@@ -9,8 +10,11 @@ import { Product } from 'src/app/models';
 export class OrderComponent implements OnInit {
   order: {user_id: string, shop_id: string, products: Product[], totalPrice: number };
   products: Product[];
+  delivery_address: string;
+  postCode: string;
+  postCodeOfProducts: string;
 
-  constructor() {}
+  constructor(private storesService: StoresService,) {}
 
   ngOnInit(): void {
     this.showOrder();
@@ -21,4 +25,11 @@ export class OrderComponent implements OnInit {
     this.products = this.order.products;
   }
 
+  checkIfSame(){
+    this.storesService.getOneShop(this.order.shop_id)
+      .then(response =>{
+        this.postCodeOfProducts = response.postcode
+        console.log(this.postCodeOfProducts)
+      })
+  }
 }
