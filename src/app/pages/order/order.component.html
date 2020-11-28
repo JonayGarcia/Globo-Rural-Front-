@@ -16,11 +16,13 @@
     <p class="title">Generar Pedido</p>
     <table>
         <tr *ngFor="let product of products" class="containerProducts">
-            <td><img [src]="product.image"></td>
-            <td class="name">{{product.name}}</td>
-            <td class="card-price">{{product.price}} €</td>
-            <td class="quantity">{{product.quantity}}</td>
-            <td class="price">{{+(product.quantity*product.price).toFixed(2)}} €</td>
+            
+                    <td><img [src]="product.image"></td>
+                    <td class="name">{{product.name}}</td>
+                    <td class="card-price">{{product.price}} €</td>
+                    <td class="quantity">{{product.quantity}}</td>
+                    <td class="price">{{+(product.quantity*product.price).toFixed(2)}} €</td>
+          
         </tr>
     </table>
     
@@ -34,15 +36,19 @@
     </div>
     <div>
         <label>Código Postal</label>
-        <input [(ngModel)]="postCode" placeholder="Código Postal" (change)="checkIfSame()">
+        <input [(ngModel)]="postCode" placeholder="Código Postal">
     </div>
 
     <div class="d-flex justify-content-center divBuy">
         <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="buy()">Comprar</button>
     </div>
 
-    <div *ngIf="isFormValid" class="msnMistake">
+      <div *ngIf="isFormValid" class="msnMistake">
         Debes introducir todos los campos
+      </div>
+
+      <div *ngIf="isCodeZip" class="msnMistake">
+        EL código postal debe ser el mismo que el de tu zona
       </div>
       
       <div *ngIf="isBuyValid" class="msnOk">

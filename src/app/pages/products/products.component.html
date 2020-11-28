@@ -17,129 +17,136 @@
     </div>
   </div>
 </div>
-<div class="second-nav"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
-  <p>Tus compras mas sencillas desde casa<p>
-  <!-- <div class="second-nav-search">
-    <inut type="text" [(ngModel)]="search" placeholder="Busca en la tienda">
-    <img src="../../../assets/images/search.png">
-  </div>p -->
-  <p>{{total()}} €</p>
-</div>
-
-<div class="dropdown">
-  <div class="dropHeader"><img src="../../../assets/images/shoppingCart.png"></div>
-  <div class="dropdown-content">
-    <app-shopping-cart
-    [productsInCart]="productsTocart"
-    (removeProductFromCart)="removeFromCart($event)"
-    (totalToPayCart)="showTotalToPay($event)"
-    (sendPetitionToPay)="startPaying($event)"></app-shopping-cart>
-  </div>
-</div>
 
 
-<div class="popUp-login" *ngIf="wantToPayF==true" >
-  <div class="formClient">
-    <div class="col alignClose" >
-      <img class="close" (click)="close()" src="/assets/images/close.png" width="20px" height="20px" alt="close">
+<div class="myBody">
+    <div class="second-nav"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
+      <p>Tus compras mas sencillas desde casa<p>
+      <!-- <div class="second-nav-search">
+        <inut type="text" [(ngModel)]="search" placeholder="Busca en la tienda">
+        <img src="../../../assets/images/search.png">
+      </div>p -->
+      <p>{{total()}} €</p>
     </div>
-    <div class="form-row">
-      <div class="form-group col">
-        <label for="inputEmail4">Email</label>
-        <input type="text" class="form-control" [(ngModel)]="email" placeholder="Email">
-      </div>
-    </div>
-    <div class="form-row">
-      <div class="form-group col">
-        <label for="inputEmail4">Contraseña</label>
-        <input type="text" class="form-control" [(ngModel)]="keyLogin" placeholder="Contraseña">
+
+    <div class="dropdown">
+      <div class="dropHeader"><img src="../../../assets/images/shoppingCart.png"></div>
+      <div class="dropdown-content">
+        <app-shopping-cart
+        [productsInCart]="productsTocart"
+        (removeProductFromCart)="removeFromCart($event)"
+        (totalToPayCart)="showTotalToPay($event)"
+        (sendPetitionToPay)="startPaying($event)"></app-shopping-cart>
       </div>
     </div>
 
-    <div class="row">
 
-      <div class="col-4">
-        ¿Aún no tienes cuenta? 
+    <div class="popUp-login" *ngIf="wantToPayF==true" >
+      <div class="formClient">
+        <div class="col alignClose" >
+          <img class="close" (click)="close()" src="/assets/images/close.png" width="20px" height="20px" alt="close">
+        </div>
+        <div class="form-row">
+          <div class="form-group col">
+            <label for="inputEmail4">Email</label>
+            <input type="text" class="form-control" [(ngModel)]="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col">
+            <label for="inputEmail4">Contraseña</label>
+            <input type="password" class="form-control" [(ngModel)]="keyLogin" placeholder="Contraseña">
+          </div>
+        </div>
+
+
+        <div class="flex-container">
+
+            <div >
+              ¿Aún no tienes cuenta? 
+              
+            </div>
+
+            <div>
+              <div routerLink="/register" class="createAccount">Crear cuenta</div>
+            </div>
+
+        </div>
+
+
+        <div class="d-flex justify-content-center divRegister">
+            <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="signIn()">Entrar</button>
+        </div>
+
+        <div *ngIf="isFormValid" class="msnMistake">
+          Debes introducir todos los campos
+        </div>
+
+
         
-      </div>
+        <div *ngIf="isUserLoged" class="msnOk">
+          <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
 
-      <div class="col-8">
-        <div routerLink="/register" class="createAccount">Crear cuenta</div>
-      </div>
+        
 
-    </div>
-
-     <div class="d-flex justify-content-center divRegister">
-        <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="signIn()">Entrar</button>
-    </div>
-
-    <div *ngIf="isFormValid" class="msnMistake">
-      Debes introducir todos los campos
-    </div>
-
-
-    
-    <div *ngIf="isUserLoged" class="msnOk">
-      <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-     </div>
-
-     
-
-     <div *ngIf="failLogin" class="msnMistake">
-      Email o contraseña inválidos
-     </div>
-  </div>
-</div>
-
-
-<div class="header"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
-  <h1>{{ shop?.name }}</h1>
-  <img [src]="shop?.logo" class="logo" />
-</div>
-
-<div class="mainContainer"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
-  <div class="filter">
-    <h3>Categoría</h3>
-    <br>
-    <div class="categoriesListed" *ngIf="category==''">
-      <div *ngFor="let category of categories">
-        <p [routerLink]="category" >{{category}}</p>
+        <div *ngIf="failLogin" class="msnMistake">
+          Email o contraseña inválidos
+        </div>
       </div>
     </div>
 
-    <div class="categoriesListed" *ngIf="category!==''">
-          <div *ngFor="let category2 of categories">
-              <p (click)="selectCategory(category2)" [ngClass]="{selected: category2==category}">{{category2}}</p>
+
+    <div class="header"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
+      <h1>{{ shop?.name }}</h1>
+      <img [src]="shop?.logo" class="logo" />
+    </div>
+
+
+    <div class="mainContainer"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
+      <div class="filter">
+        <h3>Categoría</h3>
+        <br>
+        <div class="categoriesListed" *ngIf="category==''">
+          <div *ngFor="let category of categories">
+            <p [routerLink]="category" >{{category}}</p>
           </div>
-        <button (click)="goBack()" class="showProducts">Mostrar todos los productos</button>
-    </div>
-  </div>
+        </div>
 
-  <div class="board">
-    <div *ngFor="let product of products">
-      <div class="card" style="width: 18rem">
-        <img class="card-img-top" [src]="product.image" alt="Card image cap" />
-        <div class="card-body">
-          <h5 class="card-title">{{ product.name }}</h5>
-          <p class="card-text">Precio: {{ product.price }} €</p>
-          <div class="btn-kart" *ngIf="!product.isInCart">
-            <button href="#" class="btn btn-primary" (click)="addToCart(product)">
-              <img src="../../../assets/images/addToCart.png" width="30px" height="30px">
-              <p>Añadir al Carrito</p>
-            </button>
-          </div>
-          <div class="btn-kart" *ngIf="product.isInCart">
-            <button href="#" class="btn btn-success" (click)="removeFromCart(product)">
-              <img src="../../../assets/images/removeFromCart.png" width="30px" height="30px">
-              <p>Eliminar del Carrito</p>
-            </button>
+        <div class="categoriesListed" *ngIf="category!==''">
+              <div *ngFor="let category2 of categories">
+                  <p (click)="selectCategory(category2)" [ngClass]="{selected: category2==category}">{{category2}}</p>
+              </div>
+            <button (click)="goBack()" class="showProducts">Mostrar todos los productos</button>
+        </div>
+      </div>
+
+      <div class="board">
+        <div *ngFor="let product of products">
+          <div class="card" style="width: 18rem">
+            <img class="card-img-top" [src]="product.image" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title text-center">{{ product.name }}</h5>
+              <p class="card-text text-center">Precio: {{ product.price }} €</p>
+              <div class="btn-kart" *ngIf="!product.isInCart">
+                <button href="#" class="btn btn-primary" (click)="addToCart(product)">
+                  <img src="../../../assets/images/addToCart.png" width="30px" height="30px">
+                  <p>Añadir al Carrito</p>
+                </button>
+              </div>
+              <div class="btn-kart" *ngIf="product.isInCart">
+                <button href="#" class="btn btn-success" (click)="removeFromCart(product)">
+                  <img src="../../../assets/images/removeFromCart.png" width="30px" height="30px">
+                  <p>Eliminar del Carrito</p>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
+</div>
 
 
 <router-outlet></router-outlet>

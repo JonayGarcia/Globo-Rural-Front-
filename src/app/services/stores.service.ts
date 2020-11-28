@@ -8,10 +8,12 @@ import { Shop, Product, Order } from 'src/app/models';
 })
 export class StoresService {
   // private api_host: string = '192.168.99.102:3000';
-  private api_url: string = 'http://localhost:3000/api';
+  //private api_url: string = 'http://35.180.18.107:3000/api';
   // private api_url: string = 'http://localhost:3000';
-  // private api_url: string = 'http://35.180.18.107:3000/api';
+   private api_url: string = 'http://35.180.18.107:3000/api';
   private token_item: string = "jwt-token";
+
+  myZipCode:string="hola";
 
   constructor(public router: Router) {
     const $this = this;
@@ -79,7 +81,7 @@ export class StoresService {
         return response.data;
       })
       .catch((error) => {
-        console.log('Se ha producido el error en getUser', error);
+        console.log('Se ha producido el error en getUser()', error);
       });
   }
 
@@ -104,7 +106,7 @@ export class StoresService {
         return response.data;
       })
       .catch((error) => {
-        console.log('Se ha producido el error', error);
+        console.log('Se ha producido el error en getAllShops()', error);
       });
   }
 
@@ -117,7 +119,7 @@ export class StoresService {
         return response.data;
       })
       .catch((error) => {
-        console.log('Se ha producido el error', error);
+        console.log('Se ha producido el error getOneShop()', error);
       });
   }
 
@@ -129,7 +131,7 @@ export class StoresService {
         return response.data;
       })
       .catch((error) => {
-        console.log('Se ha producido el error', error);
+        console.log('Se ha producido el error getShopsByPostCode()', error);
       });
   }
 
@@ -145,7 +147,7 @@ export class StoresService {
           return response.data;
         })
         .catch((error) => {
-          console.log('Se ha producido el error', error);
+          console.log('Se ha producido el error getProductsByShop()', error);
         });
     } else {
       return axios
@@ -155,7 +157,7 @@ export class StoresService {
           return response.data;
         })
         .catch((error) => {
-          console.log('Se ha producido el error', error);
+          console.log('Se ha producido el error getProductsByShop()', error);
         });
     }
   }

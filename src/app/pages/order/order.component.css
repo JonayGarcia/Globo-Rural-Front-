@@ -38,6 +38,10 @@
     align-items: center;
   }
 
+.containerProducts td{
+  border: 1px solid blue;
+}
+
   .containerProducts img{
     width: 60px;
     height: 60px;
@@ -90,3 +94,10 @@
   cursor: pointer;
 }
 
+
+
+.myTable{
+  display: flex;
+  border: 1px solid black;
+  justify-content: center;
+}

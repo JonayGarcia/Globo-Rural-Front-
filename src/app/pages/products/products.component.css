@@ -15,7 +15,7 @@
   margin-top: 80px;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 30px;
+  ;
 }
 
 .filter{
@@ -28,7 +28,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 80vw;
-  background-color: white;
+
   margin: auto;
   justify-content: space-around;
 }
@@ -241,8 +241,13 @@ input[type=number] {
   margin-top: 10px;
 }
 
+.createAccount{
+  color: #007bff;
+}
+
 .createAccount:hover{
   cursor: pointer;
+  text-decoration: underline #007bff; 
 }
 
 .msnMistake{
@@ -360,4 +365,18 @@ input[type=number] {
 
 .icon{
   filter: invert(100%)
+}
+
+.myBody{
+  min-height: calc( 100vh - 70px - 56px );
+  background-color: rgb(237, 252, 255);
+}
+
+.flex-container{
+  display: flex;
+  
+}
+
+.flex-container > div{
+  margin-right: 10px;
 }

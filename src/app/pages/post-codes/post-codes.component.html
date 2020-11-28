@@ -11,7 +11,7 @@
             <div class=" myText " routerLink="/login">Iniciar sesión</div>
           </div>
           <div class="myButton" *ngIf="isLogged == true">
-            <div class=" myTextWithoutCursor "> {{nameUser}}
+            <div class=" myTextWithoutCursor ">Hola! {{nameUser}}
               <img class="icon" src="/assets/images/profile-user.png" width="40px" height="40px"></div>
           </div>
           <div class="myButton" *ngIf="isLogged == true">
@@ -38,11 +38,11 @@
 
 
   <div>
-    <input type="text" class="input_code text-center" [(ngModel)]="textInput" (keyup.enter)="findCode(textInput)" placeholder="Código postal">
+    <input type="text" class="input_code text-center" [(ngModel)]="zipCode" (keyup.enter)="findCode(zipCode)" placeholder="Código postal">
   </div>
 
   <div>
-     <button class="button_find" (click)="findCode(textInput)" >Buscar tiendas</button>
+     <button class="button_find" (click)="findCode(zipCode)" >Buscar tiendas</button>
   </div>
 
   <div *ngIf="codeFound == undefined || notFound==1">

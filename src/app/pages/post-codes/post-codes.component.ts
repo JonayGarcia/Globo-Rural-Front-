@@ -13,13 +13,16 @@ export class PostCodesComponent implements OnInit {
   shops: Shop[] = [];
   codeFound: any = [];
   postCodes: string[] = [];
-  textInput: string;
+  zipCode: string;
   notFound: number = 0;
   isLogged: boolean = false;
   nameUser: string;
   //numberCode: number;
 
-  constructor(private storesService: StoresService, public router: Router) {}
+  constructor(
+    private storesService: StoresService, 
+    public router: Router
+    ){}
 
   ngOnInit(): void {
     this.getShops();
@@ -59,12 +62,14 @@ export class PostCodesComponent implements OnInit {
 
     this.codeFound = await this.storesService.getShopsByPostCode(postalcode);
     //console.log("ESto es codeFound --->>", this.codeFound);
-    if(this.codeFound != undefined && this.textInput != ""){
-      //console.log("ESto es texInput: ",this.textInput);
+    if(this.codeFound != undefined && this.zipCode != ""){
+      //console.log("ESto es texInput: ",this.zipCode);
       this.router.navigate(['/postCode', postalcode]);
       //console.log('El CP es---->', postalcode);
+
+     this.storesService.myZipCode = this.zipCode;
     }
-    this.textInput = '';
+    this.zipCode = '';
     this.notFound=1;
   }
 

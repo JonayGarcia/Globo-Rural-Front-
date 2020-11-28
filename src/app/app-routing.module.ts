@@ -6,6 +6,7 @@ import {ShopsComponent} from './pages/shops/shops.component';
 import {RegisterComponent} from './pages/register/register.component';
 import {LoginComponent} from './pages/login/login.component';
 import {OrderComponent} from './pages/order/order.component';
+import {BasketComponent} from './pages/basket/basket.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path:"order",
     component:OrderComponent
+  },
+  {
+    path:"basket",
+    component:BasketComponent
   }
 ];
 
