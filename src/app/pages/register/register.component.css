@@ -1,8 +1,18 @@
+.myHeader{
+  background-color: #28866a;
+  height: 70px;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
 .body-Register{
   display: flex;
   justify-content: center;
+  width: 100vw;
   padding-top: 25px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
+  background: linear-gradient(to bottom right, #2b9475 10%, #6ffcb5 80%, #248d6e );
 }
 
 .register-buyerimage{
@@ -18,6 +28,7 @@
   padding: 15px;
   border: 2px solid #D9D9D9;
   border-radius: 20px;
+  background-color: white;
 }
 
 .description-header p{
@@ -48,8 +59,14 @@
 }
 
 .register-container{
+  display: flex;
+  flex-direction: column;
   width: 60vw;
   margin-left: 20px;
+}
+
+.register-container h1{
+  text-align: center;
 }
 
 .register-input-name{
@@ -59,13 +76,47 @@
   width: 400px;
 }
 
+.register-input-name2, .register-input-email2, 
+.register-input-phone2, .register-input-postCode2,
+.register-input-password2{
+  display:flex;
+  border: 1px;
+  background: linear-gradient(to bottom, #379a7c,#40bd97); 
+  border-radius: 15px;
+  align-items: center;
+}
+
 label {
   display: flex;
 }
 
-.mustBefilled, .register-input-name p{
+.mustBefilled, .register-input-name p, .register-input-email p, 
+.register-input-phone p, .register-input-postCode p,
+.register-input-password p{
   margin-left: 5px;
   color: red;
+}
+
+.register-input-name2 img, .register-input-email2 img,
+.register-input-phone2 img, .register-input-postCode2 img,
+.register-input-password2 img{
+  margin-right: 10px;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.register-input-name2 input, .register-input-email2 input,
+.register-input-phone2 input, .register-input-postCode2 input,
+.register-input-password2 input {
+  color: white;
+  border: none;
+  padding: 5px;
+  background: none;
+}
+
+.register-input-postCode2 input{
+  width: 150px;
 }
 
 .register-input-name input, .register-inputs-secondrow div input,
@@ -79,24 +130,10 @@ label {
   justify-content: space-between;
 }
 
-.register-input-email{
+.register-input-email, .register-input-phone, .register-input-postCode{
   display: flex;
   flex-direction: column;
   width: 400px;
-  height: 140px;
-}
-
-.register-input-phone{
-  display: flex;
-  flex-direction: column;
-  width: 180px;
-  height: 140px;
-}
-
-.register-input-postCode{
-  display: flex;
-  flex-direction: column;
-  width: 180px;
   height: 140px;
 }
 
@@ -117,6 +154,21 @@ label {
   padding-left: 20px;
 }
 
+.button-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.button-register{
+  color: #28866a;
+  font-weight: 600;
+  background: #def3e9;
+  width: 150px;
+  padding: 10px;
+  border-radius: 20px;
+}
+
 @media (max-width: 1300px) {
   .register-buyerimage{
     width: 28vw;
@@ -132,27 +184,33 @@ label {
   }
 }
 
-@media (max-width: 980px) {
+@media (max-width: 1000px) {
   .decription-Container{
     display: none;
   }
 
   .register-container{
-    width: 80vw;
+    width: 90vw;
   }
 }
 
 @media (max-width: 790px) {
-  .register-inputs-secondrow{
-    display: flex;
-    flex-direction: column;
+  .register-container{
+    justify-content: center;
+  }
+  
+  .register-input-name{
+    margin: auto;
   }
 
-  .register-inputs-thirdrow{
+  .register-inputs-secondrow, .register-inputs-thirdrow{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: auto;
+  }
 }
-}
+
 
 
 
@@ -247,18 +305,7 @@ label {
  
 }
 
-.myHeader{
 
-  background-color: #37822e;
-  height: 70px;
-  margin:auto;
-  overflow: hidden;
-  display: flex;
-  flex-direction: row;
-  justify-content:center;
-  align-items: center;
-
-}
 
 .appName{
   color:white;
