@@ -1,13 +1,93 @@
-
-
-<header class="myHeader">
-
-
+<div class="myHeader">
           <img src="/assets/images/logo.png" routerLink="" class="appLogo cursorPointer">
           <h2 class="appName cursorPointer" routerLink="">Penguin Express</h2>
+</div>
+
+<div class="body-Register">
+  <div class="decription-Container">
+    <div class="description-header"><p>Comprador</p></div>
+    <img class="register-buyerimage" src="/assets/images/buyer.jpg" alt="Comprador">
+    <div class="description-text-container">
+       <div class="description-text">
+         <img src="/assets/images/check.png" alt="check">
+         <p>Compra cuando desees</p>
+       </div>
+       <div class="description-text">
+         <img src="/assets/images/check.png" alt="check">
+         <p>Encuentra tus tiendas en tu zona</p>
+       </div>
+       <div class="description-text">
+         <img src="/assets/images/check.png" alt="check">
+         <p>Paga de forma segura</p>
+       </div>
+    </div>
+   </div>
+   
+   <div class="register-container">
+     <h1>Crea tu cuenta</h1>
+     <div class="register-input-name">
+       <label>Nombre <p class="mustBefilled">*</p></label>
+       <input type="text" [(ngModel)]="name" placeholder="Nombre" (blur)="validateName(name)" required>
+       <p *ngIf="nameInvalid==true">El nombre proporcionado es inválido</p> 
+     </div>
+     <div class="register-inputs-secondrow">
+        <div class="register-input-email">
+          <label>Email <p class="mustBefilled">*</p></label>
+          <input type="email" [(ngModel)]="email" (blur)="validateEmail(email)" placeholder="Email">
+          <p *ngIf="emailInvalid==true">El correo electrónico introducido tiene un formato inválido</p>
+        </div>
+        <div class="register-input-phone">
+          <label>Teléfono <p class="mustBefilled">*</p></label>
+          <input type="text" [(ngModel)]="phone" (ngModelChange)="validatePhone(phone)" placeholder="Teléfono">
+          <p *ngIf="phoneInvalid==true">El número introducido tiene un formato inválido</p>
+        </div>
+        <div class="register-input-postCode">
+          <label>Código Postal <p class="mustBefilled">*</p></label>
+          <input type="text" [(ngModel)]="postcode" (ngModelChange)="validatePostCode(postcode)" placeholder="Código Postal">
+          <p *ngIf="postcodeInvalid==true">El código postal introducido tiene un formato inválido</p>
+        </div>
+     </div>
+     <div class="register-inputs-thirdrow">
+        <div class="register-input-password">
+          <label>Contraseña <p class="mustBefilled">*</p></label>
+          <input type="password" [(ngModel)]="password" (ngModelChange)="validatePassword(password)" placeholder="Contraseña">
+          <p *ngIf="passwordInvalid==true">La contraseña debe tener al menos 6 digitos</p>
+        </div>
+        <div class="register-input-password">
+          <label>Repetir Contraseña <p class="mustBefilled">*</p></label>
+          <input type="password" [(ngModel)]="password2" (ngModelChange)="validatePassword2(password2)" placeholder="Contraseña">
+          <p *ngIf="password2Invalid==true">La contraseñas no coinciden</p>
+        </div>
+     </div>
+     <div class="register-checkbox">
+        <input class="form-check-input" type="checkbox"  [(ngModel)]="check" >
+        <label class="form-check-label" for="gridCheck">
+          He leído y acepto las <a href="#">Condiciones de uso</a> y la <a href="#">Política de privacidad</a>
+        </label>
+     </div>
+     <div class="d-flex justify-content-center divRegister">
+      <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="checkRegister()">Registrarse</button>
+      </div>
+      <div *ngIf="isFormValid" class="msnMistake">
+        Debes introducir todos los campos
+      </div>
+      <div *ngIf="isUserRegistered" class="msnOk">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+      <div *ngIf="failRegister" class="msnMistake">
+        Usuario o Email ya registrados, prueba con otro usuario o email
+      </div>
+
+   
+   </div>
+</div>
 
 
-</header>
+
+
+
+
+
 
 <div class="myBody">
 

@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { NgxIntlTelInputModule } from 'ngx-intl-tel-input';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ShopsComponent } from './pages/shops/shops.component';
 import { PostCodesComponent } from './pages/post-codes/post-codes.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './pages/footer/footer.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -15,6 +15,7 @@ import { RegisterDaughterComponent } from './pages/register-daughter/register-da
 import { RegisterShopComponent } from './pages/register-shop/register-shop.component';
 import { OrderComponent } from './pages/order/order.component';
 import { BasketComponent } from './pages/basket/basket.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,10 @@ import { BasketComponent } from './pages/basket/basket.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxIntlTelInputModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
