@@ -17,6 +17,7 @@ export class PostCodesComponent implements OnInit {
   notFound: number = 0;
   isLogged: boolean = false;
   nameUser: string;
+  istoogleActive: boolean = false;
   //numberCode: number;
 
   constructor(
@@ -77,5 +78,14 @@ export class PostCodesComponent implements OnInit {
     this.storesService.clearToken();
     localStorage.removeItem("idUser")
     this.isLogged = false;
+  }
+
+  toogle(){
+    if(!this.istoogleActive){
+      this.istoogleActive = true;
+    } else {
+      this.istoogleActive = false;
+    }
+    console.log(this.istoogleActive)
   }
 }

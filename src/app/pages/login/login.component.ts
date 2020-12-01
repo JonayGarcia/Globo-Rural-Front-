@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
   email:string;
-  keyLogin:string;
+  password:string;
   idUSer: string;
 
   isFormValid:boolean=false;
@@ -27,15 +27,15 @@ export class LoginComponent implements OnInit {
   }
 
   signIn(){
-    if(this.email==undefined || this.keyLogin == undefined
-      || this.email=="" || this.keyLogin == ""
+    if(this.email==undefined || this.password == undefined
+      || this.email=="" || this.password == ""
       ){
       this.isFormValid = true;
       this.failLogin = false;
       
     }else{
       console.log("Entro a logearme....>");
-      this.storesService.performLogin(this.email, this.keyLogin)
+      this.storesService.performLogin(this.email, this.password)
       .then( data => {
         this.isFormValid = false;
         this.failLogin = false;
