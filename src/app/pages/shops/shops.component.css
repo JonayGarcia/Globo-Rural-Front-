@@ -1,34 +1,51 @@
-.logos{
-    width: 200px;
-    height: 200px;
-}
-
-.toRight{
+.myHeader{
+  width: 100vw;
+  background-color: #28866a;
+  height: 70px;
   display: flex;
-  margin-right: 15px;
+  justify-content:space-between;
+  align-items: center;
 }
 
-.myButton{
-  padding-top: 10px;
-  padding-left: 15px;
-  padding-right: 15px;
+.logo{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
 }
 
-.myText{
+.appLogo{
+  width: 60px;
+  height: 60px;
+}
+
+.appName{
   color:white;
-  cursor: pointer;
-  
 }
 
-.myText:hover{
-  cursor: pointer;
-  background-color: rgb(255,255,255);
-  border: 1px solid #000000;
-  color: #000000;;
-  border-radius: 5px;
+.toogle{
+  display: none;
 }
 
-.icon{
+.nav{
+  display:flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.nav-button, .nav-button1{
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-button:hover, .nav-button1:hover{
+  border-radius: 15px;
+  background-color: #6ffcb5;
+  color: #2b9475;
+}
+
+.tofilter{
   filter: invert(100%)
 }
 
@@ -36,8 +53,6 @@
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /*width: 80vw;*/
-    /*margin: auto;*/
     justify-content: space-around;
     padding-top: 20px;
 
@@ -49,58 +64,74 @@
 
 .card {
     margin-bottom: 25px;
+    border: 2px solid #3bb396;
     border-radius: 5px;
+    background-color: #c3c9c9;
 }
 
-.appLogo{
-    width: 70px;
-    height: 70px;
+.cursor{
+ cursor: pointer;
 }
 
-.nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(10, 100, 2);
-    color: white;
-  }
+.noBorder:active{
+  border: none;
+  border-color: white;
+}
 
-
-   .nav-logo{
-     display: flex;
-     margin-left: 40px;
-     align-items: center;
-     cursor: pointer;
-   }
-
-  .nav-container{
-    margin-right: 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .nav-container div{
-    margin-left: 20px;
-    padding: 10px;
-    border-radius: 10px;
+.myBody{
+  min-height: calc( 100vh - 70px - 56px );
+  background: rgb(43,148,117);
+  background: linear-gradient(90deg, rgba(43,148,117,1) 15%, rgba(90,215,152,1) 52%, rgba(60,149,123,1) 93%);
+}
+  
+@media (max-width: 760px) {
+  .toogle{
+    display: block;
     cursor: pointer;
+    z-index: 1000;
+    margin-right: 30px;
   }
-
-   .nav-container div:hover{
-    background-color: rgb(68, 102, 65);
-   }
-
-
-   .cursor{
-     cursor: pointer;
-   }
-
-   .noBorder:active{
-     border: none;
-     border-color: white;
-   }
-
-   .myBody{
-    min-height: calc( 100vh - 70px - 56px );
-    background-color: rgb(237, 252, 255);
+  
+  .nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom right, #2b9475 10%, #6ffcb5 80%, #248d6e );
+    z-index: 100;
   }
+  
+  .nav.active {
+    display: flex;
+  }
+  
+  .toggle.active {
+    position: fixed;
+    right: 40px;
+  }
+  
+  .nav-button, .nav-button1{
+    padding: 10px;
+    color:#125340;
+    font-size: 35px;
+  }
+    
+  .nav-button:hover, .nav-button1:hover{
+    border-radius: 15px;
+    background-color: #2b9475;
+    color: white;
+  }  
+}
+
+@media (max-width: 500px) {
+  .nav-button1{
+    width: 300px;
+    text-align: center;
+  }
+}
+  

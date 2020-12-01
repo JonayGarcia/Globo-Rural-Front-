@@ -10,7 +10,7 @@ export class StoresService {
   // private api_host: string = '192.168.99.102:3000';
   //private api_url: string = 'http://35.180.18.107:3000/api';
   // private api_url: string = 'http://localhost:3000';
-   private api_url: string = 'http://35.180.18.107:3000/api';
+   private api_url: string = 'http://15.188.246.161:3000/api';
   private token_item: string = "jwt-token";
 
   myZipCode:string="hola";
@@ -124,6 +124,7 @@ export class StoresService {
   }
 
   getShopsByPostCode(postalcode: string): Promise<Shop[]> {
+    console.log(postalcode)
     return axios
       .get(`${this.api_url}/shops?postcode=${postalcode}`) // CONECTADO
       // .get(`${this.api_url}/shops?postCode=${postalcode}`)

@@ -1,107 +1,101 @@
-<div class="nav" >
-  <div routerLink="" class="nav-logo">
-    <img src="/assets/images/logo.png" class="appLogo" />
+<div class="myHeader">
+  <div class="logo">
+    <img src="/assets/images/logo.png" class="appLogo">
     <h2 class="appName">Penguin Express</h2>
   </div>
-  <div class="nav-container">
-    <div routerLink="">Cambiar Código Postal</div>
-    <!-- <div [routerLink]="['/postCode', shop?.postCode]">Ir a otra Tienda</div> -->
-    <div [routerLink]="['/postCode', shop?.postcode]">Ir a otra Tienda</div>
-    <div class="myButton" *ngIf="isLogged == true">
-      <div class=" myText cursorPointer"> {{nameUser}}
-        <img class="icon" src="/assets/images/profile-user.png" width="30px" height="30px"></div>
+  <img *ngIf="istoogleActive==false" class="toogle" src="/assets/images/menu.png" (click)="toogle()">
+  <img *ngIf="istoogleActive==true" class="toogle" src="/assets/images/close1.png" (click)="toogle()">
+  <div class="nav" [ngClass]="{'active': istoogleActive == true}">
+    <div class="nav-button1" routerLink="">Cambiar Código Postal</div>
+    <div class="nav-button1" [routerLink]="['/postCode', shop?.postcode]">Ir a otra Tienda</div>
+    <div *ngIf="isLogged == false">
+        <div class="nav-button" routerLink="/register">Regístrate</div>
     </div>
-    <div class="myButton" *ngIf="isLogged == true">
-      <div class=" myText cursorPointer" (click)="logout()">Cerrar Sesión 
-        <img class="icon" src="/assets/images/logout.png" width="30px" height="30px"></div>
+    <div *ngIf="isLogged == false">
+        <div class="nav-button" routerLink="/login">Iniciar sesión</div>
+    </div>
+    <div *ngIf="isLogged == true">
+        <div class="nav-button">Hola! {{nameUser}}
+        <img src="/assets/images/profile-user.png" width="40px" height="40px"></div>
+    </div>
+    <div *ngIf="isLogged == true">
+        <div class="nav-button" (click)="logout()">Cerrar Sesión 
+        <img class="tofilter" src="/assets/images/logout.png" width="40px" height="40px"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container-second-nav">
+  <div class="second-nav"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
+    <p>Tus compras mas sencillas desde casa<p>
+    <!-- <div class="second-nav-search">
+      <inut type="text" [(ngModel)]="search" placeholder="Busca en la tienda">
+      <img src="../../../assets/images/search.png">
+    </div>p -->
+    <p>{{total()}} €</p>
+  </div>
+  <div class="dropdown">
+    <div class="dropHeader tofilter"><img src="../../../assets/images/shoppingCart.png"></div>
+    <div class="dropdown-content">
+      <app-shopping-cart
+      [productsInCart]="productsTocart"
+      (removeProductFromCart)="removeFromCart($event)"
+      (totalToPayCart)="showTotalToPay($event)"
+      (sendPetitionToPay)="startPaying($event)"></app-shopping-cart>
     </div>
   </div>
 </div>
 
 
 <div class="myBody">
-    <div class="second-nav"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
-      <p>Tus compras mas sencillas desde casa<p>
-      <!-- <div class="second-nav-search">
-        <inut type="text" [(ngModel)]="search" placeholder="Busca en la tienda">
-        <img src="../../../assets/images/search.png">
-      </div>p -->
-      <p>{{total()}} €</p>
-    </div>
-
-    <div class="dropdown">
-      <div class="dropHeader"><img src="../../../assets/images/shoppingCart.png"></div>
-      <div class="dropdown-content">
-        <app-shopping-cart
-        [productsInCart]="productsTocart"
-        (removeProductFromCart)="removeFromCart($event)"
-        (totalToPayCart)="showTotalToPay($event)"
-        (sendPetitionToPay)="startPaying($event)"></app-shopping-cart>
-      </div>
-    </div>
-
-
     <div class="popUp-login" *ngIf="wantToPayF==true" >
-      <div class="formClient">
-        <div class="col alignClose" >
-          <img class="close" (click)="close()" src="/assets/images/close.png" width="20px" height="20px" alt="close">
-        </div>
-        <div class="form-row">
-          <div class="form-group col">
-            <label for="inputEmail4">Email</label>
-            <input type="text" class="form-control" [(ngModel)]="email" placeholder="Email">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group col">
-            <label for="inputEmail4">Contraseña</label>
-            <input type="password" class="form-control" [(ngModel)]="keyLogin" placeholder="Contraseña">
-          </div>
-        </div>
-
-
-        <div class="flex-container">
-
-            <div >
-              ¿Aún no tienes cuenta? 
-              
-            </div>
-
-            <div>
-              <div routerLink="/register" class="createAccount">Crear cuenta</div>
-            </div>
-
-        </div>
-
-
-        <div class="d-flex justify-content-center divRegister">
-            <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="signIn()">Entrar</button>
-        </div>
-
-        <div *ngIf="isFormValid" class="msnMistake">
-          Debes introducir todos los campos
-        </div>
-
-
-        
-        <div *ngIf="isUserLoged" class="msnOk">
-          <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
-        </div>
-
-        
-
-        <div *ngIf="failLogin" class="msnMistake">
-          Email o contraseña inválidos
-        </div>
+      <div class="col alignClose" >
+        <img class="close" (click)="close()" src="/assets/images/close.png" width="20px" height="20px" alt="close">
       </div>
+      <div class="formClient">
+        <div class="container-login">
+          <div class="login-input-email">
+            <label>Email del Usuario</label>
+            <div class="login-input-email2">
+              <img src="/assets/images/user.png">
+              <input type="email" [(ngModel)]="email" placeholder="Email">
+            </div>
+          </div>
+          <div class="login-input-password">
+            <label>Contraseña</label>
+            <div class="login-input-password2">
+              <img src="/assets/images/password.png">
+              <input type="password" [(ngModel)]="password" (keyup.enter)="signIn()" placeholder="Contraseña">
+            </div>
+          </div>
+          <div class="message-container">
+            <p>
+              ¿Aún no tienes cuenta? 
+            </p>
+            <div routerLink="/register" class="createAccount">Crear cuenta</div>
+          </div>
+          <div class="button-container">
+            <button type="submit" class="button-login" (click)="signIn()">Entrar</button>
+          </div>
+          <div *ngIf="isFormValid" class="msnMistake">
+            Debes introducir todos los campos
+          </div>
+          <div *ngIf="isUserLoged" class="msnOk">
+            <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+          </div>
+          <div *ngIf="failLogin" class="msnMistake">
+            Email o contraseña inválidos
+          </div>
+        </div>
+        <img class="imageLogin" src="/assets/images/people-login.png">
+      </div>
+      
     </div>
-
 
     <div class="header"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
       <h1>{{ shop?.name }}</h1>
       <img [src]="shop?.logo" class="logo" />
     </div>
-
 
     <div class="mainContainer"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
       <div class="filter">
@@ -109,15 +103,15 @@
         <br>
         <div class="categoriesListed" *ngIf="category==''">
           <div *ngFor="let category of categories">
-            <p [routerLink]="category" >{{category}}</p>
+            <p class="categories" [routerLink]="category" >{{category}}</p>
           </div>
         </div>
 
         <div class="categoriesListed" *ngIf="category!==''">
-              <div *ngFor="let category2 of categories">
-                  <p (click)="selectCategory(category2)" [ngClass]="{selected: category2==category}">{{category2}}</p>
-              </div>
-            <button (click)="goBack()" class="showProducts">Mostrar todos los productos</button>
+            <div *ngFor="let category2 of categories">
+              <p class="categories" (click)="selectCategory(category2)" [ngClass]="{selected: category2==category}">{{category2}}</p>
+            </div>
+            <div (click)="goBack()" class="showProducts">Mostrar todos los productos</div>
         </div>
       </div>
 
@@ -129,13 +123,13 @@
               <h5 class="card-title text-center">{{ product.name }}</h5>
               <p class="card-text text-center">Precio: {{ product.price }} €</p>
               <div class="btn-kart" *ngIf="!product.isInCart">
-                <button href="#" class="btn btn-primary" (click)="addToCart(product)">
+                <button href="#" class="button-addShop" (click)="addToCart(product)">
                   <img src="../../../assets/images/addToCart.png" width="30px" height="30px">
                   <p>Añadir al Carrito</p>
                 </button>
               </div>
               <div class="btn-kart" *ngIf="product.isInCart">
-                <button href="#" class="btn btn-success" (click)="removeFromCart(product)">
+                <button href="#" class="button-removeShop" (click)="removeFromCart(product)">
                   <img src="../../../assets/images/removeFromCart.png" width="30px" height="30px">
                   <p>Eliminar del Carrito</p>
                 </button>

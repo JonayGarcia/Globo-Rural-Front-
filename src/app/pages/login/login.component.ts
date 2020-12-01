@@ -45,7 +45,8 @@ export class LoginComponent implements OnInit {
         localStorage.setItem('idUser', this.idUSer);
         console.log(this.storesService.existToken());
         setTimeout(() => {
-          this.router.navigate(['/']);
+          // this.router.navigate(['/']);
+          this._location.back();
         }, 3000);  //3s
       })
       .catch((error) => {

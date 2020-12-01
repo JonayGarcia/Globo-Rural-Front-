@@ -26,7 +26,7 @@ export class PostCodesComponent implements OnInit {
     ){}
 
   ngOnInit(): void {
-    this.getShops();
+    // this.getShops();
     this.checkIfLog();
   }
 
@@ -43,20 +43,21 @@ export class PostCodesComponent implements OnInit {
     }
   }
 
-  async getShops() {
-    this.shops = await this.storesService.getAllShops();
-    this.getPostCodes();
-  }
+  // async getShops() {
+  //   this.shops = await this.storesService.getAllShops();
+  //   console.log(this.shops);
+  //   // this.getPostCodes();
+  // }
 
-  getPostCodes() {
-    // SI QUIEREN TENER UNA LISTA DE CODIGOS POSTALES,
-    // SE PUEDE IMPLEMENTAR EN LA API DIRECTAMENTE... comentadlo en el grupo!
-    this.shops.forEach((shop: Shop) => {
-      if (this.postCodes.includes(shop.postcode) == false)
-        this.postCodes.push(shop.postcode);
-    });
-    //console.log('Mis tiendas---->', this.shops);
-  }
+  // getPostCodes() {
+  //   // SI QUIEREN TENER UNA LISTA DE CODIGOS POSTALES,
+  //   // SE PUEDE IMPLEMENTAR EN LA API DIRECTAMENTE... comentadlo en el grupo!
+  //   this.shops.forEach((shop: Shop) => {
+  //     if (this.postCodes.includes(shop.postcode) == false)
+  //       this.postCodes.push(shop.postcode);
+  //   });
+  //   //console.log('Mis tiendas---->', this.shops);
+  // }
 
   async findCode(postalcode: string) {
     //console.log("ESto es postalcode--->",postalcode);

@@ -170,7 +170,8 @@ export class RegisterComponent implements OnInit {
           localStorage.setItem('user', JSON.stringify(data));
           this.isUserRegistered = true;
           setTimeout(() => {
-            this.router.navigate(['/']);
+            // this.router.navigate(['/']);
+            this._location.back();
           }, 3000);  //3s
         })
         .catch((error) => {

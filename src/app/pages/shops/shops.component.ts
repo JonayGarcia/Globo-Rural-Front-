@@ -12,6 +12,7 @@ export class ShopsComponent implements OnInit {
   shops: Shop[] = [];
   isLogged: boolean = false;
   nameUser: string;
+  istoogleActive: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -46,5 +47,14 @@ export class ShopsComponent implements OnInit {
     this.storesService.clearToken();
     localStorage.removeItem("idUser")
     this.isLogged = false;
+  }
+
+  toogle(){
+    if(!this.istoogleActive){
+      this.istoogleActive = true;
+    } else {
+      this.istoogleActive = false;
+    }
+    console.log(this.istoogleActive)
   }
 }

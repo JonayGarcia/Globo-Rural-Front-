@@ -30,12 +30,13 @@ export class ProductsComponent implements OnInit {
   
   user:string;
   email:string;
-  keyLogin:string;
+  password:string;
   orderToPay: {user_id: string, shop_id: string, products: Product[], totalPrice: number };
 
   isFormValid:boolean=false;
   isUserLoged :boolean=false;
   failLogin: boolean = false;
+  istoogleActive: boolean = false;
 
   constructor(
     private route: ActivatedRoute,
@@ -193,15 +194,15 @@ export class ProductsComponent implements OnInit {
   }
 
   signIn(){
-    if(this.email==undefined || this.keyLogin == undefined
-      || this.email=="" || this.keyLogin == ""
+    if(this.email==undefined || this.password == undefined
+      || this.email=="" || this.password == ""
       ){
       this.isFormValid = true;
       this.failLogin = false;
       console.log("Debes introducir todos los campos");
 
     }else{
-      this.storesService.performLogin(this.email, this.keyLogin)
+      this.storesService.performLogin(this.email, this.password)
       .then( data => {
         console.log("Entras --->>");
         this.isFormValid = false;
@@ -235,5 +236,14 @@ export class ProductsComponent implements OnInit {
     this.storesService.clearToken();
     localStorage.removeItem("idUser")
     this.isLogged = false;
+  }
+
+  toogle(){
+    if(!this.istoogleActive){
+      this.istoogleActive = true;
+    } else {
+      this.istoogleActive = false;
+    }
+    console.log(this.istoogleActive)
   }
 }

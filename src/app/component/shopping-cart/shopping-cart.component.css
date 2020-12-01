@@ -11,7 +11,7 @@ input[type=number] {
 }
 
 .empty{
-  color: rgb(10, 100, 2);
+  color: rgb(19, 87, 66);
   font-weight: 400;
   margin-left: 15px;
   margin-top: 15px;
@@ -77,7 +77,7 @@ input[type=number] {
 
 .toOrder p{
   text-align: center;
-  background-color: rgb(10, 100, 2);
+  background-color: rgb(19, 87, 66);
   border-radius: 5px;
   color: white;
   width: 100%
