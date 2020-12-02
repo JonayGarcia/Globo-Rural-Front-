@@ -81,6 +81,7 @@ export class OrderComponent implements OnInit {
           if(this.storesService.myZipCode == this.postCode){
                 this.isFormValid = false;
                 this.isBuyValid = true;
+                this.isCodeZip=false;
                 
                 
                 this.products.forEach(product=>{
@@ -111,10 +112,11 @@ export class OrderComponent implements OnInit {
                   this.productsSaved =this.productsSaved.filter(element => element.shop_id != this.shop_id);
                   localStorage.setItem("productsSaved", JSON.stringify(this.productsSaved));
                  
-                  this.router.navigate(['/basket']); 
+                 // this.router.navigate(['/basket']); 
           }else{
             this.isFormValid = false;
             this.isCodeZip=true;
+            this.isBuyValid = false;
           }
 
       }

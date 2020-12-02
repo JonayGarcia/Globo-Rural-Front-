@@ -18,14 +18,24 @@
   margin-top:10px;
   text-align: center;
   color:red;
+  font-weight: bold;
 }
 
 .msnOk{
   margin-top:10px;
   text-align: center;
   color:rgb(60, 206, 53);
+  font-weight: bold;
  }
 
+
+ .msnOkOrder{
+  margin-top:10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  
+ }
 .title{
   font-size: 40px;
   text-align: center;
