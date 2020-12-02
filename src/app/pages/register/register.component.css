@@ -30,6 +30,7 @@
   display: flex;
   justify-content: center;
   width: 100vw;
+  min-height: calc( 100vh - 70px - 56px );
   padding-top: 25px;
   padding-bottom: 60px;
   background: linear-gradient(to bottom right, #2b9475 10%, #6ffcb5 80%, #248d6e );
@@ -96,12 +97,12 @@
   width: 400px;
 }
 
-.register-input-name2, .register-input-email2, 
+.register-input-name2, .register-input-email2,
 .register-input-phone2, .register-input-postCode2,
 .register-input-password2{
   display:flex;
   border: 1px;
-  background: linear-gradient(to bottom, #379a7c,#40bd97); 
+  background: linear-gradient(to bottom, #379a7c,#40bd97);
   border-radius: 15px;
   align-items: center;
 }
@@ -110,7 +111,7 @@ label {
   display: flex;
 }
 
-.mustBefilled, .register-input-name p, .register-input-email p, 
+.mustBefilled, .register-input-name p, .register-input-email p,
 .register-input-phone p, .register-input-postCode p,
 .register-input-password p{
   margin-left: 5px;
@@ -240,7 +241,7 @@ label {
 
   .register-input-name, .register-inputs-secondrow, .register-inputs-thirdrow,
   .register-input-phone2, .register-input-postCode2, .register-input-email2,
-  .register-input-password2, .register-input-phone, .register-input-postCode, 
+  .register-input-password2, .register-input-phone, .register-input-postCode,
   .register-input-email, .register-input-password{
     width: 300px;
   }
@@ -335,7 +336,7 @@ label {
   display: flex;
   flex-direction: row;
   justify-content: center;
- 
+
 }
 
 

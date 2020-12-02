@@ -3,7 +3,7 @@
         <img src="/assets/images/logo.png" class="appLogo">
         <h2 class="appName">Penguin Express</h2>
       </div>
-      
+
       <div class="nav-container">
         <div (click)="goBack()">Volver a la tienda</div>
       </div>
@@ -16,16 +16,16 @@
     <p class="title">Generar Pedido</p>
     <table>
         <tr *ngFor="let product of products" class="containerProducts">
-            
+
                     <td><img [src]="product.image"></td>
                     <td class="name">{{product.name}}</td>
                     <td class="card-price">{{product.price}} €</td>
                     <td class="quantity">{{product.quantity}}</td>
                     <td class="price">{{+(product.quantity*product.price).toFixed(2)}} €</td>
-          
+
         </tr>
     </table>
-    
+
     <div class="total">
         <p>{{productsInCart.totalPrice}} €</p>
     </div>
@@ -50,12 +50,12 @@
       <div *ngIf="isCodeZip" class="msnMistake">
         EL código postal debe ser el mismo que el de tu zona
       </div>
-      
+
       <div *ngIf="isBuyValid" class="msnOk">
         Has comprado con éxito
       </div>
 
 
-    
+
 </div>
 

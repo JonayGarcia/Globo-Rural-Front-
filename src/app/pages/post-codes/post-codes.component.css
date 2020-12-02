@@ -52,7 +52,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 80.7vh;
+  min-height: calc( 100vh - 70px - 56px );
   background: linear-gradient(to bottom right, #2b9475 10%, #6ffcb5 80%, #248d6e );
 }
 
@@ -70,7 +70,7 @@
 .container-input-postCode{
   display:flex;
   border: 1px;
-  background: linear-gradient(to bottom, #379a7c,#40bd97); 
+  background: linear-gradient(to bottom, #379a7c,#40bd97);
   border-radius: 15px;
   align-items: center;
 }
@@ -212,7 +212,7 @@
     color:#125340;
     font-size: 35px;
   }
-  
+
   .nav-button:hover{
     border-radius: 15px;
     background-color: #2b9475;
@@ -375,10 +375,10 @@ h6{
   text-align: right;
   height: 100%;
   float: right;
- 
- 
-  
-  
+
+
+
+
 }
 
  .myButton{
@@ -388,9 +388,9 @@ h6{
   padding-right: 15px;
   padding-top: 20px;
   height: 100%;
- 
+
   margin: 0 auto;
-  
+
 }
 
 .myButtonWithoutH{
@@ -400,9 +400,9 @@ h6{
   padding-right: 15px;
   padding-top: 20px;
   height: 100%;
- 
+
   margin: 0 auto;
-  
+
 }
 
 
@@ -411,14 +411,14 @@ h6{
 .myText{
   color:white;
   cursor: pointer;
-  
- 
-  
+
+
+
 }
 .myTextWithoutCursor{
   color:white;
   cursor: pointer;
-  
+
 }
 
 .myText:hover{
@@ -428,8 +428,8 @@ h6{
   color: #000000;;
   border-radius: 5px;
   font-weight: bold;
-  
-  
+
+
 
 }
 
@@ -440,7 +440,7 @@ h6{
 
 .myRegister{
   grid-column: 1;
- 
+
 }
 
 .mySignIn{

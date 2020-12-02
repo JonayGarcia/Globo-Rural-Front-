@@ -1,7 +1,7 @@
 .mainContainer{
   /*margin: 0 15px;*/
   min-height: calc( 100vh - 70px - 56px );
-  background-color: rgb(237, 252, 255);
+  background: linear-gradient(to bottom right, #2b9475 10%, #6ffcb5 80%, #248d6e );
 }
 
 .myHeader{
@@ -38,9 +38,7 @@
     align-items: center;
   }
 
-.containerProducts td{
-  border: 1px solid blue;
-}
+
 
   .containerProducts img{
     width: 60px;

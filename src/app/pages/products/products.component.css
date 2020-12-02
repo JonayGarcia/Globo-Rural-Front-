@@ -108,7 +108,7 @@
   position: absolute;
   display: inline-block;
   align-self: center;
-  top: 85px; 
+  top: 85px;
   right: 20px;
 }
 
@@ -130,7 +130,7 @@
 .dropdown:hover .dropHeader {cursor: pointer;}
 
 .myBody{
-  min-height: calc( 100vh - 70px - 56px );
+  min-height: calc( 100vh - 70px - 56px - 64px );
   background: rgb(43,148,117);
   background: linear-gradient(90deg, rgba(43,148,117,1) 15%, rgba(90,215,152,1) 52%, rgba(60,149,123,1) 93%);
   padding-top: 20px;
@@ -323,7 +323,7 @@ input[type=number] {
 .login-input-password2{
   display:flex;
   border: 1px;
-  background: linear-gradient(to bottom, #379a7c,#40bd97); 
+  background: linear-gradient(to bottom, #379a7c,#40bd97);
   border-radius: 15px;
   align-items: center;
 }
@@ -428,7 +428,7 @@ label {
 
 .createAccount:hover{
   cursor: pointer;
-  text-decoration: underline #007bff; 
+  text-decoration: underline #007bff;
 }
 
 .msnMistake{
@@ -533,7 +533,7 @@ label {
 .myText{
   color:white;
   cursor: pointer;
-  
+
 }
 
 .myText:hover{
@@ -552,7 +552,7 @@ label {
 
 .flex-container{
   display: flex;
-  
+
 }
 
 .flex-container > div{

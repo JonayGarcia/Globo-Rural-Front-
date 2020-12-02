@@ -31,7 +31,7 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 80.8vh;
+  min-height: calc( 100vh - 70px - 56px );
   padding-top: 25px;
   padding-bottom: 60px;
   background: linear-gradient(to bottom right, #2b9475 10%, #6ffcb5 80%, #248d6e );
@@ -69,7 +69,7 @@
 .login-input-password2{
   display:flex;
   border: 1px;
-  background: linear-gradient(to bottom, #379a7c,#40bd97); 
+  background: linear-gradient(to bottom, #379a7c,#40bd97);
   border-radius: 15px;
   align-items: center;
 }
@@ -228,7 +228,7 @@ label {
     margin-left: 0px;
   }
 
-  .login-input-email2, .login-input-password2, 
+  .login-input-email2, .login-input-password2,
   .login-input-email, .login-input-password{
     width: 300px;
     margin: auto;
