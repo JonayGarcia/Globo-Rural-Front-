@@ -1,14 +1,17 @@
-<header class="myHeader">
+<div class="myHeader">
     <div routerLink=""  class="nav-logo">
         <img src="/assets/images/logo.png" class="appLogo">
         <h2 class="appName">Penguin Express</h2>
       </div>
 
       <div class="nav-container">
+        <img src="/assets/images/store.png">
         <div (click)="goBack()">Volver a la tienda</div>
       </div>
 
-</header>
+</div>
+
+
 
 
 <div class="mainContainer">
@@ -46,6 +49,7 @@
 
 
 
+
 <div class="inputsAddress">
     <div>
       <label>Dirección de Envío</label>
@@ -76,15 +80,20 @@
     <div *ngIf="isBuyValid" class="msnOkOrder">
       Has comprado con éxito
     </div>
+  </div> 
 
 
 
-</div>
 
 
 <!--Parte José
 <div class="mainContainer">
+<<<<<<< HEAD
     <p class="title">Detalles del pedido</p>
+=======
+  <div class="order">
+    <p class="title">Generar Pedido</p>
+>>>>>>> 780a21fd4e50d22ad807a272ead4edea92e2d19e
     <table>
         <tr>
         <th>Productos pedidos ({{productsInCart.products.length}})</th>
@@ -94,28 +103,25 @@
 
         </tr>
         <tr *ngFor="let product of products" class="containerProducts">
-
                     <td><img [src]="product.image"></td>
                     <td class="name">{{product.name}}</td>
                     <td class="card-price">{{product.price}} €</td>
                     <td class="quantity">{{product.quantity}}</td>
                     <td class="price">{{+(product.quantity*product.price).toFixed(2)}} €</td>
-
         </tr>
     </table>
-
     <div class="total">
         <p>{{productsInCart.totalPrice}} €</p>
     </div>
-
-    <div>
-        <label>Dirección de Envío</label>
-        <input [(ngModel)]="delivery_address" placeholder="Dirección de envío">
-    </div>
-    <div>
-        <label>Código Postal</label>
-        <input [(ngModel)]="postCode" placeholder="Código Postal">
-    </div>
+  </div>
+  <div>
+      <label>Dirección de Envío</label>
+      <input [(ngModel)]="delivery_address" placeholder="Dirección de envío">
+  </div>
+  <div>
+      <label>Código Postal</label>
+      <input [(ngModel)]="postCode" placeholder="Código Postal">
+  </div>
 
     <div class="d-flex justify-content-center divBuy">
         <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="buy()">Comprar</button>
@@ -132,8 +138,5 @@
       <div *ngIf="isBuyValid" class="msnOkOrder">
         Has comprado con éxito
       </div>
-
-
-
 </div>
 -->

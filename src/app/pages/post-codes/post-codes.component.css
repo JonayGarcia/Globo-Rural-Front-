@@ -115,6 +115,8 @@
 
 
 .msn_error{
+  background-color: red;
+  border-radius: 25px;
   color:black;
   padding:4px;
   text-align:center;
