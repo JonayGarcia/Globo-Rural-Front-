@@ -105,8 +105,8 @@ export class OrderComponent implements OnInit {
                   
                   this.storesService.postBuy(this.productsToSendObject)
                   .then(data => {
-                      console.log("ESTE ES DATA:", data); //solo asi, revisa si funciona 
-                  })
+                      console.log("ESTE ES LO QUE DEVUELVE EL BACKEND:", data); //solo asi, revisa si funciona 
+                  });
 
                   this.productsSaved = JSON.parse(localStorage.getItem("productsSaved"));
                   this.productsSaved =this.productsSaved.filter(element => element.shop_id != this.shop_id);

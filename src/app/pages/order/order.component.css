@@ -41,24 +41,8 @@
   text-align: center;
 }
 
-.containerProducts{
-    margin: 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
 
 
-
-  .containerProducts img{
-    width: 60px;
-    height: 60px;
-  }
-
-  .total{
-      margin-right: 15px;
-      text-align: right;
-  }
 
   .headers{
     display: flex;
@@ -69,13 +53,99 @@
     width: 100vw;
   }
 
-  .name{
-    width: 40vw;
+
+  .containerOrder{
+    border:1px solid black;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    color: rgb(0, 0, 0) !important;
+    box-shadow: 0 5px 16px rgba(49, 138, 172, 1);
+    /*transition: all 0.2s ease;*/
+   
+  }
+  
+
+  .tableHeader{
+    display: flex;
+    margin: 15px;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .price{
-    margin-right: 25px;
+  .tableHeader div{
+    margin-left: auto;
+    margin-right: auto;
   }
+
+.nameTitle{
+  width: 47vw;
+  margin-left: 30px;
+}
+
+.card-priceTtile{
+  width: 5vw;
+  text-align: center;
+}
+
+.quantityTitle{
+  width: 5vw;
+  text-align: center;
+}
+
+.priceTtile{
+  width: 5vw;
+  text-align: center;
+}
+
+
+.containerProducts{
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*border: 1px solid red;*/
+}
+
+
+
+.containerProducts img{
+  width: 60px;
+  height: 60px;
+}
+
+.containerProducts div{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .name{
+    width: 40vw;
+    text-align: left;
+  }
+
+.card-price{
+  width: 5vw;
+  text-align: center;
+}
+
+.quantity{
+  width: 5vw;
+  text-align: center;
+}
+
+.price{
+  width: 5vw;
+  /*margin-right: 25px;*/
+  text-align: center;
+}
+
+.total{
+  margin-right: 15px;
+  text-align: right;
+}
 
   .myBuy{
     margin-top: 10px;
@@ -83,6 +153,7 @@
 
   .divBuy{
     margin-top: 10px;
+    padding-bottom: 10px;
   }
 
   .appLogo{
@@ -108,4 +179,33 @@
   display: flex;
   border: 1px solid black;
   justify-content: center;
+}
+
+.inputsAddress{
+  display: flex;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+
+.inAddress {
+  width: 20vw;
+  background: linear-gradient(to bottom, #379a7c,#40bd97);
+   border: 1px solid #393939;
+   border-radius: 5px 5px 5px 5px;
+   color: #ffffff;
+   font-size: 12px;
+   padding: 5px
+}
+
+.inCP {
+  width: 10vw;
+  background: linear-gradient(to bottom, #379a7c,#40bd97);
+   border: 1px solid #393939;
+   border-radius: 5px 5px 5px 5px;
+   color: #ffffff;
+   font-size: 12px;
+   padding: 5px
 }

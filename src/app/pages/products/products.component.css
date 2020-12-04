@@ -346,9 +346,13 @@ label {
 
 .createAccount{
   margin-left: 15px;
-  text-decoration: underline;
+  /*text-decoration: underline;*/
   color: blue;
   cursor: pointer;
+}
+
+.createAccount:hover{
+  text-decoration: underline blue;
 }
 
 .button-container{

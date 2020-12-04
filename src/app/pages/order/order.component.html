@@ -11,10 +11,88 @@
 </header>
 
 
-
 <div class="mainContainer">
-    <p class="title">Generar Pedido</p>
+  <p class="title">Detalles del pedido</p>
+
+  <div class="containerOrder">
+          <div class="tableHeader">
+              
+              <div class="nameTitle">Productos pedidos ({{productsInCart.products.length}})</div>
+              <div class="card-priceTtile">€/Ud</div>
+              <div class="quantityTitle">Ud</div>
+              <div class="priceTtile">€/Pr</div>
+
+              
+          </div>
+          
+          
+              <div *ngFor="let product of products" class="containerProducts">
+
+                          <div><img [src]="product.image"></div>
+                          <div class="name">{{product.name}}</div>
+                          <div class="card-price">{{product.price}} €</div>
+                          <div class="quantity">{{product.quantity}}</div>
+                          <div class="price"> {{+(product.quantity*product.price).toFixed(2)}} €</div>
+
+              </div>
+            
+              <div class="total">
+                <p>Total: {{productsInCart.totalPrice}} €</p>
+            </div>
+
+  </div>
+
+
+
+
+
+<div class="inputsAddress">
+    <div>
+      <label>Dirección de Envío</label>
+      <input class="inAddress"  [(ngModel)]="delivery_address" placeholder="Dirección de envío">
+    </div>
+
+    <div>
+      <label>Código Postal</label>
+      <input class="inCP" [(ngModel)]="postCode" placeholder="Código Postal">
+    </div>
+    
+</div>
+
+
+
+  <div class="d-flex justify-content-center divBuy">
+      <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="buy()">Comprar</button>
+  </div>
+
+    <div *ngIf="isFormValid" class="msnMistake">
+      Debes introducir todos los campos
+    </div>
+
+    <div *ngIf="isCodeZip" class="msnMistake">
+      EL código postal debe ser el mismo que el de tu zona
+    </div>
+
+    <div *ngIf="isBuyValid" class="msnOkOrder">
+      Has comprado con éxito
+    </div>
+
+
+
+</div>
+
+
+<!--Parte José
+<div class="mainContainer">
+    <p class="title">Detalles del pedido</p>
     <table>
+        <tr>
+        <th>Productos pedidos ({{productsInCart.products.length}})</th>
+        <th>Precio Ud.</th>
+        <th>Unidades</th>
+        <th>Precio Producto</th>
+
+        </tr>
         <tr *ngFor="let product of products" class="containerProducts">
 
                     <td><img [src]="product.image"></td>
@@ -58,4 +136,4 @@
 
 
 </div>
-
+-->
