@@ -14,34 +14,12 @@
 }
 
 
-.msnMistake{
-  margin-top:10px;
-  text-align: center;
-  color:red;
-  font-weight: bold;
-}
 
-.msnOk{
-  margin-top:10px;
-  text-align: center;
-  color:rgb(60, 206, 53);
-  font-weight: bold;
- }
-
-
- .msnOkOrder{
-  margin-top:10px;
-  text-align: center;
-  color: white;
-  font-weight: bold;
-  
- }
 .title{
+  padding-top: 16px;
   font-size: 40px;
   text-align: center;
 }
-
-
 
 
   .headers{
@@ -70,45 +48,59 @@
 
   .tableHeader{
     display: flex;
-    margin: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     justify-content: space-between;
     align-items: center;
+    border-bottom-style: solid;
+    border-width:1px;
+    font-weight: bold;
+    background: #38c27d;
   }
 
-  .tableHeader div{
-    margin-left: auto;
-    margin-right: auto;
-  }
+
 
 .nameTitle{
-  width: 47vw;
-  margin-left: 30px;
+  width: 49vw;
+  margin-left: 25px;
 }
 
 .card-priceTtile{
   width: 5vw;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .quantityTitle{
   width: 5vw;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .priceTtile{
   width: 5vw;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
 .containerProducts{
+  border-bottom-style: solid;
+  border-width:1px;
+}
+
+.productsRow{
   margin: 15px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   /*border: 1px solid red;*/
 }
-
 
 
 .containerProducts img{
@@ -116,7 +108,7 @@
   height: 60px;
 }
 
-.containerProducts div{
+.containerProducts  div{
   margin-left: auto;
   margin-right: auto;
 }
@@ -143,8 +135,11 @@
 }
 
 .total{
+  margin-top: 10px;
   margin-right: 15px;
+  margin-bottom: 10px;
   text-align: right;
+  font-weight: bold;
 }
 
   .myBuy{
@@ -152,8 +147,8 @@
   }
 
   .divBuy{
-    margin-top: 10px;
-    padding-bottom: 10px;
+    margin-top: 30px;
+    padding-bottom: 20px;
   }
 
   .appLogo{
@@ -201,11 +196,81 @@
 }
 
 .inCP {
-  width: 10vw;
+  width: 11vw;
   background: linear-gradient(to bottom, #379a7c,#40bd97);
    border: 1px solid #393939;
    border-radius: 5px 5px 5px 5px;
    color: #ffffff;
    font-size: 12px;
    padding: 5px
+}
+
+
+.msnMistake{
+  
+  text-align: center;
+  color:red;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.msnErrorStock{
+  text-align: center;
+  color:black;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.msnOk{
+  margin-top:10px;
+  text-align: center;
+  color:rgb(60, 206, 53);
+  font-weight: bold;
+  padding-bottom: 20px;
+ }
+
+
+ .msnOkOrder{
+  margin-top:10px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  padding-bottom: 20px;
+  
+ }
+
+.tableStock{
+  margin-top: 15px;
+  border:1px solid black;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  color: rgb(0, 0, 0) !important;
+  box-shadow: 0 5px 16px rgba(49, 138, 172, 1);
+  /*transition: all 0.2s ease;*/
+}
+
+ .rowTableStock{
+  border-bottom-style: solid;
+  border-width:1px;
+ }
+
+ .rowTableStock .nameStock{
+   width: 400px;
+   text-align: left;
+ }
+
+ .rowTableStock .quantityStock{
+  width: 20px;
+}
+
+.rowStock{
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /*border: 1px solid red;*/
 }

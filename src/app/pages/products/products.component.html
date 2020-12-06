@@ -1,7 +1,7 @@
 <div class="myHeader">
   <div class="logo">
-    <img src="/assets/images/logo.png" class="appLogo">
-    <h2 class="appName">Penguin Express</h2>
+    <img routerLink=""   src="/assets/images/logo.png" class="appLogo">
+    <h2 routerLink=""  class="appName">Penguin Express</h2>
   </div>
   <img *ngIf="istoogleActive==false" class="toogle" src="/assets/images/menu.png" (click)="toogle()">
   <img *ngIf="istoogleActive==true" class="toogle" src="/assets/images/close1.png" (click)="toogle()">
@@ -97,22 +97,23 @@
       <img [src]="shop?.logo" class="logo" />
     </div>
 
+
     <div class="mainContainer"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
       <div class="filter">
-        <h3>Categoría</h3>
-        <br>
-        <div class="categoriesListed" *ngIf="category==''">
-          <div *ngFor="let category of categories">
-            <p class="categories" [routerLink]="category" >{{category}}</p>
-          </div>
-        </div>
-
-        <div class="categoriesListed" *ngIf="category!==''">
-            <div *ngFor="let category2 of categories">
-              <p class="categories" (click)="selectCategory(category2)" [ngClass]="{selected: category2==category}">{{category2}}</p>
+          <h3>Categoría</h3>
+          <br>
+          <div class="categoriesListed" *ngIf="category==''">
+            <div *ngFor="let category of categories">
+              <p class="categories" [routerLink]="category" >{{category}}</p>
             </div>
-            <div (click)="goBack()" class="showProducts">Mostrar todos los productos</div>
-        </div>
+          </div>
+
+          <div class="categoriesListed" *ngIf="category!==''">
+              <div *ngFor="let category2 of categories">
+                <p class="categories" (click)="selectCategory(category2)" [ngClass]="{selected: category2==category}">{{category2}}</p>
+              </div>
+              <div (click)="goBack()" class="showProducts">Mostrar todos los productos</div>
+          </div>
       </div>
 
       <div class="board">

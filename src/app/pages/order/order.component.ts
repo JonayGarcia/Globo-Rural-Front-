@@ -1,8 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Product, ProductInOrder, Order } from 'src/app/models';
+import { Product, ProductInOrder, Order, Shop } from 'src/app/models';
 import { StoresService } from 'src/app/services/stores.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { stringify } from 'querystring';
+import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
 
 @Component({
   selector: 'app-order',
@@ -30,6 +32,13 @@ export class OrderComponent implements OnInit {
   isFormValid:boolean=false;
   isBuyValid:boolean=false;
   isCodeZip:boolean=false;
+  isErrorStock:boolean=false;
+
+  CPBackend:string="";
+  shop:Shop;
+  myShopOrder:{};
+  errorMesageStock:string="";
+  bufferStock= [];
 
   constructor(private route: ActivatedRoute,
     private storesService: StoresService,
@@ -63,6 +72,9 @@ export class OrderComponent implements OnInit {
   }
 
    buy(){
+      //console.log("Esto es ZIPCODE-->", this.storesService.myZipCode);
+      console.log("Recoger-->", localStorage.getItem('zipCode'));
+      //this.getZipCode();
 
       if(this.delivery_address == undefined || this.postCode == undefined 
         || this.delivery_address == "" || this.postCode == ""
@@ -71,14 +83,15 @@ export class OrderComponent implements OnInit {
           this.isFormValid = true;
           this.isBuyValid = false;
           this.isCodeZip=false;
-          console.log("Soy el hijo:", this.storesService.myZipCode);
+          //console.log("Soy el hijo:", this.storesService.myZipCode);
+          //@Input('zipCOde');
 
       }else{
         
          // this.checkIfSamePostCode();
 
 
-          if(this.storesService.myZipCode == this.postCode){
+          if(JSON.parse(localStorage.getItem('zipCode'))=== this.postCode){
                 this.isFormValid = false;
                 this.isBuyValid = true;
                 this.isCodeZip=false;
@@ -106,19 +119,39 @@ export class OrderComponent implements OnInit {
                   this.storesService.postBuy(this.productsToSendObject)
                   .then(data => {
                       console.log("ESTE ES LO QUE DEVUELVE EL BACKEND:", data); //solo asi, revisa si funciona 
+                       this.router.navigate(['/basket']);
+                  }).catch( (error) =>{
+                    this.isErrorStock=true;
+                    this.errorMesageStock = error.message;
+                    this.bufferStock = error.insufficientStock;
+
                   });
 
+                  // Estas 3 líneas ke hacen???
                   this.productsSaved = JSON.parse(localStorage.getItem("productsSaved"));
                   this.productsSaved =this.productsSaved.filter(element => element.shop_id != this.shop_id);
                   localStorage.setItem("productsSaved", JSON.stringify(this.productsSaved));
                  
-                 // this.router.navigate(['/basket']); 
+                  
           }else{
+            console.log(JSON.parse(localStorage.getItem('zipCode')));
+            console.log("De html",this.postCode);
             this.isFormValid = false;
             this.isCodeZip=true;
             this.isBuyValid = false;
           }
 
       }
-}
+    }
+
+    /*
+    async getZipCode(){
+     this.myShopOrder = JSON.parse(localStorage.getItem('orderToPay'));
+     console.log("oooo-->", this.myShopOrder.products[0].shop_id);
+     this.shop = await this.storesService.getOneShop(this.myShopOrder.products[0].shop_id);
+     this.CPBackend = this.shop.postCode;
+     console.log("____",this.CPBackend);
+    }
+    */
+
 }

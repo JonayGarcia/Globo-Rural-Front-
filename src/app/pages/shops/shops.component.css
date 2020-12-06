@@ -16,10 +16,14 @@
 .appLogo{
   width: 60px;
   height: 60px;
+  cursor: pointer;
 }
+
+
 
 .appName{
   color:white;
+  cursor: pointer;
 }
 
 .toogle{

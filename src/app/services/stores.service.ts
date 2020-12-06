@@ -13,7 +13,7 @@ export class StoresService {
   // private api_url: string = 'http://15.188.246.161:3000/api';
   private token_item: string = "jwt-token";
 
-  myZipCode:string="hola";
+  //myZipCode:string="hola";
 
   constructor(public router: Router) {
     const $this = this;
@@ -93,7 +93,7 @@ export class StoresService {
     .catch( (error) => {
       console.log(error);
       console.log(error.response.data);
-     
+     throw error.response.data;
     });
   }
 

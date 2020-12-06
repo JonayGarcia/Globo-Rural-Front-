@@ -30,17 +30,17 @@
           
           
               <div *ngFor="let product of products" class="containerProducts">
-
+                    <div class="productsRow">
                           <div><img [src]="product.image"></div>
                           <div class="name">{{product.name}}</div>
                           <div class="card-price">{{product.price}} €</div>
                           <div class="quantity">{{product.quantity}}</div>
                           <div class="price"> {{+(product.quantity*product.price).toFixed(2)}} €</div>
-
+                     </div>
               </div>
             
               <div class="total">
-                <p>Total: {{productsInCart.totalPrice}} €</p>
+                <div> Total: {{productsInCart.totalPrice}} €</div>
             </div>
 
   </div>
@@ -64,7 +64,6 @@
 </div>
 
 
-
   <div class="d-flex justify-content-center divBuy">
       <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="buy()">Comprar</button>
   </div>
@@ -77,8 +76,28 @@
       EL código postal debe ser el mismo que el de tu zona
     </div>
 
+    <!--
     <div *ngIf="isBuyValid" class="msnOkOrder">
       Has comprado con éxito
+    </div>
+    -->
+
+    <!--Mostrar el error que envía el backend-->
+    <div *ngIf="isErrorStock" class="msnErrorStock">
+      {{errorMesageStock}} Los siguientes productos no están disponibles:
+            <div class="tableStock">
+                  <div *ngFor="let product of bufferStock" class="rowTableStock" >
+                      <div class="rowStock">
+                              <div class="nameStock">
+                                {{product.name}}
+                              </div>
+
+                              <div class="quantityStock"> 
+                                {{product.stock}}
+                              </div>
+                      </div>
+                  </div>
+            </div>
     </div>
   </div> 
 
@@ -88,12 +107,9 @@
 
 <!--Parte José
 <div class="mainContainer">
-<<<<<<< HEAD
-    <p class="title">Detalles del pedido</p>
-=======
+
   <div class="order">
     <p class="title">Generar Pedido</p>
->>>>>>> 780a21fd4e50d22ad807a272ead4edea92e2d19e
     <table>
         <tr>
         <th>Productos pedidos ({{productsInCart.products.length}})</th>

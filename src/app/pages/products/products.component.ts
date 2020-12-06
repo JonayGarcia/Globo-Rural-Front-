@@ -76,6 +76,7 @@ export class ProductsComponent implements OnInit {
   async showProducts() {
     if(this.category==""){
       this.shop = await this.storesService.getOneShop(this.id);
+      console.log("ESTO ES SHOPS: ",this.shop);
       this.products = await this.storesService.getProductsByShop(this.shop._id);
       // this.products = await this.storesService.getProductsByShop(this.id);
       this.showsWhosInCart(this.products)

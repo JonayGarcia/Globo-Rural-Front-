@@ -13,7 +13,7 @@ export class PostCodesComponent implements OnInit {
   shops: Shop[] = [];
   codeFound: any = [];
   postCodes: string[] = [];
-  zipCode: string;
+  zipCode: string="";
   notFound: number = 0;
   isLogged: boolean = false;
   nameUser: string;
@@ -69,7 +69,8 @@ export class PostCodesComponent implements OnInit {
       this.router.navigate(['/postCode', postalcode]);
       //console.log('El CP es---->', postalcode);
 
-     this.storesService.myZipCode = this.zipCode;
+      localStorage.setItem('zipCode',JSON.stringify(this.zipCode));
+     //this.storesService.myZipCode = this.zipCode;
     }
     this.zipCode = '';
     this.notFound=1;
