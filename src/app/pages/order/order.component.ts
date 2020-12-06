@@ -92,8 +92,7 @@ export class OrderComponent implements OnInit {
 
 
           if(JSON.parse(localStorage.getItem('zipCode'))=== this.postCode){
-                this.isFormValid = false;
-                this.isBuyValid = true;
+                this.isFormValid = false;   
                 this.isCodeZip=false;
                 
                 
@@ -119,18 +118,24 @@ export class OrderComponent implements OnInit {
                   this.storesService.postBuy(this.productsToSendObject)
                   .then(data => {
                       console.log("ESTE ES LO QUE DEVUELVE EL BACKEND:", data); //solo asi, revisa si funciona 
-                       this.router.navigate(['/basket']);
+                       //this.router.navigate(['/basket']);
+
+                       this.productsSaved = JSON.parse(localStorage.getItem("productsSaved"));
+                       this.productsSaved =this.productsSaved.filter(element => element.shop_id != this.shop_id);
+                       localStorage.setItem("productsSaved", JSON.stringify(this.productsSaved));
+                       this.isBuyValid = true;
+
+
                   }).catch( (error) =>{
+
                     this.isErrorStock=true;
                     this.errorMesageStock = error.message;
                     this.bufferStock = error.insufficientStock;
 
                   });
 
-                  // Estas 3 líneas ke hacen???
-                  this.productsSaved = JSON.parse(localStorage.getItem("productsSaved"));
-                  this.productsSaved =this.productsSaved.filter(element => element.shop_id != this.shop_id);
-                  localStorage.setItem("productsSaved", JSON.stringify(this.productsSaved));
+            
+
                  
                   
           }else{
@@ -143,6 +148,7 @@ export class OrderComponent implements OnInit {
 
       }
     }
+
 
     /*
     async getZipCode(){

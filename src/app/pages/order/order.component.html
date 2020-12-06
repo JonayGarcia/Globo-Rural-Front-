@@ -1,7 +1,7 @@
 <div class="myHeader">
-    <div routerLink=""  class="nav-logo">
-        <img src="/assets/images/logo.png" class="appLogo">
-        <h2 class="appName">Penguin Express</h2>
+    <div  class="nav-logo">
+        <img routerLink="" src="/assets/images/logo.png" class="appLogo">
+        <h2 routerLink=""  class="appName">Penguin Express</h2>
       </div>
 
       <div class="nav-container">
@@ -76,11 +76,18 @@
       EL código postal debe ser el mismo que el de tu zona
     </div>
 
-    <!--
+    
     <div *ngIf="isBuyValid" class="msnOkOrder">
-      Has comprado con éxito
+      <img src="/assets/images/background.jpg" >
+      <div id="compradoConEXito">Has comprado con éxito. Tu pedido está en camino</div>
+
+          <div class="textOk">
+                <div class="textOkPhrase">Para seguir copmrando haz</div>
+                <div class="clicAqui" (click)="goBack()">click aquí</div>
+          </div>
+      
     </div>
-    -->
+    
 
     <!--Mostrar el error que envía el backend-->
     <div *ngIf="isErrorStock" class="msnErrorStock">

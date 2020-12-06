@@ -15,9 +15,10 @@ export class ProductsComponent implements OnInit {
   public products2: Product[] = [];
   id: string;
   // id: number;
-  category: string ="";
+  category: string = "";
   categories : string[] =[];
-  search: string;
+  search: string = "";
+  toSearch: string = "";
   public productsIncart : Product[] = [];
   isInCart: boolean = false;
   totalToPay: number = 0;
@@ -48,14 +49,15 @@ export class ProductsComponent implements OnInit {
     this.route.parent.params.subscribe(params => {
       //en FRONT Y EN BACK ES LA MISMA LINEA
       this.id = params.id;
+      console.log(this.id);
       this.showProducts();
     });
-    this.route.params
-       .subscribe(params => {
-         if(params['category']){
-          this.category = params['category'];
-          this.showProducts();
-         }
+    this.route.queryParams
+       .subscribe(queryParams => {
+         console.log("esto es queryParams -->",queryParams)
+        this.category = queryParams['category'];
+        this.search = queryParams['search'];
+        this.showProducts();
        });
     this.checkIfLog();
   }
@@ -74,18 +76,36 @@ export class ProductsComponent implements OnInit {
   }
 
   async showProducts() {
-    if(this.category==""){
+    console.log("esto es category-->",this.category);
+    console.log("esto es search con ganas.-->",this.search);
+    
+    if(this.category=="" && this.search==""){
       this.shop = await this.storesService.getOneShop(this.id);
       console.log("ESTO ES SHOPS: ",this.shop);
       this.products = await this.storesService.getProductsByShop(this.shop._id);
       // this.products = await this.storesService.getProductsByShop(this.id);
-      this.showsWhosInCart(this.products)
+      this.showsWhosInCart(this.products);
     } else {
       this.shop = await this.storesService.getOneShop(this.id);
-      this.products = await this.storesService.getProductsByShop(this.shop._id, this.category);
-      // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category);
-      this.products2 = await this.storesService.getProductsByShop(this.shop._id);
-      // this.products2 = await this.storesService.getProductsByShop(this.shop.id);
+      if(this.search=="" || this.search==null){
+        this.products = await this.storesService.getProductsByShop(this.shop._id, this.category);
+        // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category);
+        this.products2 = await this.storesService.getProductsByShop(this.shop._id);
+        // this.products2 = await this.storesService.getProductsByShop(this.shop.id);
+      } else if(this.category==""){
+        this.products = await this.storesService.getProductsByShop(this.shop._id, this.category, this.search);
+        console.log("Busqueda solo por search-->",this.products);
+        // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category);
+        this.products2 = await this.storesService.getProductsByShop(this.shop._id);
+        // this.products2 = await this.storesService.getProductsByShop(this.shop.id);
+      } else {
+        console.log();
+          this.products = await this.storesService.getProductsByShop(this.shop._id, this.category, this.search);
+          console.log(this.products);
+          // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category);
+          this.products2 = await this.storesService.getProductsByShop(this.shop._id);
+          // this.products2 = await this.storesService.getProductsByShop(this.shop.id);
+      }
       this.showsWhosInCart(this.products)
     }
     this.getCategories();
@@ -133,12 +153,40 @@ export class ProductsComponent implements OnInit {
     }
   }
 
+  addFilterCategory(category){
+    if(this.search.length!=0){
+      console.log("agregando search al category")
+      this.router.navigate(
+        ['../'], 
+        {
+          relativeTo: this.route,
+          queryParams: {category: category },
+          queryParamsHandling: 'merge'
+        });
+      
+    } else {
+      console.log("Entra a este else");
+      this.router.navigate(['./products'], { relativeTo: this.route, queryParams: { category: category } });
+      console.log("ruta acutal-->", this.route);
+    }
+  }
+
   selectCategory(category: string) {
-    this.router.navigate(['../', category], {relativeTo: this.route });
+    // this.router.navigate(['../', category], {relativeTo: this.route });
+    console.log("Entra a selectCategory");
+    this.router.navigate([this.router.url.split('?')[0]], { queryParams: {category: category, search: null }, replaceUrl: true });
+
+    // this.router.navigate(
+    //   ['./products'], 
+    //   {
+    //     relativeTo: this.route,
+    //     queryParams: { category: category},
+    //     queryParamsHandling: "merge"
+    //   });
  }
 
   goBack(): void {
-    this.router.navigate(['../'], { relativeTo: this.route });
+    this.router.navigate(['./'], { relativeTo: this.route });
   }
 
   addToCart(product){
@@ -246,5 +294,31 @@ export class ProductsComponent implements OnInit {
       this.istoogleActive = false;
     }
     console.log(this.istoogleActive)
+  }
+
+  find(data){
+    this.toSearch = data.replace(/[ÀÁÂÃÄÅ]/g,"A").replace(/[àáâãäå]/g,"a").replace(/[ÈÉÊË]/g,"E");
+    this.toSearch = this.toSearch.replace(/[èéê]/g,"e").replace(/[ìíî]/g,"i").replace(/[ÌÍÎ]/g,"I").replace(/[ÒÓÔÖ]/g,"O");
+    this.toSearch = this.toSearch.replace(/[òóôö]/g,"o").replace(/[ùúûü]/g,"u").replace(/[ÙÚÛÜ]/g,"U");
+    console.log("estoy en find", this.category);
+    if(this.category.length!=0){
+      console.log("agregando search al category")
+      this.router.navigate(
+        ['./'], 
+        {
+          relativeTo: this.route,
+          queryParams: {search: this.toSearch },
+          queryParamsHandling: 'merge'
+        });
+        
+    } else {
+      console.log("Entra a este else");
+      this.router.navigate(['./products'], { relativeTo: this.route, queryParams: { search: this.toSearch } });
+    
+    }
+
+    
+
+   
   }
 }

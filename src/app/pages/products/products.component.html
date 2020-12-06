@@ -1,49 +1,52 @@
+
 <div class="myHeader">
-  <div class="logo">
-    <img routerLink=""   src="/assets/images/logo.png" class="appLogo">
-    <h2 routerLink=""  class="appName">Penguin Express</h2>
-  </div>
-  <img *ngIf="istoogleActive==false" class="toogle" src="/assets/images/menu.png" (click)="toogle()">
-  <img *ngIf="istoogleActive==true" class="toogle" src="/assets/images/close1.png" (click)="toogle()">
-  <div class="nav" [ngClass]="{'active': istoogleActive == true}">
-    <div class="nav-button1" routerLink="">Cambiar Código Postal</div>
-    <div class="nav-button1" [routerLink]="['/postCode', shop?.postcode]">Ir a otra Tienda</div>
-    <div *ngIf="isLogged == false">
-        <div class="nav-button" routerLink="/register">Regístrate</div>
+    <div class="logo">
+      <img routerLink=""   src="/assets/images/logo.png" class="appLogo">
+      <h2 routerLink=""  class="appName">Penguin Express</h2>
     </div>
-    <div *ngIf="isLogged == false">
-        <div class="nav-button" routerLink="/login">Iniciar sesión</div>
+    <img *ngIf="istoogleActive==false" class="toogle" src="/assets/images/menu.png" (click)="toogle()">
+    <img *ngIf="istoogleActive==true" class="toogle" src="/assets/images/close1.png" (click)="toogle()">
+    <div class="nav" [ngClass]="{'active': istoogleActive == true}">
+      <div class="nav-button1" routerLink="">Cambiar Código Postal</div>
+      <div class="nav-button1" [routerLink]="['/postCode', shop?.postcode]">Ir a otra Tienda</div>
+      <div *ngIf="isLogged == false">
+          <div class="nav-button" routerLink="/register">Regístrate</div>
+      </div>
+      <div *ngIf="isLogged == false">
+          <div class="nav-button" routerLink="/login">Iniciar sesión</div>
+      </div>
+      <div *ngIf="isLogged == true">
+          <div class="nav-button">Hola! {{nameUser}}
+          <img src="/assets/images/profile-user.png" width="40px" height="40px"></div>
+      </div>
+      <div *ngIf="isLogged == true">
+          <div class="nav-button" (click)="logout()">Cerrar Sesión 
+          <img class="tofilter" src="/assets/images/logout.png" width="40px" height="40px"></div>
+      </div>
     </div>
-    <div *ngIf="isLogged == true">
-        <div class="nav-button">Hola! {{nameUser}}
-        <img src="/assets/images/profile-user.png" width="40px" height="40px"></div>
-    </div>
-    <div *ngIf="isLogged == true">
-        <div class="nav-button" (click)="logout()">Cerrar Sesión 
-        <img class="tofilter" src="/assets/images/logout.png" width="40px" height="40px"></div>
-    </div>
-  </div>
 </div>
 
+
+
 <div class="container-second-nav">
-  <div class="second-nav"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
-    <p>Tus compras mas sencillas desde casa<p>
-    <!-- <div class="second-nav-search">
-      <inut type="text" [(ngModel)]="search" placeholder="Busca en la tienda">
-      <img src="../../../assets/images/search.png">
-    </div>p -->
-    <p>{{total()}} €</p>
-  </div>
-  <div class="dropdown">
-    <div class="dropHeader tofilter"><img src="../../../assets/images/shoppingCart.png"></div>
-    <div class="dropdown-content">
-      <app-shopping-cart
-      [productsInCart]="productsTocart"
-      (removeProductFromCart)="removeFromCart($event)"
-      (totalToPayCart)="showTotalToPay($event)"
-      (sendPetitionToPay)="startPaying($event)"></app-shopping-cart>
+    <div class="second-nav"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
+      <p>Tus compras mas sencillas desde casa<p>
+      <div class="second-nav-search">
+        <input type="text" [(ngModel)]="search" placeholder="Busca en la tienda" (keyup.enter)="find(search)">
+        <img src="../../../assets/images/search.png" (click)="find(search)">
+      </div>
+      <p>{{total()}} €</p>
     </div>
-  </div>
+    <div class="dropdown">
+      <div class="dropHeader tofilter"><img src="../../../assets/images/shoppingCart.png"></div>
+      <div class="dropdown-content">
+        <app-shopping-cart
+        [productsInCart]="productsTocart"
+        (removeProductFromCart)="removeFromCart($event)"
+        (totalToPayCart)="showTotalToPay($event)"
+        (sendPetitionToPay)="startPaying($event)"></app-shopping-cart>
+      </div>
+    </div>
 </div>
 
 
@@ -100,11 +103,13 @@
 
     <div class="mainContainer"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
       <div class="filter">
-          <h3>Categoría</h3>
+          <h3 >Categoría</h3>
           <br>
           <div class="categoriesListed" *ngIf="category==''">
             <div *ngFor="let category of categories">
-              <p class="categories" [routerLink]="category" >{{category}}</p>
+              <p class="categories" (click)="addFilterCategory(category)">{{category}}</p>
+              <!-- <p class="categories" [routerLink]="['./products']" 
+              [queryParams]="{category: category}">{{category}}</p> -->
             </div>
           </div>
 
@@ -118,10 +123,10 @@
 
       <div class="board">
         <div *ngFor="let product of products">
-          <div class="card" style="width: 18rem">
+          <div class="card" style="width: 15rem">
             <img class="card-img-top" [src]="product.image" alt="Card image cap" />
             <div class="card-body">
-              <h5 class="card-title text-center">{{ product.name }}</h5>
+              <h5 class="card-title text-center myCardTtile">{{ product.name }}</h5>
               <p class="card-text text-center">Precio: {{ product.price }} €</p>
               <div class="btn-kart" *ngIf="!product.isInCart">
                 <button href="#" class="button-addShop" (click)="addToCart(product)">
@@ -139,6 +144,8 @@
           </div>
         </div>
       </div>
+     
+      
     </div>
 
 </div>

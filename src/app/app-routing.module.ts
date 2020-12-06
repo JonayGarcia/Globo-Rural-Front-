@@ -25,7 +25,7 @@ const routes: Routes = [
         component: ProductsComponent,
       },
       {
-        path: ":category",
+        path: "products",
         component: ProductsComponent
         // component: FilterByCategoryComponent
       }

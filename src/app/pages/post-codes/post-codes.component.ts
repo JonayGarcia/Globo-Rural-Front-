@@ -63,7 +63,7 @@ export class PostCodesComponent implements OnInit {
     //console.log("ESto es postalcode--->",postalcode);
 
     this.codeFound = await this.storesService.getShopsByPostCode(postalcode);
-    //console.log("ESto es codeFound --->>", this.codeFound);
+    console.log("ESto es codeFound --->>", this.codeFound);
     if(this.codeFound != undefined && this.zipCode != ""){
       //console.log("ESto es texInput: ",this.zipCode);
       this.router.navigate(['/postCode', postalcode]);

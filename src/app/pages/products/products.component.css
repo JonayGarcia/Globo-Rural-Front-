@@ -1,5 +1,5 @@
 .myHeader{
-  width: 100vw;
+
   background-color: #28866a;
   height: 70px;
   display: flex;
@@ -133,6 +133,7 @@
 
 .myBody{
   min-height: calc( 100vh - 70px - 56px - 64px );
+  max-width: 100vw;
  
   background: rgb(43,148,117);
   background: linear-gradient(90deg, rgba(43,148,117,1) 15%, rgba(90,215,152,1) 52%, rgba(60,149,123,1) 93%);
@@ -141,8 +142,8 @@
 
 .card-img-top {
   align-self: center;
-  width: 250px;
-  height: 250px;
+  width: 225px;
+  height: 225px;
   padding-top: 10px;
 }
 
@@ -202,7 +203,7 @@
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 80vw;
+  width: 70vw;
 
   margin: auto;
   justify-content: space-around;
@@ -250,10 +251,15 @@
 }
 
 .card {
-  width: 300px;
+  /*width: 200px;*/
+  height: 480px !important;
   height: fit-content;
   margin-bottom: 20px;
   border-radius: 25px;
+}
+
+.myCardTtile{
+  height: 96px !important
 }
 
 /* Chrome, Safari, Edge, Opera */

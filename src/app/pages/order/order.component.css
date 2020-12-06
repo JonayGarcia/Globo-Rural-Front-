@@ -154,18 +154,20 @@
   .appLogo{
     width: 70px;
     height: 70px;
+    cursor: pointer;
 }
 
 
 .appName{
   color:white;
+  cursor: pointer;
 }
 
 .nav-logo{
   display: flex;
   margin-left: 40px;
   align-items: center;
-  cursor: pointer;
+
 }
 
 
@@ -231,13 +233,47 @@
 
 
  .msnOkOrder{
+   display: flex;
+   flex-direction: column;
   margin-top:10px;
   text-align: center;
-  color: white;
+  color: black;
   font-weight: bold;
   padding-bottom: 20px;
-  
  }
+
+ .msnOkOrder img{
+   margin-left: auto;
+   margin-right: auto;
+  width:270px;
+  height:180px;
+ }
+
+#compradoConEXito{
+  margin-top:10px;
+}
+
+ .textOk{
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   flex-direction: row;
+ }
+
+ .textOkPhrase{
+   text-align: right;
+ }
+
+ .clicAqui{
+  text-align: left;
+  padding-left: 5px;
+   color:#007bff;
+   cursor: pointer;
+ }
+
+ .cliclAqui:hover{
+  text-decoration: underline;
+}
 
 .tableStock{
   margin-top: 15px;

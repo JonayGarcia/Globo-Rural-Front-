@@ -130,6 +130,7 @@ export class StoresService {
       .get(`${this.api_url}/shops?postcode=${postalcode}`) // CONECTADO
       // .get(`${this.api_url}/shops?postCode=${postalcode}`)
       .then((response) => {
+       
         return response.data;
       })
       .catch((error) => {
@@ -137,13 +138,14 @@ export class StoresService {
       });
   }
 
-  getProductsByShop(shop_id: string, category?: string): Promise<Product[]> {
+  getProductsByShop(shop_id: string, category?: string, search?: string): Promise<Product[]> {
   // getProductsByShop(shop_id: number, category?: string): Promise<Product[]> {
-    if (category) {
-      return axios
+    if (search){
+      if(typeof category =="undefined"){
+        console.log("search")
+        return axios
         .get(
-          `${this.api_url}/products/shop/${shop_id}?category=${category}`// PENDIENTE DE IMPLEMENTAR EN EL BACKEND
-          // `${this.api_url}/products?shop_id=${shop_id}&category=${category}`
+          `${this.api_url}/products/shop/${shop_id}?name=${search}`
         )
         .then((response) => {
           return response.data;
@@ -151,6 +153,31 @@ export class StoresService {
         .catch((error) => {
           console.log('Se ha producido el error getProductsByShop()', error);
         });
+      } else {
+        console.log("category and search")
+        return axios
+        .get(
+          `${this.api_url}/products/shop/${shop_id}?category=${category}&name=${search}`
+        )
+        .then((response) => {
+          return response.data;
+        })
+        .catch((error) => {
+          console.log('Se ha producido el error getProductsByShop()', error);
+        });
+      } 
+    } else if (category) {
+      console.log("category")
+      return axios
+      .get(
+        `${this.api_url}/products/shop/${shop_id}?category=${category}`
+      )
+      .then((response) => {
+        return response.data;
+      })
+      .catch((error) => {
+        console.log('Se ha producido el error getProductsByShop()', error);
+      });
     } else {
       return axios
         .get(`${this.api_url}/products/shop/${shop_id}`) // CONECTADO
