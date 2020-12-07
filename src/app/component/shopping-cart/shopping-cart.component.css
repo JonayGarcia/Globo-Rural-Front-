@@ -20,8 +20,20 @@ input[type=number] {
 .cartWithProducts{
   margin: 15px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
   align-items: center;
+}
+
+.container1{
+  display: flex;
+  justify-content: space-between;
+  width: 70%
+}
+
+.container2{
+  display: flex;
+  justify-content: space-between;
+  width: 30%
 }
 
 .cartWithProducts img{
@@ -85,4 +97,34 @@ input[type=number] {
 
 .myButton{
   cursor: pointer;
+}
+
+@media (max-width: 720px) {
+
+
+  .name{
+    width: fit-content;
+    font-size: 15px;
+  }
+
+  .card-Ammount img{
+    width: 15px;
+    height: 15px;
+  }
+
+  .cartWithProducts{
+    flex-direction: column;
+  }
+  
+  .container1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .container2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }

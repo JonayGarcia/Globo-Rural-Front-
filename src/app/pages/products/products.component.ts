@@ -47,14 +47,11 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.parent.params.subscribe(params => {
-      //en FRONT Y EN BACK ES LA MISMA LINEA
       this.id = params.id;
-      console.log(this.id);
       this.showProducts();
     });
     this.route.queryParams
        .subscribe(queryParams => {
-         console.log("esto es queryParams -->",queryParams)
         this.category = queryParams['category'];
         this.search = queryParams['search'];
         this.showProducts();
@@ -76,35 +73,21 @@ export class ProductsComponent implements OnInit {
   }
 
   async showProducts() {
-    console.log("esto es category-->",this.category);
-    console.log("esto es search con ganas.-->",this.search);
-    
-    if(this.category=="" && this.search==""){
+    if(typeof this.category == "undefined" && typeof this.search == "undefined" ){
       this.shop = await this.storesService.getOneShop(this.id);
-      console.log("ESTO ES SHOPS: ",this.shop);
       this.products = await this.storesService.getProductsByShop(this.shop._id);
-      // this.products = await this.storesService.getProductsByShop(this.id);
       this.showsWhosInCart(this.products);
     } else {
       this.shop = await this.storesService.getOneShop(this.id);
       if(this.search=="" || this.search==null){
         this.products = await this.storesService.getProductsByShop(this.shop._id, this.category);
-        // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category);
         this.products2 = await this.storesService.getProductsByShop(this.shop._id);
-        // this.products2 = await this.storesService.getProductsByShop(this.shop.id);
       } else if(this.category==""){
         this.products = await this.storesService.getProductsByShop(this.shop._id, this.category, this.search);
-        console.log("Busqueda solo por search-->",this.products);
-        // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category);
         this.products2 = await this.storesService.getProductsByShop(this.shop._id);
-        // this.products2 = await this.storesService.getProductsByShop(this.shop.id);
       } else {
-        console.log();
-          this.products = await this.storesService.getProductsByShop(this.shop._id, this.category, this.search);
-          console.log(this.products);
-          // this.products = await this.storesService.getProductsByShop(this.shop.id, this.category);
-          this.products2 = await this.storesService.getProductsByShop(this.shop._id);
-          // this.products2 = await this.storesService.getProductsByShop(this.shop.id);
+        this.products = await this.storesService.getProductsByShop(this.shop._id, this.category, this.search);
+        this.products2 = await this.storesService.getProductsByShop(this.shop._id);
       }
       this.showsWhosInCart(this.products)
     }
@@ -117,21 +100,15 @@ export class ProductsComponent implements OnInit {
       this.productsIncart = this.productsSaved.find(element=> element.shop_id == this.id).products;
       for (let i=0; i<this.productsIncart.length;i++){
         for (let j=0; j<products.length;j++){
-          // if(products[j].id === this.productsIncart[i].id){
           if(this.products[j]._id === this.productsIncart[i]._id){
             products[j].isInCart = true;
             break
-          } 
-          // else{
-          //   products[j].isInCart = false;
-          // }
+          }
         }
       }
     } else {
       products.forEach(product=> product.isInCart=false)      
     }
-    console.log(this.productsSaved)
-    console.log(this.id)
     this.productsSaved.forEach(element=>{
       if(element.shop_id == this.id){
         this.productsTocart = element.products
@@ -154,8 +131,7 @@ export class ProductsComponent implements OnInit {
   }
 
   addFilterCategory(category){
-    if(this.search.length!=0){
-      console.log("agregando search al category")
+    if(typeof this.search != "undefined"){
       this.router.navigate(
         ['../'], 
         {
@@ -165,24 +141,23 @@ export class ProductsComponent implements OnInit {
         });
       
     } else {
-      console.log("Entra a este else");
       this.router.navigate(['./products'], { relativeTo: this.route, queryParams: { category: category } });
-      console.log("ruta acutal-->", this.route);
     }
   }
 
   selectCategory(category: string) {
-    // this.router.navigate(['../', category], {relativeTo: this.route });
-    console.log("Entra a selectCategory");
-    this.router.navigate([this.router.url.split('?')[0]], { queryParams: {category: category, search: null }, replaceUrl: true });
-
-    // this.router.navigate(
-    //   ['./products'], 
-    //   {
-    //     relativeTo: this.route,
-    //     queryParams: { category: category},
-    //     queryParamsHandling: "merge"
-    //   });
+    if(typeof this.search != "undefined"){
+      this.router.navigate(
+        ['./'], 
+        {
+          relativeTo: this.route,
+          queryParams: {category: category },
+          queryParamsHandling: 'merge'
+        });
+    } else {
+      this.router.navigate([this.router.url.split('?')[0]], 
+      { queryParams: {category: category, search: null }, replaceUrl: true }); 
+    }
  }
 
   goBack(): void {
@@ -214,8 +189,6 @@ export class ProductsComponent implements OnInit {
       if(element.shop_id==product.shop_id){
         element.products =element.products.filter(x=> x._id !=product._id);
         this.productsTocart = this.productsTocart.filter(i=> i._id != product._id);
-        // element.products =element.products.filter(x=> x.id !=product.id);
-        // this.productsTocart = this.productsTocart.filter(i=> i.id != product.id);
       }
     })
     localStorage.setItem('productsSaved', JSON.stringify(this.productsSaved));
@@ -248,12 +221,9 @@ export class ProductsComponent implements OnInit {
       ){
       this.isFormValid = true;
       this.failLogin = false;
-      console.log("Debes introducir todos los campos");
-
     }else{
       this.storesService.performLogin(this.email, this.password)
       .then( data => {
-        console.log("Entras --->>");
         this.isFormValid = false;
         this.failLogin = false;
         this.isUserLoged = true;
@@ -266,10 +236,9 @@ export class ProductsComponent implements OnInit {
         localStorage.setItem('orderToPay', JSON.stringify(this.orderToPay));
         setTimeout(() => {
           this.router.navigate(['/order']);
-        }, 3000);  //3s
+        }, 3000);
       })
       .catch((error) => {
-        console.log('Se ha producido el error en el front--->', error);
         this.failLogin = true;
         this.isFormValid = false;
         return error
@@ -293,16 +262,13 @@ export class ProductsComponent implements OnInit {
     } else {
       this.istoogleActive = false;
     }
-    console.log(this.istoogleActive)
   }
 
   find(data){
     this.toSearch = data.replace(/[ÀÁÂÃÄÅ]/g,"A").replace(/[àáâãäå]/g,"a").replace(/[ÈÉÊË]/g,"E");
     this.toSearch = this.toSearch.replace(/[èéê]/g,"e").replace(/[ìíî]/g,"i").replace(/[ÌÍÎ]/g,"I").replace(/[ÒÓÔÖ]/g,"O");
     this.toSearch = this.toSearch.replace(/[òóôö]/g,"o").replace(/[ùúûü]/g,"u").replace(/[ÙÚÛÜ]/g,"U");
-    console.log("estoy en find", this.category);
-    if(this.category.length!=0){
-      console.log("agregando search al category")
+    if(typeof this.category !="undefined"){
       this.router.navigate(
         ['./'], 
         {
@@ -310,15 +276,11 @@ export class ProductsComponent implements OnInit {
           queryParams: {search: this.toSearch },
           queryParamsHandling: 'merge'
         });
-        
     } else {
-      console.log("Entra a este else");
-      this.router.navigate(['./products'], { relativeTo: this.route, queryParams: { search: this.toSearch } });
-    
+      this.router.navigate([this.router.url.split('?')[0]], 
+      { queryParams: {search: this.toSearch}, replaceUrl: true });
+      // this.router.navigate(['./products'], { relativeTo: this.route, queryParams: { search: this.toSearch } });    
     }
-
-    
-
-   
   }
+
 }
