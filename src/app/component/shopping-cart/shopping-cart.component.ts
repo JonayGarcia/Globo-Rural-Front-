@@ -11,10 +11,15 @@ import { Router } from '@angular/router';
 export class ShoppingCartComponent implements OnInit {
   @Input() public productsInCart: Product[];
   @Output() removeProductFromCart = new EventEmitter();
+
+
+
   @Output() totalToPayCart = new EventEmitter();
   @Output () sendPetitionToPay = new EventEmitter();
   totalToPay: number;
   wantToPay : boolean = false;
+
+
   productsSaved = [];
   // id: number;
   id: string;
@@ -34,7 +39,12 @@ export class ShoppingCartComponent implements OnInit {
     }
     if(product.quantity==0) {
       product.isInCart = false;
-      this.removeProductFromCart.emit(product)
+      console.log("El carrito se ha vaciado-->>", product);
+      this.removeProductFromCart.emit(product);
+
+
+      
+
     }
   }
 

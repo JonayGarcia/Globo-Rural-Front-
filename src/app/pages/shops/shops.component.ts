@@ -39,6 +39,7 @@ export class ShopsComponent implements OnInit {
 
   async showShops() {
     const postalcode: string = this.route.snapshot.paramMap.get('postCode');
+    console.log("Esto es lo que cojo de la url", postalcode);
     this.shops = await this.storesService.getShopsByPostCode(postalcode);
     console.log(this.shops)
   }

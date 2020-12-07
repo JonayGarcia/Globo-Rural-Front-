@@ -1,7 +1,7 @@
 
 <div class="myHeader">
     <div class="logo">
-      <img routerLink=""   src="/assets/images/logo.png" class="appLogo">
+      <img routerLink=""   src="/assets/images/logonuevo_v2.png" class="appLogo">
       <h2 routerLink=""  class="appName">Penguin Express</h2>
     </div>
     <img *ngIf="istoogleActive==false" class="toogle" src="/assets/images/menu.png" (click)="toogle()">
@@ -47,11 +47,15 @@
     <div class="dropdown">
       <div class="dropHeader tofilter"><img src="../../../assets/images/shoppingCart.png"></div>
       <div class="dropdown-content">
+
         <app-shopping-cart
         [productsInCart]="productsTocart"
         (removeProductFromCart)="removeFromCart($event)"
         (totalToPayCart)="showTotalToPay($event)"
-        (sendPetitionToPay)="startPaying($event)"></app-shopping-cart>
+        (sendPetitionToPay)="startPaying($event)"
+
+        
+        ></app-shopping-cart>
       </div>
     </div>
 </div>
@@ -133,20 +137,27 @@
           <div class="card" style="width: 15rem">
             <img class="card-img-top" [src]="product.image" alt="Card image cap" />
             <div class="card-body">
-              <h5 class="card-title text-center myCardTtile">{{ product.name }}</h5>
-              <p class="card-text text-center">Precio: {{ product.price }} €</p>
-              <div class="btn-kart" *ngIf="!product.isInCart">
-                <button href="#" class="button-addShop" (click)="addToCart(product)">
-                  <img src="../../../assets/images/addToCart.png" width="30px" height="30px">
-                  <p>Añadir al Carrito</p>
-                </button>
-              </div>
-              <div class="btn-kart" *ngIf="product.isInCart">
-                <button href="#" class="button-removeShop" (click)="removeFromCart(product)">
-                  <img src="../../../assets/images/removeFromCart.png" width="30px" height="30px">
-                  <p>Eliminar del Carrito</p>
-                </button>
-              </div>
+                  <h5 class="card-title text-center myCardTtile">{{ product.name }}</h5>
+                  <p class="card-text text-center">Precio: {{ product.price }} €</p>
+
+                  <div class="btn-kart" *ngIf="!product.isInCart ">
+
+                        <button href="#" class="button-addShop" (click)="addToCart(product)">
+                          <img src="../../../assets/images/addToCart.png" width="30px" height="30px">
+                          <p>Añadir al Carrito</p>
+                        </button>
+
+                  </div>
+
+                  <div class="btn-kart" *ngIf="product.isInCart">
+
+                        <button href="#" class="button-removeShop" (click)="removeFromCart(product)">
+                          <img src="../../../assets/images/removeFromCart.png" width="30px" height="30px">
+                          <p>Eliminar del Carrito</p>
+                        </button>
+
+                  </div>
+
             </div>
           </div>
         </div>

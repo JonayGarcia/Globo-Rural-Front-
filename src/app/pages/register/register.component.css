@@ -13,8 +13,9 @@
 }
 
 .appLogo{
-  width: 60px;
+  width: 86px;
   height: 60px;
+  cursor: pointer;
 }
 
 .appName{
@@ -341,8 +342,9 @@ textarea:focus, input:focus{
 }
 
 .appLogo{
-  width: 70px;
-  height: 70px;
+  width: 86px;
+  height: 60px;
+  cursor: pointer
 }
 
 .imgDeliver{
@@ -360,4 +362,5 @@ textarea:focus, input:focus{
 
 .appName{
   color:white;
+  cursor: pointer;
 }
