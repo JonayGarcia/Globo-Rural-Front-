@@ -156,12 +156,10 @@
 }
 
 .filter{
-  position: -webkit-sticky; /* Safari */
+  position: -webkit-sticky; 
   position: sticky;
   top: 0;
   width: 20vw;
-  /* background: rgb(69,195,138);
-  background: linear-gradient(90deg, rgba(69,195,138,1) 34%, rgba(124,195,163,1) 80%); */
   margin-left: 30px;
   padding: 10px;
   height: 100vh;

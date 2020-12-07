@@ -47,11 +47,10 @@ export class ProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.parent.params.subscribe(params => {
-      //en FRONT Y EN BACK ES LA MISMA LINEA
       this.id = params.id;
-      console.log(this.id);
       this.showProducts();
     });
+
     this.route.queryParams
        .subscribe(queryParams => {
          console.log("esto es queryParams -->",queryParams)
@@ -80,9 +79,11 @@ export class ProductsComponent implements OnInit {
     console.log("esto es search con ganas.-->",this.search);
     
     if(this.category=="" && this.search==""){
-      this.shop = await this.storesService.getOneShop(this.id);
-      console.log("ESTO ES SHOPS: ",this.shop);
-      this.products = await this.storesService.getProductsByShop(this.shop._id);
+      //this.shop = await this.storesService.getOneShop(this.id);
+      //console.log("ESTO ES SHOPS: ",this.shop);
+      //this.products = await this.storesService.getProductsByShop(this.shop._id);
+
+      this.products = await this.storesService.getProductsByShop(this.id);
       // this.products = await this.storesService.getProductsByShop(this.id);
       this.showsWhosInCart(this.products);
     } else {
