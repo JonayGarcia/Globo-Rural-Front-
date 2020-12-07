@@ -1,14 +1,16 @@
 <div class="myHeader">
-    <div  class="nav-logo">
-        <img routerLink="" src="/assets/images/logo.png" class="appLogo">
-        <h2 routerLink=""  class="appName">Penguin Express</h2>
-      </div>
+    <div  class="logo">
+            <img routerLink="" src="/assets/images/logonuevo_v2.png" class="appLogo">
+            <h2 routerLink=""  class="appName">Penguin Express</h2>
 
-      <div class="nav-container">
-        <img src="/assets/images/store.png">
-        <div (click)="goBack()">Volver a la tienda</div>
-      </div>
+    </div>
 
+    <div class="divHome">
+            <img  (click)="goBack()" src="/assets/images/store.png">
+            <div  class="nav-button"  (click)="goBack()">Volver a la tienda</div>
+           <!-- <div  class="nav-button"   [routerLink]="['/postCode', shop?.postcode]" >Volver a la tienda</div>-->
+
+      </div>
 </div>
 
 
@@ -64,18 +66,21 @@
 </div>
 
 
-  <div class="d-flex justify-content-center divBuy">
+  <div *ngIf="!isBuyValid" class="d-flex justify-content-center divBuy">
       <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="buy()">Comprar</button>
   </div>
 
-    <div *ngIf="isFormValid" class="msnMistake">
-      Debes introducir todos los campos
-    </div>
+    <div *ngIf="isFormValid" class="divMsnMistake">
+        <div  class="msnMistake">
+          Debes introducir todos los campos
+        </div>
+     </div>
 
-    <div *ngIf="isCodeZip" class="msnMistake">
-      EL código postal debe ser el mismo que el de tu zona
+     <div *ngIf="isCodeZip" class="divMsnMistake">
+        <div  class="msnMistake">
+          No hay repartidores disponbiles para entregar en esta zona
+        </div>
     </div>
-
     
     <div *ngIf="isBuyValid" class="msnOkOrder">
       <img src="/assets/images/background.jpg" >
@@ -93,6 +98,12 @@
     <div *ngIf="isErrorStock" class="msnErrorStock">
       {{errorMesageStock}} Los siguientes productos no están disponibles:
             <div class="tableStock">
+
+                <div class="tableStockHeader">
+                    <div class="productStock">Producto</div>
+                    <div class="cantidadStock">Cantidad disponible</div>
+                </div>
+
                   <div *ngFor="let product of bufferStock" class="rowTableStock" >
                       <div class="rowStock">
                               <div class="nameStock">

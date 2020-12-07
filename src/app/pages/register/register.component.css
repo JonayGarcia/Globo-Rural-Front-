@@ -13,8 +13,9 @@
 }
 
 .appLogo{
-  width: 60px;
+  width: 86px;
   height: 60px;
+  cursor: pointer;
 }
 
 .appName{
@@ -324,8 +325,9 @@ label {
 }
 
 .appLogo{
-  width: 70px;
-  height: 70px;
+  width: 86px;
+  height: 60px;
+  cursor: pointer
 }
 
 .imgDeliver{
@@ -343,4 +345,5 @@ label {
 
 .appName{
   color:white;
+  cursor: pointer;
 }

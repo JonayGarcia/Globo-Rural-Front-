@@ -39,6 +39,7 @@ export class ProductsComponent implements OnInit {
   failLogin: boolean = false;
   istoogleActive: boolean = false;
 
+
   constructor(
     private route: ActivatedRoute,
     private storesService: StoresService,
@@ -86,6 +87,7 @@ export class ProductsComponent implements OnInit {
       this.products = await this.storesService.getProductsByShop(this.id);
       // this.products = await this.storesService.getProductsByShop(this.id);
       this.showsWhosInCart(this.products);
+      console.log("si entro a este if..");
     } else {
       this.shop = await this.storesService.getOneShop(this.id);
       if(this.search=="" || this.search==null){
@@ -131,6 +133,7 @@ export class ProductsComponent implements OnInit {
     } else {
       products.forEach(product=> product.isInCart=false)      
     }
+
     console.log(this.productsSaved)
     console.log(this.id)
     this.productsSaved.forEach(element=>{
@@ -191,6 +194,7 @@ export class ProductsComponent implements OnInit {
   }
 
   addToCart(product){
+
     product.isInCart = true;
     product.quantity = 1;
     if(this.productsSaved.some(item => item.shop_id ==product.shop_id)){
@@ -210,7 +214,12 @@ export class ProductsComponent implements OnInit {
   }
 
   removeFromCart(product){
+    console.log("Entra a remove con-->", product.isInCart);
     product.isInCart = false;
+
+
+    
+
     this.productsSaved.forEach(element =>{
       if(element.shop_id==product.shop_id){
         element.products =element.products.filter(x=> x._id !=product._id);
@@ -221,6 +230,8 @@ export class ProductsComponent implements OnInit {
     })
     localStorage.setItem('productsSaved', JSON.stringify(this.productsSaved));
   }
+
+
 
   showTotalToPay(total){
     this.totalToPay= total;

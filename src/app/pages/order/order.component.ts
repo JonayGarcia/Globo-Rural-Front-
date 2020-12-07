@@ -5,6 +5,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { stringify } from 'querystring';
 import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
+import {Location} from '@angular/common'
 
 @Component({
   selector: 'app-order',
@@ -40,18 +41,23 @@ export class OrderComponent implements OnInit {
   errorMesageStock:string="";
   bufferStock= [];
 
-  constructor(private route: ActivatedRoute,
+  constructor(
+    private route: ActivatedRoute,
     private storesService: StoresService,
-    public router: Router) {}
+    public router: Router,
+    private _location: Location
+    ) {}
 
   ngOnInit(): void {
     this.showOrder();
   }
 
   showOrder(){
-    this.productsInCart = JSON.parse(localStorage.getItem('orderToPay'))
+    this.productsInCart = JSON.parse(localStorage.getItem('orderToPay'));
+    console.log("Esto es orderToPay", this.productsInCart);
     this.products = this.productsInCart.products;
     this.shop_id = this.productsInCart.shop_id;
+    console.log("¿Es este el id de la tienda?", this.shop_id);
   }
 
   /*
@@ -68,7 +74,8 @@ export class OrderComponent implements OnInit {
   */
 
   goBack(): void {
-    this.router.navigate(['../'], { relativeTo: this.route });
+   // this.router.navigate(['./'], { relativeTo: this.route });
+   this._location.back();
   }
 
    buy(){

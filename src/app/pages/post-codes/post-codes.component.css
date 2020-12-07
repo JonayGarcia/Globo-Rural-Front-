@@ -13,12 +13,14 @@
 }
 
 .appLogo{
-  width: 60px;
+  width: 86px;
   height: 60px;
+  cursor: pointer;
 }
 
 .appName{
   color:white;
+  cursor: pointer;
 }
 
 .toogle{
@@ -117,10 +119,11 @@
 .msn_error{
   background-color: red;
   border-radius: 25px;
-  color:black;
-  padding:4px;
+  color:white;
+  padding:8px;
   text-align:center;
   margin-top: 15px;
+  font-weight: bold;
 
 }
 
