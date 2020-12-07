@@ -155,15 +155,7 @@
   ;
 }
 
-.filter{
-  position: -webkit-sticky; 
-  position: sticky;
-  top: 0;
-  width: 20vw;
-  margin-left: 30px;
-  padding: 10px;
-  height: 100vh;
-}
+
 
 .filter h3{
   color: #e2f3ec;
@@ -567,3 +559,18 @@ label {
 .flex-container > div{
   margin-right: 10px;
 }
+
+
+.filter{
+  position: -webkit-sticky; 
+  position: sticky;
+  top: 0;
+  width: 20vw;
+  margin-left: 30px;
+  padding: 10px;
+  height: 100vh;
+}
+
+
+
+
