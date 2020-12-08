@@ -92,6 +92,10 @@
   width: 360px;
 }
 
+textarea:focus, input:focus{
+  outline: none;
+}
+
 .container-button{
   display: flex;
   justify-content: center;
@@ -356,7 +360,18 @@ h6{
   text-align: center;
 }
 
+::placeholder {
+  color: white;
+  opacity: 1; /* Firefox */
+}
 
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: white;
+}
 
 
 

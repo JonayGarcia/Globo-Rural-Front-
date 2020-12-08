@@ -26,11 +26,18 @@
     </div>
 </div>
 
-
-
 <div class="container-second-nav">
     <div class="second-nav"  [ngClass]="{backgroundOpacity:wantToPayF==true}">
-      <p>Tus compras mas sencillas desde casa<p>
+      <div class="second-nav-category">
+        <div class="hearderCategory" >Categoría</div>
+        <div class="dropdownCategories">
+          <div *ngFor="let category2 of categories">
+            <div class="elements" (click)="selectCategory(category2)" [ngClass]="{selected: category2==category}">{{category2}}</div>
+          </div>
+          <div class="elements" (click)="goBack()" >Mostrar todos los productos</div>
+        </div>
+      </div>
+      <p class="slogan">Tus compras mas sencillas desde casa<p>
       <div class="second-nav-search">
         <input type="text" [(ngModel)]="search" placeholder="Busca en la tienda" (keyup.enter)="find(search)">
         <img src="../../../assets/images/search.png" (click)="find(search)">
@@ -125,7 +132,7 @@
           </div>
       </div>
 
-      <div class="board">
+      <div class="board" *ngIf="products.length !=0">
         <div *ngFor="let product of products">
           <div class="card" style="width: 15rem">
             <img class="card-img-top" [src]="product.image" alt="Card image cap" />
@@ -154,6 +161,11 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="noResultsFound" *ngIf="products.length ==0">
+        <p>Ups... Su búsqueda no coincide con ninguno de nuestros productos😅</p>
+        <img src="/assets/images/logo.png" width="140px" height="140px">
       </div>
      
       

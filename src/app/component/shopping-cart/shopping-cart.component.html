@@ -4,14 +4,18 @@
 
 <div *ngIf="productsInCart.length!=0">
     <div *ngFor="let product of productsInCart" class="cartWithProducts">
-        <img [src]="product.image">
-        <p class="name">{{product.name}}</p>
-        <div class="card-Ammount">
-            <img src="../../../assets/images/less.png" (click)="decrease(product)" class="myButton">
-            <input type="number" [(ngModel)]="product.quantity">
-            <img src="../../../assets/images/more.png" (click)="increase(product)" class="myButton">
+        <div class="container1">
+            <img [src]="product.image">
+            <p class="name">{{product.name}}</p>  
         </div>
-        <p>{{+(product.quantity*product.price).toFixed(2)}} €</p>
+        <div class="container2">
+            <div class="card-Ammount">
+                <img src="../../../assets/images/less.png" (click)="decrease(product)" class="myButton">
+                <input type="number" [(ngModel)]="product.quantity">
+                <img src="../../../assets/images/more.png" (click)="increase(product)" class="myButton">
+            </div>
+            <p>{{+(product.quantity*product.price).toFixed(2)}} €</p>
+        </div>
     </div>
 </div>
 
