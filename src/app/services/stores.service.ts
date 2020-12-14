@@ -7,11 +7,14 @@ import { Shop, Product, Order } from 'src/app/models';
   providedIn: 'root',
 })
 export class StoresService {
+
   // private api_host: string = '192.168.99.102:3000';
   //private api_url: string = 'http://35.180.18.107:3000/api';
   //  private api_url: string = 'http://localhost:3000/api';
   private api_url: string = 'http://35.180.91.232:3000/api';
   private token_item: string = "jwt-token";
+  //private api_url: string = 'http://localhost:3000/api';
+
 
   //myZipCode:string="hola";
 
@@ -51,7 +54,11 @@ export class StoresService {
 
   performLogin(email: string, password: string){
     return axios
+
       .post(`${this.api_url}/user/login`, {email, password})
+
+      //.get(`${this.api_url}/shops`) // CONECTADO
+
       .then((response) => {
         this.storeToken(response.data.token);
         return response.data;
@@ -114,8 +121,10 @@ export class StoresService {
   getOneShop(id: string): Promise<Shop> {
   // getOneShop(id: number): Promise<Shop> {
     return axios
-      .get(`${this.api_url}/shops/${id}`) // CONECTADO
-      // .get(`${this.api_url}/shops/${id}`)
+      //.get(`${this.api_url}/shops/${id}`) // CONECTADO
+
+       .get(`${this.api_url}/shops/${id}`)
+
       .then((response) => {
         return response.data;
       })
@@ -127,8 +136,10 @@ export class StoresService {
   getShopsByPostCode(postalcode: string): Promise<Shop[]> {
     console.log(postalcode)
     return axios
-      .get(`${this.api_url}/shops?postcode=${postalcode}`) // CONECTADO
-      // .get(`${this.api_url}/shops?postCode=${postalcode}`)
+      //.get(`${this.api_url}/shops?postcode=${postalcode}`) // CONECTADO
+
+       .get(`${this.api_url}/shops?postCode=${postalcode}`)
+
       .then((response) => {
        
         return response.data;
@@ -145,7 +156,11 @@ export class StoresService {
         console.log("search")
         return axios
         .get(
-          `${this.api_url}/products/shop/${shop_id}?name=${search}`
+
+          //`${this.api_url}/products/shop/${shop_id}?name=${search}`
+
+          `${this.api_url}/products/shop/${shop_id}?category=${category}`// PENDIENTE DE IMPLEMENTAR EN EL BACKEND
+
         )
         .then((response) => {
           return response.data;
@@ -180,8 +195,10 @@ export class StoresService {
       });
     } else {
       return axios
-        .get(`${this.api_url}/products/shop/${shop_id}`) // CONECTADO
-        // .get(`${this.api_url}/products?shop_id=${shop_id}`)
+        //.get(`${this.api_url}/products/shop/${shop_id}`) // CONECTADO
+
+         .get(`${this.api_url}/products?shop_id=${shop_id}`)
+
         .then((response) => {
           return response.data;
         })

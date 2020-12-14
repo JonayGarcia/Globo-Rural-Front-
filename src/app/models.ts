@@ -19,6 +19,7 @@ export interface Product {
   image: string;
   shop_id: string;
   category: string;
+
   quantity: number;
   isInCart: boolean;
   // esto es solo para trabajar con la fakeapi
@@ -48,5 +49,5 @@ export interface ProductInOrder{
   name:string; 
   units: number;
   unit_price: number;
-  image: string;
+
 }
