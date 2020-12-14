@@ -1,0 +1,130 @@
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.empty{
+  color: rgb(19, 87, 66);
+  font-weight: 400;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.cartWithProducts{
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.container1{
+  display: flex;
+  justify-content: space-between;
+  width: 70%
+}
+
+.container2{
+  display: flex;
+  justify-content: space-between;
+  width: 30%
+}
+
+.cartWithProducts img{
+  width: 40px;
+  height: 40px;
+}
+
+.name{
+  width: 300px;
+  font-size: 20px;
+}
+
+.card-Ammount input{
+  width: 30px;
+  border-radius: 10px;
+}
+
+.card-Ammount img{
+  width: 30px;
+  height: 30px;
+}
+
+.cart-footer p{
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(10, 100, 2);
+  text-align: end;
+  margin-right: 20px;
+}
+
+.cart-footer{
+  display:flex;
+  flex-direction: column;
+}
+
+.toLogin{
+  display:flex;
+  flex-direction: column;
+}
+
+.toLogin div{
+  background-color: rgb(10, 100, 2);
+  color:white;
+  font-size: 20px;
+  font-weight: 600;
+  cursor:pointer;
+  text-align: center;
+}
+
+.toOrder:hover{
+  cursor: pointer;
+}
+
+.toOrder p{
+  text-align: center;
+  background-color: rgb(19, 87, 66);
+  border-radius: 5px;
+  color: white;
+  width: 100%
+}
+
+.myButton{
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+
+
+  .name{
+    width: fit-content;
+    font-size: 15px;
+  }
+
+  .card-Ammount img{
+    width: 15px;
+    height: 15px;
+  }
+
+  .cartWithProducts{
+    flex-direction: column;
+  }
+  
+  .container1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .container2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}

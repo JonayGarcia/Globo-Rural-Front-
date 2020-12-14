@@ -3,7 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 import {PostCodesComponent} from './pages/post-codes/post-codes.component';
 import {ProductsComponent} from './pages/products/products.component';
 import {ShopsComponent} from './pages/shops/shops.component';
-import {FilterByCategoryComponent} from './pages/filter-by-category/filter-by-category.component';
+import {RegisterComponent} from './pages/register/register.component';
+import {LoginComponent} from './pages/login/login.component';
+import {OrderComponent} from './pages/order/order.component';
+import {BasketComponent} from './pages/basket/basket.component';
 
 const routes: Routes = [
   {
@@ -12,30 +15,37 @@ const routes: Routes = [
   },
   { 
     path: 'postCode/:postCode',
-    component: ShopsComponent,
-    // children: [
-    //   {
-    //     path: 'shop/:name',
-    //     component: ProductsComponent
-    //   }
-    // ]
+    component: ShopsComponent
   },
   {
-    path: 'postCode/:postCode/shop/:name',
+    path: 'postCode/:postCode/shop/:id',
     children: [
       {
         path:'',
         component: ProductsComponent,
       },
       {
-        path: ":category",
-        component: FilterByCategoryComponent
+        path: "products",
+        component: ProductsComponent
+        // component: FilterByCategoryComponent
       }
     ]
   },
   {
-    path: 'postCode/:postCode/shop/:name/category/:category',
-    component: FilterByCategoryComponent
+    path:"register",
+    component: RegisterComponent
+  },
+  {
+    path:"login",
+    component:LoginComponent
+  },
+  {
+    path:"order",
+    component:OrderComponent
+  },
+  {
+    path:"basket",
+    component:BasketComponent
   }
 ];
 

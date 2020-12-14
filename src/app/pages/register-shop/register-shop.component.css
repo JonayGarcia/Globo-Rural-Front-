@@ -1,0 +1,33 @@
+
+
+ .formClient{
+
+  margin:auto;
+  margin-top:125px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  width: 50vw;
+
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+ }
+
+ .close{
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.alignClose{
+  float: right;
+  padding: 0;
+}
+
+.msnMistake{
+  margin-top:10px;
+  text-align: center;
+  color:red;
+}

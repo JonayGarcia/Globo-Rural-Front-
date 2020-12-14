@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FilterByCategoryComponent } from './filter-by-category.component';
+import { RegisterShopComponent } from './register-shop.component';
 
-describe('FilterByCategoryComponent', () => {
-  let component: FilterByCategoryComponent;
-  let fixture: ComponentFixture<FilterByCategoryComponent>;
+describe('RegisterShopComponent', () => {
+  let component: RegisterShopComponent;
+  let fixture: ComponentFixture<RegisterShopComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FilterByCategoryComponent ]
+      declarations: [ RegisterShopComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilterByCategoryComponent);
+    fixture = TestBed.createComponent(RegisterShopComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

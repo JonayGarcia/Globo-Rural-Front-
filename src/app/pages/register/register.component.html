@@ -1,0 +1,162 @@
+<div class="myHeader">
+  <div class="logo">
+    <img routerLink="" src="/assets/images/logonuevo_v2.png" class="appLogo">
+    <h2 routerLink=""  class="appName">Penguin Express</h2>
+  </div>
+  <div class="nav">
+    <img src="/assets/images/home.png" routerLink="">
+  </div>
+</div>
+
+<div class="body-Register">
+  <div class="decription-Container">
+    <img class="register-buyerimage" src="/assets/images/buyer.jpg" alt="Comprador">
+    <div class="description-text-container">
+       <div class="description-text">
+         <img src="/assets/images/check.png" alt="check">
+         <p>Compra cuando desees</p>
+       </div>
+       <div class="description-text">
+         <img src="/assets/images/check.png" alt="check">
+         <p>Encuentra tus tiendas en tu zona</p>
+       </div>
+       <div class="description-text">
+         <img src="/assets/images/check.png" alt="check">
+         <p>Paga de forma segura</p>
+       </div>
+    </div>
+   </div>
+
+   
+   <div class="register-container">
+     <h1>Crea tu cuenta</h1>
+     <div class="register-input-name">
+       <label>Nombre <p class="mustBefilled">*</p></label>
+       <div class="register-input-name2">
+         <img src="/assets/images/user.png">
+        <input type="text" [(ngModel)]="name" placeholder="Nombre" (blur)="validateName(name)">
+       </div>
+       <p *ngIf="nameInvalid==true">El nombre proporcionado es inválido</p> 
+     </div>
+     <div class="register-inputs-secondrow">
+        <div class="register-input-email">
+          <label>Email <p class="mustBefilled">*</p></label>
+          <div class="register-input-email2">
+            <img src="/assets/images/email.png">
+            <input type="email" [(ngModel)]="email" (blur)="validateEmail(email)" placeholder="Email">
+          </div>
+          <p *ngIf="emailInvalid==true">El correo electrónico introducido tiene un formato inválido</p>
+        </div>
+        <div class="register-input-phone">
+          <label>Teléfono <p class="mustBefilled">*</p></label>
+          <div class="register-input-phone2">
+            <img src="/assets/images/phone.png">
+            <input type="text" [(ngModel)]="phone" (ngModelChange)="validatePhone(phone)" placeholder="Teléfono">
+          </div>
+          <p *ngIf="phoneInvalid==true">El número introducido tiene un formato inválido</p>
+        </div>
+        <div class="register-input-postCode">
+          <label>Código Postal <p class="mustBefilled">*</p></label>
+          <div class="register-input-postCode2">
+            <img src="/assets/images/location.png">
+            <input type="text" [(ngModel)]="postcode" (ngModelChange)="validatePostCode(postcode)" placeholder="Código Postal">
+          </div>          
+          <p *ngIf="postcodeInvalid==true">El código postal introducido tiene un formato inválido</p>
+        </div>
+     </div>
+     <div class="register-inputs-thirdrow">
+        <div class="register-input-password">
+          <label>Contraseña <p class="mustBefilled">*</p></label>
+          <div class="register-input-password2">
+            <img src="/assets/images/password.png">
+            <input type="password" [(ngModel)]="password" (ngModelChange)="validatePassword(password)" placeholder="Contraseña">
+          </div>
+          <p *ngIf="passwordInvalid==true">La contraseña debe tener al menos 6 digitos</p>
+        </div>
+        <div class="register-input-password">
+          <label>Repetir Contraseña <p class="mustBefilled">*</p></label>
+          <div class="register-input-password2">
+            <img src="/assets/images/password.png">
+            <input type="password" [(ngModel)]="password2" (ngModelChange)="validatePassword2(password2)" placeholder="Contraseña">
+          </div>
+          <p *ngIf="password2Invalid==true">La contraseñas no coinciden</p>
+        </div>
+     </div>
+     <div class="register-checkbox">
+        <input class="form-check-input" type="checkbox"  [(ngModel)]="check" >
+        <label class="form-check-label" for="gridCheck">
+          He leído y acepto las Condiciones de uso y la Política de privacidad
+        </label>
+     </div>
+     <div class="button-container">
+        <button type="submit" class="button-register" role="button" aria-pressed="true" (click)="checkRegister()">Registrarse</button>
+      </div>
+      <div *ngIf="isFormValid" class="msnMistake">
+        Debes introducir todos los campos
+      </div>
+      <div *ngIf="isUserRegistered" class="msnOk">
+        <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+      </div>
+      <div *ngIf="failRegister" class="msnMistake">
+        Usuario o Email ya registrados, prueba con otro usuario o email
+      </div>
+   </div>
+</div>
+
+<!-- <div class="myBody">
+
+    <div *ngIf="showBuyer" class="inputRegisterC"  >
+      <app-register-daughter></app-register-daughter>
+    </div>
+
+
+    <div class="mainContainer registerUsers" [ngClass]="{backgroundOpacity: showBuyer==true || showClient==true || showdDealer==true}">
+
+      <div class="row  justify-content-between">
+          <div class="col">
+              <div class="card" style="width: 23rem;">
+                <h1 class="textName">Comprador</h1>
+                <img class="card-img-top" src="/assets/images/buyer.jpg" alt="Comprador">
+                <div class="card-body">
+
+                    <div class="container-fluid">
+                          <div class="row">
+                                <div class="col-2">
+                                  <img src="/assets/images/check.png" alt="check">
+                                </div>
+                                <div class="col-10">
+                                  Compra cuando desees
+                                </div>
+                          </div>
+
+                          <div class="row">
+                                <div class="col-2">
+                                  <img src="/assets/images/check.png" alt="check">
+                                </div>
+                                <div class="col-10">
+                                  Encuentra tus tiendas en tu zona
+                                </div>
+                          </div>
+
+                          <div class="row">
+                                <div class="col-2">
+                                  <img src="/assets/images/check.png" alt="check">
+                                </div>
+                                <div class="col-10">
+                                  Paga de forma segura
+                                </div>
+                          </div>
+                      </div>
+
+                      <div class="d-flex justify-content-center divRegister">
+                          <a class="btn btn-primary" (click)="registerC()" >Registrarse</a>
+                      </div>
+
+                </div>
+            </div>
+          </div>
+
+    </div>
+    </div>
+
+    </div> -->
