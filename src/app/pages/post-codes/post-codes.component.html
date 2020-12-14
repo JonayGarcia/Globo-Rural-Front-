@@ -1,28 +1,57 @@
-
-<body>
-  <header class="container-fluid bg-dark heaaderHome">
-    <div class="row ">
-      <div class="col">
-
-      </div>
-      <div class="col-md-auto">
-        <div class="text-white cursorPointer">Regístrate</div>
-      </div>
-      <div class="col col-lg-1">
-        <div class="text-white cursorPointer">Iniciar sesión</div>
-      </div>
-
+  <div class="myHeader">
+    <div class="logo">
+      <img routerLink="" src="/assets/images/logonuevo_v2.png" class="appLogo">
+      <h2 routerLink="" class="appName">Penguin Express</h2>
     </div>
+    <img *ngIf="istoogleActive==false" class="toogle" src="/assets/images/menu.png" (click)="toogle()">
+    <img *ngIf="istoogleActive==true" class="toogle" src="/assets/images/close1.png" (click)="toogle()">
+    <div class="nav" [ngClass]="{'active': istoogleActive == true}">
+        <div *ngIf="isLogged == false">
+          <div class="nav-button" routerLink="/register">Regístrate</div>
+        </div>
+        <div *ngIf="isLogged == false">
+          <div class="nav-button" routerLink="/login">Iniciar sesión</div>
+        </div>
+        <div *ngIf="isLogged == true">
+          <div class="nav-button">Hola! {{nameUser}}
+            <img src="/assets/images/profile-user.png" width="40px" height="40px"></div>
+        </div>
+        <div *ngIf="isLogged == true">
+          <div class="nav-button" (click)="logout()">Cerrar Sesión 
+            <img class="tofilter" src="/assets/images/logout.png" width="40px" height="40px"></div>
+        </div>
+    </div>
+  </div>
 
+<div class="body-container">
+  <img class="imagestore2" src="/assets/images/shop-location.png" alt="logo">
+  <div class="container-sloganAndImage">
+    <div class="container-slogan">
+      <p>
+        Tus compras mas sencillas desde casa
+      </p>
+      <p>
+        Encuentra tu Mercado más cercano
+      </p>
+      <div class="container-input-postCode">
+        <img src="/assets/images/select-location.png">
+        <input type="text" class="input-postCode" [(ngModel)]="zipCode" (keyup.enter)="findCode(zipCode)" placeholder="Código postal">
+      </div>
+      <div class="container-button">
+         <button  class="button-postCode" (click)="findCode(zipCode)" >Buscar tiendas</button>
+      </div>
+    </div>
+    <img class="imagestore" src="/assets/images/shop-location.png" alt="logo">
+  </div>
+  <div *ngIf="codeFound == undefined || notFound==1">
+    <div class="msn_error">No se encuentran repartidores disponibles para esta zona</div>
+  </div>
+</div>
 
-
-  </header>
-
-
-
+<!-- <div class="myBody">
   <div class="title">Penguin Express</div>
 
-  <img class="logo" src="/assets/images/logo.png" alt="logo">
+  <img class="imageShop" src="/assets/images/shop-location.png" alt="logo">
 
   <div class="slogan">
       Tus compras mas sencillas desde casa
@@ -30,28 +59,21 @@
   <div class="slogan">
     Encuentra tu Mercado más cercano
 
-</div>
-  <!--
-  Parte de Jose
-    <div class="dropdown">
-      <div class="dropHeader">Selecciona un Código Postal</div>
-      <div class="dropdown-content">
-          <div *ngFor="let option of postCodes" [routerLink]="['/postCode', option]">{{option}}</div>
-      </div>
-  </div>
--->
+</div >
+
 
   <div>
-    <input type="text" class="input_code text-center" [(ngModel)]="textInput" (keyup.enter)="findCode(textInput)" placeholder="Código postal">
+    <input type="text" class="input_code text-center" [(ngModel)]="zipCode" (keyup.enter)="findCode(zipCode)" placeholder="Código postal">
   </div>
 
   <div>
-     <button class="button_find" (click)="findCode(textInput)" >Buscar tiendas</button>
+     <button class="button_find" (click)="findCode(zipCode)" >Buscar tiendas</button>
   </div>
 
-  <div *ngIf="codeFound.length == 0 && notFound==0">
-      <div class="msn_error">Código no encontrado</div>
+  <div *ngIf="codeFound == undefined || notFound==1">
+      <div class="msn_error">No se encuentran repartidores disponibles para esta zona</div>
 
   </div>
 
-</body>
+
+</div> -->

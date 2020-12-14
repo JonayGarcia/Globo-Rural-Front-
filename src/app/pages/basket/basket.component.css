@@ -1,0 +1,30 @@
+.myBody{
+    min-height: calc( 100vh - 70px - 56px );
+    background-color: rgb(237, 252, 255);
+  }
+
+  .myHeader{
+
+    background-color: rgb(10, 100, 2);
+    height: 70px;
+    margin:auto;
+    overflow: hidden;
+  
+  }
+
+.appLogo{
+    width: 70px;
+    height: 70px;
+}
+
+
+.appName{
+  color:white;
+}
+
+.nav-logo{
+  display: flex;
+  margin-left: 40px;
+  align-items: center;
+  cursor: pointer;
+}

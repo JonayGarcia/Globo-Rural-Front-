@@ -13,41 +13,81 @@ export class PostCodesComponent implements OnInit {
   shops: Shop[] = [];
   codeFound: any = [];
   postCodes: string[] = [];
-  textInput: string;
-  numberCode: number;
-  notFound: number;
+  zipCode: string="";
+  notFound: number = 0;
+  isLogged: boolean = false;
+  nameUser: string;
+  istoogleActive: boolean = false;
+  //numberCode: number;
 
-  constructor(private storesService: StoresService, public router: Router) {}
+  constructor(
+    private storesService: StoresService, 
+    public router: Router
+    ){}
 
   ngOnInit(): void {
-    this.getShops();
+    // this.getShops();
+    this.checkIfLog();
   }
 
-  async getShops() {
-    this.shops = await this.storesService.getAllShops();
-    this.getPostCodes();
+  checkIfLog(){
+    if(this.storesService.existToken()==true){
+      const id = localStorage.getItem("idUser")
+      this.storesService.getUser(id)
+        .then(response=> {
+          this.nameUser = response.name;
+        });
+      this.isLogged = true;
+    } else {
+      this.isLogged = false;
+    }
   }
 
-  getPostCodes() {
-    // SI QUIEREN TENER UNA LISTA DE CODIGOS POSTALES,
-    // SE PUEDE IMPLEMENTAR EN LA API DIRECTAMENTE... comentadlo en el grupo!
-    this.shops.forEach((shop: Shop) => {
-      if (this.postCodes.includes(shop.postcode) == false)
-        this.postCodes.push(shop.postcode);
-    });
-    console.log('Mis tiendas---->', this.shops);
-  }
+  // async getShops() {
+  //   this.shops = await this.storesService.getAllShops();
+  //   console.log(this.shops);
+  //   // this.getPostCodes();
+  // }
+
+  // getPostCodes() {
+  //   // SI QUIEREN TENER UNA LISTA DE CODIGOS POSTALES,
+  //   // SE PUEDE IMPLEMENTAR EN LA API DIRECTAMENTE... comentadlo en el grupo!
+  //   this.shops.forEach((shop: Shop) => {
+  //     if (this.postCodes.includes(shop.postcode) == false)
+  //       this.postCodes.push(shop.postcode);
+  //   });
+  //   //console.log('Mis tiendas---->', this.shops);
+  // }
 
   async findCode(postalcode: string) {
+    //console.log("ESto es postalcode--->",postalcode);
+
     this.codeFound = await this.storesService.getShopsByPostCode(postalcode);
-    if (this.codeFound.length == 0) {
-      this.notFound = 0;
-      console.log('No se ha encontrado el CP');
-    } else {
-      this.notFound = 1;
+    console.log("ESto es codeFound --->>", this.codeFound);
+    if(this.codeFound != undefined && this.zipCode != ""){
+      //console.log("ESto es texInput: ",this.zipCode);
       this.router.navigate(['/postCode', postalcode]);
-      console.log('El CP es---->', postalcode);
+      //console.log('El CP es---->', postalcode);
+
+      localStorage.setItem('zipCode',JSON.stringify(this.zipCode));
+     //this.storesService.myZipCode = this.zipCode;
     }
-    this.textInput = '';
+    this.zipCode = '';
+    this.notFound=1;
+  }
+
+  logout(){
+    this.storesService.clearToken();
+    localStorage.removeItem("idUser")
+    this.isLogged = false;
+  }
+
+  toogle(){
+    if(!this.istoogleActive){
+      this.istoogleActive = true;
+    } else {
+      this.istoogleActive = false;
+    }
+    console.log(this.istoogleActive)
   }
 }

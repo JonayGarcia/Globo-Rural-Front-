@@ -1,0 +1,381 @@
+.mainContainer{
+  /*margin: 0 15px;*/
+  min-height: calc( 100vh - 70px - 56px );
+  background: linear-gradient(to bottom right, #2b9475 10%, #6ffcb5 80%, #248d6e );
+}
+
+.myHeader{
+
+  background-color: #28866a;
+  height: 70px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.myHeader img{
+  cursor: pointer;
+}
+
+.logo{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.divHome{
+  display: flex;
+}
+
+
+.title{
+  padding-top: 16px;
+  font-size: 40px;
+  text-align: center;
+}
+
+
+  .headers{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  table{
+    width: 100vw;
+  }
+
+
+  .containerOrder{
+    border:1px solid black;
+    width: 75vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+    color: rgb(0, 0, 0) !important;
+    box-shadow: 0 5px 16px rgba(49, 138, 172, 1);
+    /*transition: all 0.2s ease;*/
+    background: rgb(229, 248, 238);
+   
+  }
+  
+
+  .tableHeader{
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-style: solid;
+    border-width:1px;
+    font-weight: bold;
+    background: rgb(189, 228, 207);
+  }
+
+
+
+.nameTitle{
+  width: 49vw;
+  margin-left: 25px;
+}
+
+.card-priceTtile{
+  width: 5vw;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.quantityTitle{
+  width: 5vw;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.priceTtile{
+  width: 5vw;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.containerProducts{
+  border-bottom-style: solid;
+  border-width:1px;
+}
+
+.productsRow{
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /*border: 1px solid red;*/
+}
+
+
+.containerProducts img{
+  width: 60px;
+  height: 60px;
+}
+
+.containerProducts  div{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .name{
+    width: 40vw;
+    text-align: left;
+  }
+
+.card-price{
+  width: 5vw;
+  text-align: center;
+}
+
+.quantity{
+  width: 5vw;
+  text-align: center;
+}
+
+.price{
+  width: 5vw;
+  /*margin-right: 25px;*/
+  text-align: center;
+}
+
+.total{
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  text-align: right;
+  font-weight: bold;
+}
+
+  .myBuy{
+    margin-top: 10px;
+  }
+
+  .divBuy{
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .appLogo{
+    width: 86px;
+    height: 60px;
+    cursor: pointer;
+}
+
+
+.appName{
+  color:white;
+  cursor: pointer;
+}
+
+.nav-logo{
+  display: flex;
+  margin-left: 40px;
+  align-items: center;
+
+}
+
+.nav-container{
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+
+.nav-button{
+  padding: 10px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.nav-button:hover{
+  border-radius: 15px;
+  background-color: #6ffcb5;
+  color: #2b9475;
+}
+
+.myTable{
+  display: flex;
+  border: 1px solid black;
+  justify-content: center;
+}
+
+.inputsAddress{
+  display: flex;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.inputsAddress label{
+  
+  font-weight: bold;
+}
+
+.inAddress {
+  width: 20vw;
+  background: linear-gradient(to bottom, #379a7c,#40bd97);
+   border: 1px solid #393939;
+   border-radius: 5px 5px 5px 5px;
+   color: #ffffff;
+   font-size: 12px;
+   padding: 5px
+}
+
+.inCP {
+  width: 11vw;
+  background: linear-gradient(to bottom, #379a7c,#40bd97);
+   border: 1px solid #393939;
+   border-radius: 5px 5px 5px 5px;
+   color: #ffffff;
+   font-size: 12px;
+   padding: 5px
+}
+
+.divMsnMistake{
+  padding-bottom: 20px;
+}
+
+.msnMistake{
+  width:fit-content;
+  background-color: red;
+  border-radius: 25px;
+  color:white;
+  padding:8px;
+  text-align:center;
+  margin-top: 15px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.msnErrorStock{
+  text-align: center;
+  color:black;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.msnOk{
+  margin-top:10px;
+  text-align: center;
+  color:rgb(60, 206, 53);
+  font-weight: bold;
+  padding-bottom: 20px;
+ }
+
+
+ .msnOkOrder{
+   display: flex;
+   flex-direction: column;
+  margin-top:10px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  padding-bottom: 20px;
+ }
+
+ .msnOkOrder img{
+   margin-left: auto;
+   margin-right: auto;
+  width:270px;
+  height:180px;
+ }
+
+#compradoConEXito{
+  margin-top:10px;
+}
+
+ .textOk{
+   margin-left: auto;
+   margin-right: auto;
+   display: flex;
+   flex-direction: row;
+ }
+
+ .textOkPhrase{
+   text-align: right;
+ }
+
+ .clicAqui{
+  text-align: left;
+  padding-left: 5px;
+   color:#007bff;
+   cursor: pointer;
+ }
+
+ .cliclAqui:hover{
+  text-decoration: underline;
+}
+
+.tableStock{
+  margin-top: 15px;
+  border:1px solid black;
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+
+  color: rgb(0, 0, 0) !important;
+  box-shadow: 0 5px 16px rgba(49, 138, 172, 1);
+  /*transition: all 0.2s ease;*/
+  background: rgb(229, 248, 238);
+}
+
+.tableStockHeader{
+  display: flex;
+  border-bottom-style: solid;
+  border-width:1px;
+  height: 55px;
+  align-items: center;
+  background: rgb(189, 228, 207);
+}
+
+.productStock{
+  width: 50%;
+  margin-left: 15px;
+  text-align: left;
+}
+
+.cantidadStock{
+  width: 50%;
+  margin-right: 15px;
+  text-align: right;
+}
+
+
+ .rowTableStock{
+  border-bottom-style: solid;
+  border-width:1px;
+ }
+
+ .rowTableStock .nameStock{
+   width: 400px;
+   text-align: left;
+ }
+
+ .rowTableStock .quantityStock{
+  width: 20px;
+}
+
+.rowStock{
+  margin: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /*border: 1px solid red;*/
+}

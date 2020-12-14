@@ -1,0 +1,176 @@
+<div class="myHeader">
+    <div  class="logo">
+            <img routerLink="" src="/assets/images/logonuevo_v2.png" class="appLogo">
+            <h2 routerLink=""  class="appName">Penguin Express</h2>
+
+    </div>
+
+    <div class="divHome">
+            <img  (click)="goBack()" src="/assets/images/store.png">
+            <div  class="nav-button"  (click)="goBack()">Volver a la tienda</div>
+           <!-- <div  class="nav-button"   [routerLink]="['/postCode', shop?.postcode]" >Volver a la tienda</div>-->
+
+      </div>
+</div>
+
+
+
+
+<div class="mainContainer">
+  <p class="title">Detalles del pedido</p>
+
+  <div class="containerOrder">
+          <div class="tableHeader">
+              
+              <div class="nameTitle">Productos pedidos ({{productsInCart.products.length}})</div>
+              <div class="card-priceTtile">€/Ud</div>
+              <div class="quantityTitle">Ud</div>
+              <div class="priceTtile">€/Pr</div>
+
+              
+          </div>
+          
+          
+              <div *ngFor="let product of products" class="containerProducts">
+                    <div class="productsRow">
+                          <div><img [src]="product.image"></div>
+                          <div class="name">{{product.name}}</div>
+                          <div class="card-price">{{product.price}} €</div>
+                          <div class="quantity">{{product.quantity}}</div>
+                          <div class="price"> {{+(product.quantity*product.price).toFixed(2)}} €</div>
+                     </div>
+              </div>
+            
+              <div class="total">
+                <div> Total: {{productsInCart.totalPrice}} €</div>
+            </div>
+
+  </div>
+
+
+
+
+
+
+<div class="inputsAddress">
+    <div>
+      <label>Dirección de Envío</label>
+      <input class="inAddress"  [(ngModel)]="delivery_address" placeholder="Dirección de envío">
+    </div>
+
+    <div>
+      <label>Código Postal</label>
+      <input class="inCP" [(ngModel)]="postCode" placeholder="Código Postal">
+    </div>
+    
+</div>
+
+
+  <div *ngIf="!isBuyValid" class="d-flex justify-content-center divBuy">
+      <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="buy()">Comprar</button>
+  </div>
+
+    <div *ngIf="isFormValid" class="divMsnMistake">
+        <div  class="msnMistake">
+          Debes introducir todos los campos
+        </div>
+     </div>
+
+     <div *ngIf="isCodeZip" class="divMsnMistake">
+        <div  class="msnMistake">
+          No hay repartidores disponbiles para entregar en esta zona
+        </div>
+    </div>
+    
+    <div *ngIf="isBuyValid" class="msnOkOrder">
+      <img src="/assets/images/background.jpg" >
+      <div id="compradoConEXito">Has comprado con éxito. Tu pedido está en camino</div>
+
+          <div class="textOk">
+                <div class="textOkPhrase">Para seguir comprando haz</div>
+                <div class="clicAqui" (click)="goBack()">click aquí</div>
+          </div>
+      
+    </div>
+    
+
+    <!--Mostrar el error que envía el backend-->
+    <div *ngIf="isErrorStock" class="msnErrorStock">
+      {{errorMesageStock}} Los siguientes productos no están disponibles:
+            <div class="tableStock">
+
+                <div class="tableStockHeader">
+                    <div class="productStock">Producto</div>
+                    <div class="cantidadStock">Cantidad disponible</div>
+                </div>
+
+                  <div *ngFor="let product of bufferStock" class="rowTableStock" >
+                      <div class="rowStock">
+                              <div class="nameStock">
+                                {{product.name}}
+                              </div>
+
+                              <div class="quantityStock"> 
+                                {{product.stock}}
+                              </div>
+                      </div>
+                  </div>
+            </div>
+    </div>
+  </div> 
+
+
+
+
+
+<!--Parte José
+<div class="mainContainer">
+
+  <div class="order">
+    <p class="title">Generar Pedido</p>
+    <table>
+        <tr>
+        <th>Productos pedidos ({{productsInCart.products.length}})</th>
+        <th>Precio Ud.</th>
+        <th>Unidades</th>
+        <th>Precio Producto</th>
+
+        </tr>
+        <tr *ngFor="let product of products" class="containerProducts">
+                    <td><img [src]="product.image"></td>
+                    <td class="name">{{product.name}}</td>
+                    <td class="card-price">{{product.price}} €</td>
+                    <td class="quantity">{{product.quantity}}</td>
+                    <td class="price">{{+(product.quantity*product.price).toFixed(2)}} €</td>
+        </tr>
+    </table>
+    <div class="total">
+        <p>{{productsInCart.totalPrice}} €</p>
+    </div>
+  </div>
+  <div>
+      <label>Dirección de Envío</label>
+      <input [(ngModel)]="delivery_address" placeholder="Dirección de envío">
+  </div>
+  <div>
+      <label>Código Postal</label>
+      <input [(ngModel)]="postCode" placeholder="Código Postal">
+  </div>
+
+    <div class="d-flex justify-content-center divBuy">
+        <button type="submit" class="btn btn-primary btn-lg" role="button" aria-pressed="true" (click)="buy()">Comprar</button>
+    </div>
+
+      <div *ngIf="isFormValid" class="msnMistake">
+        Debes introducir todos los campos
+      </div>
+
+      <div *ngIf="isCodeZip" class="msnMistake">
+        EL código postal debe ser el mismo que el de tu zona
+      </div>
+
+      <div *ngIf="isBuyValid" class="msnOkOrder">
+        Has comprado con éxito
+      </div>
+</div>
+-->
